@@ -1,0 +1,962 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Life-HaQ</title>
+<meta name="description" content="お金・投資・不動産・キャリア・住まい・家事・役所手続きのライフハックアプリ">
+<meta name="theme-color" content="#f2304b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Life-HaQ">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<style>
+html{color-scheme:light}
+:root{padding:0}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+.hero{padding-top:calc(14px + env(safe-area-inset-top,0px))!important}
+</style>
+</head>
+<body>
+<style>
+/* Layout: phone app shell — red header band with search, white rounded cards on a light grey ground, icon grid, fixed 5-tab bar, full-screen article sheet */
+:root{
+  --bg:#f3f4f6; --surface:#ffffff; --ink:#1b1d21; --sub:#6b7079; --line:#e6e8ec;
+  --brand:#f2304b; --brand-ink:#ffffff; --brand-soft:#ffe8eb; --brand-deep:#d01e38;
+  --blue:#2f6fed; --blue-soft:#e8f0fe; --amber:#e8a10c; --amber-soft:#fff4dc; --green:#1f9d6b; --green-soft:#e3f6ee;
+  --shadow:0 1px 2px rgba(20,24,32,.06),0 4px 14px rgba(20,24,32,.05);
+  --font:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic UI","Meiryo",system-ui,sans-serif;
+  --r:16px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1115; --surface:#1a1d23; --ink:#eceef2; --sub:#9aa1ad; --line:#2a2e36;
+  --brand:#ff4d64; --brand-ink:#ffffff; --brand-soft:#3a1a21; --brand-deep:#e0384f;
+  --blue:#78a3ff; --blue-soft:#1b2740; --amber:#f2b84b; --amber-soft:#382c13; --green:#4cc797; --green-soft:#16302a;
+  --shadow:0 1px 2px rgba(0,0,0,.3); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1115; --surface:#1a1d23; --ink:#eceef2; --sub:#9aa1ad; --line:#2a2e36;
+  --brand:#ff4d64; --brand-ink:#ffffff; --brand-soft:#3a1a21; --brand-deep:#e0384f;
+  --blue:#78a3ff; --blue-soft:#1b2740; --amber:#f2b84b; --amber-soft:#382c13; --green:#4cc797; --green-soft:#16302a;
+  --shadow:0 1px 2px rgba(0,0,0,.3); color-scheme:dark}
+*{box-sizing:border-box}
+html,body{background:var(--bg)}
+body{color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.65;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+a{color:var(--blue)}
+.app{max-width:560px;margin:0 auto;padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+.pad{padding-inline:16px}
+/* header */
+.hero{background:var(--brand);color:var(--brand-ink);padding:14px 16px 46px;border-radius:0 0 22px 22px}
+.hero-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.logo{font-weight:800;font-size:1.4rem;letter-spacing:-.01em;display:flex;align-items:center;gap:8px}
+.logo i{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:9px;background:var(--brand-ink);color:var(--brand);font-style:normal;font-size:.95rem;font-weight:900}
+.hero-date{font-size:.8rem;opacity:.9}
+.searchbtn{margin-top:12px;width:100%;display:flex;align-items:center;gap:8px;background:var(--surface);color:var(--sub);border:0;border-radius:12px;padding:11px 14px;text-align:left;font-size:.92rem}
+.searchbtn svg{width:18px;height:18px;stroke:var(--sub);fill:none;stroke-width:2;flex:none}
+.lift{margin-top:-30px}
+/* cards */
+.card{background:var(--surface);border-radius:var(--r);box-shadow:var(--shadow);padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.stack{display:flex;flex-direction:column;gap:14px}
+.sec-h{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.sec-h h2{font-size:1.02rem;margin:0;font-weight:700}
+.link{background:none;border:0;color:var(--blue);font-size:.82rem;padding:4px 0}
+.sub{color:var(--sub)}
+.sm{font-size:.82rem}
+.xs{font-size:.74rem}
+.pill{display:inline-flex;align-items:center;font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:99px;background:var(--brand-soft);color:var(--brand-deep);white-space:nowrap}
+.pill.blue{background:var(--blue-soft);color:var(--blue)}
+.pill.amber{background:var(--amber-soft);color:var(--amber)}
+.pill.green{background:var(--green-soft);color:var(--green)}
+/* icon grid */
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px 6px}
+.ico{display:flex;flex-direction:column;align-items:center;gap:6px;background:none;border:0;padding:0;font-size:.74rem;color:var(--ink);text-align:center;line-height:1.3}
+.ico span.c{width:48px;height:48px;border-radius:15px;display:grid;place-items:center}
+.ico svg{width:24px;height:24px;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.c-red{background:var(--brand-soft)} .c-red svg{stroke:var(--brand)}
+.c-blue{background:var(--blue-soft)} .c-blue svg{stroke:var(--blue)}
+.c-amber{background:var(--amber-soft)} .c-amber svg{stroke:var(--amber)}
+.c-green{background:var(--green-soft)} .c-green svg{stroke:var(--green)}
+/* news */
+.news{display:flex;flex-direction:column}
+.nitem{display:flex;gap:12px;padding:12px 0;border-top:1px solid var(--line);align-items:flex-start}
+.nitem:first-child{border-top:0;padding-top:2px}
+.nitem .txt{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.nitem b{font-size:.94rem;line-height:1.45}
+.nitem p{margin:0;font-size:.84rem;color:var(--sub)}
+.nitem .meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.star{flex:none;background:none;border:0;padding:4px;width:34px;height:34px;display:grid;place-items:center;border-radius:10px}
+.star svg{width:22px;height:22px;stroke:var(--sub);fill:none;stroke-width:1.8}
+.star[aria-pressed="true"] svg{stroke:var(--amber);fill:var(--amber)}
+.updated{font-size:.74rem;color:var(--sub)}
+/* horizontal featured */
+.hscroll{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 16px 6px;margin-inline:-16px;scrollbar-width:none}
+.hscroll::-webkit-scrollbar{display:none}
+.feat{flex:none;width:72%;max-width:300px;scroll-snap-align:start;border-radius:var(--r);padding:16px;border:0;text-align:left;display:flex;flex-direction:column;gap:6px;min-height:132px;box-shadow:var(--shadow)}
+.feat b{font-size:1rem;line-height:1.4}
+.feat span{font-size:.8rem;opacity:.85}
+.f0{background:var(--brand);color:var(--brand-ink)} .f1{background:var(--blue);color:#fff} .f2{background:var(--surface);color:var(--ink)} .f3{background:var(--green);color:#fff}
+/* timeline */
+.tl li{list-style:none;display:grid;grid-template-columns:64px 1fr;gap:10px;padding:10px 0;border-top:1px solid var(--line)}
+.tl li:first-child{border-top:0;padding-top:0}
+.tl ul{margin:0;padding:0}
+.tl .when{font-size:.78rem;font-weight:700;color:var(--brand);font-variant-numeric:tabular-nums}
+.tl b{font-size:.92rem;display:block;line-height:1.45}
+.tl p{margin:3px 0 0;font-size:.82rem;color:var(--sub)}
+/* term */
+.term{background:var(--blue-soft);border-radius:12px;padding:12px 14px}
+.term b{color:var(--blue)}
+.term p{margin:4px 0 0;font-size:.86rem}
+/* list rows */
+.row{display:flex;align-items:center;gap:12px;padding:12px 0;border-top:1px solid var(--line);background:none;border-left:0;border-right:0;border-bottom:0;width:100%;text-align:left}
+.row:first-child{border-top:0}
+.row .txt{flex:1;min-width:0}
+.row .txt b{display:block;font-size:.94rem;line-height:1.45}
+.row .txt span{display:block;font-size:.8rem;color:var(--sub);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row .c{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;flex:none}
+.row .c svg{width:20px;height:20px;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.chev{width:16px;height:16px;stroke:var(--sub);fill:none;stroke-width:2;flex:none}
+/* search */
+.sbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:6;background:var(--bg);padding:12px 16px 8px}
+.sfield{display:flex;align-items:center;gap:8px;background:var(--surface);border-radius:12px;padding:0 12px;box-shadow:var(--shadow)}
+.sfield svg{width:18px;height:18px;stroke:var(--sub);fill:none;stroke-width:2;flex:none}
+.sfield input{flex:1;min-width:0;border:0;background:transparent;padding:12px 0;outline:none;font-size:16px}
+.sfield button{background:none;border:0;color:var(--sub);font-size:.8rem;padding:6px}
+.sugg{background:var(--surface);border-radius:12px;box-shadow:var(--shadow);margin-top:6px;overflow:hidden}
+.sugg button{display:flex;gap:10px;align-items:center;width:100%;border:0;background:none;padding:10px 14px;text-align:left;border-top:1px solid var(--line);font-size:.9rem}
+.sugg button:first-child{border-top:0}
+.sugg small{color:var(--sub);margin-left:auto;font-size:.72rem;white-space:nowrap}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 16px 8px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:6px 13px;font-size:.82rem}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags button{border:0;background:var(--surface);box-shadow:var(--shadow);border-radius:99px;padding:6px 12px;font-size:.82rem}
+/* article sheet */
+.sheet{position:fixed;inset:0;z-index:20;background:var(--bg);overflow-y:auto;-webkit-overflow-scrolling:touch}
+.sheet-bar{position:sticky;top:0;z-index:2;background:var(--surface);display:flex;align-items:center;gap:8px;padding:calc(8px + env(safe-area-inset-top,0px)) 8px 8px;border-bottom:1px solid var(--line)}
+.back{background:none;border:0;display:flex;align-items:center;gap:2px;padding:6px 8px;font-size:.9rem;color:var(--ink)}
+.back svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2.2}
+.sheet-bar .grow{flex:1}
+.art{max-width:560px;margin:0 auto;padding:18px 16px calc(40px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:16px}
+.art h1{font-size:1.38rem;line-height:1.4;margin:0;text-wrap:balance}
+.art .lead{font-size:.95rem;color:var(--sub);margin:0}
+.sum{background:var(--brand-soft);border-radius:14px;padding:14px 16px}
+.sum h3{margin:0 0 6px;font-size:.82rem;color:var(--brand-deep);letter-spacing:.04em}
+.sum ul{margin:0;padding-left:1.15em}
+.sum li{margin:3px 0;font-size:.92rem}
+.asec{background:var(--surface);border-radius:14px;padding:16px;box-shadow:var(--shadow)}
+.asec h2{font-size:1.02rem;margin:0 0 8px;display:flex;gap:8px;align-items:center}
+.asec h2::before{content:"";width:4px;height:1em;border-radius:2px;background:var(--brand)}
+.asec ul{margin:0;padding-left:1.15em}
+.asec li{margin:6px 0}
+.box{border-radius:14px;padding:12px 14px;font-size:.88rem}
+.box.tip{background:var(--green-soft)} .box.warn{background:var(--amber-soft)}
+.box b{display:block;font-size:.78rem;margin-bottom:2px}
+.box.tip b{color:var(--green)} .box.warn b{color:var(--amber)}
+.src{font-size:.78rem;color:var(--sub)}
+.related{display:flex;flex-direction:column}
+/* tools */
+.seg{display:flex;gap:6px;overflow-x:auto;padding:12px 16px 4px;scrollbar-width:none}
+.seg::-webkit-scrollbar{display:none}
+.seg button{flex:none;border:0;background:var(--surface);border-radius:99px;padding:8px 14px;font-size:.85rem;box-shadow:var(--shadow);font-weight:600}
+.seg button[aria-selected="true"]{background:var(--brand);color:var(--brand-ink)}
+.field{display:flex;flex-direction:column;gap:4px;min-width:0}
+.field label{font-size:.78rem;color:var(--sub)}
+.field input{padding:11px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);width:100%;font-variant-numeric:tabular-nums;font-size:16px}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.big{font-size:1.9rem;font-weight:800;color:var(--brand);font-variant-numeric:tabular-nums;line-height:1.2}
+.res{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;background:var(--bg);border-radius:12px;padding:10px 12px}
+.res div{display:flex;flex-direction:column;min-width:0}
+.res span{font-size:.72rem;color:var(--sub)}
+.res b{font-size:1rem;font-variant-numeric:tabular-nums}
+.chart{width:100%;height:auto;display:block}
+.flag{font-size:.82rem;border-radius:10px;padding:9px 12px}
+.flag.ok{background:var(--green-soft)} .flag.ng{background:var(--amber-soft)}
+.brow{display:grid;grid-template-columns:7em 1fr 5.6em;gap:10px;align-items:center}
+.brow input[type=range]{width:100%;accent-color:var(--brand)}
+.brow output{text-align:right;font-size:.85rem;font-variant-numeric:tabular-nums}
+.bar{display:flex;height:12px;border-radius:99px;overflow:hidden;background:var(--line)}
+.check{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-top:1px solid var(--line)}
+.check input{width:22px;height:22px;margin-top:2px;accent-color:var(--brand);flex:none}
+.check div{min-width:0}
+.check p{margin:0;font-size:.8rem;color:var(--sub)}
+.check.done b{text-decoration:line-through;color:var(--sub);font-weight:400}
+.phase{font-size:.75rem;font-weight:700;color:var(--brand);margin-top:10px}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:8px 14px;font-size:.85rem}
+.tool-h{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.tool-h h2{margin:0;font-size:1.1rem}
+.empty{text-align:center;padding:28px 12px;color:var(--sub);font-size:.88rem}
+.empty svg{width:40px;height:40px;stroke:var(--line);fill:none;stroke-width:1.6;margin-bottom:6px}
+ol.steps{margin:0;padding-left:1.3em} ol.steps li{margin:6px 0}
+.pagetitle{font-size:1.3rem;font-weight:800;margin:0;padding:16px 16px 4px}
+/* tabbar */
+nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:10;background:var(--surface);border-top:1px solid var(--line);padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));display:grid;grid-template-columns:repeat(5,1fr)}
+nav.tabs button{border:0;background:transparent;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:.66rem;color:var(--sub);padding:4px 0}
+nav.tabs svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+nav.tabs button[aria-current="page"]{color:var(--brand);font-weight:700}
+.toast{position:fixed;left:50%;bottom:calc(92px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--surface);font-size:.84rem;padding:9px 16px;border-radius:99px;z-index:30;white-space:nowrap}
+@media (prefers-reduced-motion:no-preference){.sheet{animation:slide .22s ease-out}.toast{animation:pop .2s ease-out}}
+@keyframes slide{from{transform:translateX(24px);opacity:.6}to{transform:none;opacity:1}}
+.sbar{top:0!important;padding-top:calc(12px + env(safe-area-inset-top,0px))!important}
+.pagetitle{padding-top:calc(16px + env(safe-area-inset-top,0px))!important}
+@keyframes pop{from{opacity:0;transform:translate(-50%,6px)}to{opacity:1;transform:translate(-50%,0)}}
+</style>
+
+<div class="app">
+<!-- HOME -->
+<section id="v-home">
+  <div class="hero">
+    <div class="hero-top"><div class="logo"><i>HQ</i>Life-HaQ</div><div class="hero-date" id="hdate"></div></div>
+    <button class="searchbtn" data-search><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>NISA、内見、確定申告…なんでも検索</button>
+  </div>
+  <div class="pad stack lift">
+    <div class="card"><div class="grid4" id="catgrid"></div></div>
+
+    <div class="card">
+      <div class="sec-h"><h2>今日のニュース</h2><span class="updated" id="news-upd"></span></div>
+      <div class="news" id="news"></div>
+      <button class="link" id="news-more" hidden style="align-self:flex-start">過去7日分を見る</button>
+      <div id="news-old" hidden></div>
+    </div>
+
+    <div>
+      <div class="sec-h" style="margin-bottom:8px"><h2>今日のおすすめ</h2><span class="updated">毎日入れ替わります</span></div>
+      <div class="hscroll" id="feat"></div>
+    </div>
+
+    <div class="card">
+      <div class="sec-h"><h2>今日の用語</h2><button class="star" id="term-star" aria-pressed="false" aria-label="お気に入り"><svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.8 6.6 19.7l1.1-6.1L3.2 9.4l6.1-.8z"/></svg></button></div>
+      <div class="term" id="term"></div>
+    </div>
+
+    <div class="card">
+      <div class="sec-h"><h2>これから変わる制度</h2><span class="pill">2026年10月時点</span></div>
+      <div class="tl"><ul id="updates"></ul></div>
+      <p class="xs sub" style="margin:0">手続きの前に、必ず公式情報で最新の内容を確認してください。</p>
+    </div>
+
+    <div class="card">
+      <div class="sec-h"><h2>よく使うツール</h2><button class="link" data-go="tools">すべて</button></div>
+      <div class="grid4" id="toolgrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SEARCH / ARTICLES -->
+<section id="v-know" hidden>
+  <div class="sbar">
+    <div class="sfield"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="キーワード（例：にーさ、家賃、転職）" autocomplete="off" aria-label="検索"><button id="qclear" hidden>クリア</button></div>
+    <div class="sugg" id="sugg" hidden></div>
+  </div>
+  <div class="chips" id="chips" role="toolbar" aria-label="カテゴリ"></div>
+  <div class="pad stack">
+    <div id="popular" class="stack" style="gap:8px"><div class="xs sub">よく検索されることば</div><div class="tags" id="poptags"></div></div>
+    <div class="card" style="padding-block:6px"><div class="xs sub" id="count" style="padding-top:8px"></div><div id="list"></div></div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section id="v-tools" hidden>
+  <h1 class="pagetitle">ツール</h1>
+  <div class="seg" role="tablist" id="seg"></div>
+  <div class="pad stack" style="margin-top:10px">
+    <div class="card" data-panel="sim">
+      <div class="tool-h"><h2>積立シミュレーター</h2><button class="star" data-fav="t:sim" aria-label="お気に入り"></button></div>
+      <div class="g2">
+        <div class="field"><label for="s-m">毎月の積立額（円）</label><input id="s-m" type="number" inputmode="numeric" value="50000" step="1000" min="0"></div>
+        <div class="field"><label for="s-y">期間（年）</label><input id="s-y" type="number" inputmode="numeric" value="20" min="1" max="50"></div>
+        <div class="field"><label for="s-r">想定利回り（年率％）</label><input id="s-r" type="number" inputmode="decimal" value="4" step="0.5" min="0" max="15"></div>
+        <div class="field"><label for="s-i">最初にまとめて（円）</label><input id="s-i" type="number" inputmode="numeric" value="0" step="10000" min="0"></div>
+      </div>
+      <div><span class="sm sub">最終評価額の目安</span><div class="big" id="s-out"></div></div>
+      <div class="res"><div><span>元本</span><b id="s-p"></b></div><div><span>運用益</span><b id="s-g"></b></div><div><span>益の割合</span><b id="s-pct"></b></div></div>
+      <svg class="chart" id="s-chart" viewBox="0 0 340 160" role="img" aria-label="元本と評価額の推移"></svg>
+      <div class="flag" id="s-flag"></div>
+      <p class="xs sub" style="margin:0">毎月複利・手数料と税は考えない概算です。実際の運用成績は上下し、元本割れもあります。</p>
+    </div>
+    <div class="card" data-panel="goal" hidden>
+      <div class="tool-h"><h2>貯金目標</h2><button class="star" data-fav="t:goal" aria-label="お気に入り"></button></div>
+      <div class="g2">
+        <div class="field"><label for="g-t">目標額（円）</label><input id="g-t" type="number" inputmode="numeric" value="3000000" step="100000"></div>
+        <div class="field"><label for="g-n">今ある額（円）</label><input id="g-n" type="number" inputmode="numeric" value="500000" step="10000"></div>
+        <div class="field"><label for="g-mo">期限（か月後）</label><input id="g-mo" type="number" inputmode="numeric" value="24" min="1"></div>
+        <div class="field"><label for="g-b">ボーナス時の上乗せ（1回・円）</label><input id="g-b" type="number" inputmode="numeric" value="100000" step="10000"></div>
+      </div>
+      <div><span class="sm sub">毎月の積立が必要な額</span><div class="big" id="g-out"></div></div>
+      <p class="sm sub" id="g-note" style="margin:0"></p>
+    </div>
+    <div class="card" data-panel="budget" hidden>
+      <div class="tool-h"><h2>家計の配分</h2><button class="star" data-fav="t:budget" aria-label="お気に入り"></button></div>
+      <div class="field"><label for="b-in">毎月の手取り（円）</label><input id="b-in" type="number" inputmode="numeric" value="260000" step="5000"></div>
+      <div class="bar" id="b-bar" aria-hidden="true"></div>
+      <div id="b-rows" style="display:flex;flex-direction:column;gap:8px"></div>
+      <div class="flag" id="b-flag"></div>
+      <div><button class="btn" id="b-reset">目安の配分に戻す</button></div>
+      <p class="xs sub" style="margin:0">初期値は一人暮らしの例です。入力はこの端末にだけ保存されます。</p>
+    </div>
+    <div class="card" data-panel="yield" hidden>
+      <div class="tool-h"><h2>不動産の利回り</h2><button class="star" data-fav="t:yield" aria-label="お気に入り"></button></div>
+      <div class="g2">
+        <div class="field"><label for="y-p">物件価格（万円）</label><input id="y-p" type="number" inputmode="numeric" value="2500"></div>
+        <div class="field"><label for="y-c">購入時の諸費用（万円）</label><input id="y-c" type="number" inputmode="numeric" value="200"></div>
+        <div class="field"><label for="y-r">月の家賃（円）</label><input id="y-r" type="number" inputmode="numeric" value="110000" step="1000"></div>
+        <div class="field"><label for="y-v">空室率（％）</label><input id="y-v" type="number" inputmode="decimal" value="5" step="1"></div>
+        <div class="field"><label for="y-e">年間の経費（万円）</label><input id="y-e" type="number" inputmode="numeric" value="35"></div>
+        <div class="field"><label for="y-l">ローン年返済額（万円）</label><input id="y-l" type="number" inputmode="numeric" value="100"></div>
+      </div>
+      <div class="res"><div><span>表面利回り</span><b id="y-g"></b></div><div><span>実質利回り</span><b id="y-n"></b></div><div><span>年の手残り</span><b id="y-cf"></b></div></div>
+      <div class="flag" id="y-flag"></div>
+      <p class="xs sub" style="margin:0">経費は管理費・修繕積立金・管理委託料・固定資産税・保険など。税金と将来の大規模修繕は含みません。</p>
+    </div>
+    <div class="card" data-panel="move" hidden>
+      <div class="tool-h"><h2>引越しチェックリスト</h2><div style="display:flex;align-items:center;gap:6px"><span class="pill" id="m-prog"></span><button class="star" data-fav="t:move" aria-label="お気に入り"></button></div></div>
+      <div id="m-list"></div>
+      <div><button class="btn" id="m-reset">チェックをすべて外す</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAVORITES -->
+<section id="v-fav" hidden>
+  <h1 class="pagetitle">お気に入り</h1>
+  <div class="pad stack" style="margin-top:8px" id="favwrap"></div>
+</section>
+
+<!-- MORE -->
+<section id="v-more" hidden>
+  <h1 class="pagetitle">使い方</h1>
+  <div class="pad stack" style="margin-top:8px">
+    <div class="card">
+      <div class="sec-h"><h2>ホーム画面に追加する</h2><span class="pill blue">iPhone / Android</span></div>
+      <ol class="steps sm">
+        <li>このページを <b>Safari</b>（Androidは Chrome）で開きます。アプリ内で開いている場合は「ブラウザで開く」を選びます。</li>
+        <li>画面下の共有ボタン（四角から矢印）をタップします。</li>
+        <li>「ホーム画面に追加」を選び、名前を「Life-HaQ」にして「追加」。</li>
+        <li>ホーム画面のアイコンから、アプリのように起動できます。</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h2 style="margin:0;font-size:1.02rem">毎日の更新について</h2>
+      <p class="sm" style="margin:0">「今日のニュース」は毎朝自動で新しい内容に更新されます。オフラインのときは最後に読み込んだ内容が表示されます。「今日のおすすめ」と「今日の用語」は日付ごとに入れ替わります。</p>
+      <p class="sm sub" style="margin:0">お気に入り、家計配分、チェックリストは、この端末のブラウザにだけ保存されます。ブラウザのデータを消すと消えます。</p>
+    </div>
+    <div class="card">
+      <h2 style="margin:0;font-size:1.02rem">このアプリについて</h2>
+      <p class="sm" style="margin:0">お金・住まい・手続き・キャリアの一般的な情報をまとめたものです。個別の投資判断や税務判断の助言ではありません。制度の数字は2026年10月時点で確認したもので、変わることがあります。大事な判断の前には公式サイトや専門家に確認してください。</p>
+    </div>
+    <div class="card">
+      <h2 style="margin:0;font-size:1.02rem">公式情報へのリンク</h2>
+      <div id="links"></div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ARTICLE SHEET -->
+<div class="sheet" id="sheet" hidden>
+  <div class="sheet-bar"><button class="back" id="back"><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg>戻る</button><span class="grow"></span><button class="star" id="sheet-star" aria-label="お気に入り"></button></div>
+  <article class="art" id="art"></article>
+</div>
+
+<nav class="tabs" aria-label="メイン">
+  <button data-go="home" aria-current="page"><svg viewBox="0 0 24 24"><path d="M3 11 12 4l9 7v9h-6v-6H9v6H3z"/></svg>ホーム</button>
+  <button data-go="know"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>さがす</button>
+  <button data-go="tools"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 7h8M8 12h2M14 12h2M8 16h2M14 16h2"/></svg>ツール</button>
+  <button data-go="fav"><svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.8 6.6 19.7l1.1-6.1L3.2 9.4l6.1-.8z"/></svg>お気に入り</button>
+  <button data-go="more"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg>使い方</button>
+</nav>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+/* ================= DATA ================= */
+const ICONS={
+ nisa:'<path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/>',
+ invest:'<path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>',
+ kakei:'<rect x="3" y="6" width="18" height="13" rx="3"/><path d="M16 12.5h2M3 10h18"/>',
+ save:'<path d="M5 11a7 6 0 0 1 13-2l2 1v4l-2 1-1 3h-3l-.5-1.5h-3L10 18H7l-1-3a6 6 0 0 1-1-4z"/><circle cx="15" cy="11" r=".6"/>',
+ tax:'<path d="M7 3h10v18l-2.5-1.5L12 21l-2.5-1.5L7 21z"/><path d="M10 8h4M10 12h4"/>',
+ estate:'<path d="M3 21V9l7-5 7 5v12"/><path d="M17 12h4v9M7 13h2M7 17h2M11 13h2M11 17h2"/>',
+ career:'<rect x="3" y="7" width="18" height="13" rx="3"/><path d="M9 7V5h6v2M3 12h18"/>',
+ home:'<path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/>',
+ chores:'<path d="M7 21h10M9 3h6l-1 6h-4z"/><path d="M8 9h8l1 12H7z"/>',
+ gov:'<path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-6 10 6z"/>',
+ news:'<rect x="3" y="4" width="18" height="16" rx="3"/><path d="M7 8h10M7 12h10M7 16h6"/>',
+ tool:'<rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 7h8M8 12h2M14 12h2M8 16h2M14 16h2"/>',
+ sim:'<path d="M3 17l6-6 4 4 8-8"/>',goal:'<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".8"/>',
+ budget:'<path d="M12 3v9l7 4"/><circle cx="12" cy="12" r="9"/>',yield:'<path d="M4 20 20 4"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/>',
+ move:'<path d="M3 7h11v10H3zM14 10h4l3 3v4h-7"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/>'
+};
+const CATS=[
+ {k:'NISA・iDeCo',i:'nisa',c:'red'},{k:'投資の基本',i:'invest',c:'blue'},{k:'家計・節約',i:'kakei',c:'amber'},{k:'貯金',i:'save',c:'green'},
+ {k:'税金',i:'tax',c:'red'},{k:'不動産投資',i:'estate',c:'blue'},{k:'キャリア',i:'career',c:'amber'},{k:'住まい探し',i:'home',c:'green'},
+ {k:'家事',i:'chores',c:'amber'},{k:'役所・手続き',i:'gov',c:'red'},{k:'ニュースの読み方',i:'news',c:'blue'}
+];
+const catOf=k=>CATS.find(c=>c.k===k)||CATS[0];
+const SRC={
+ nisa:['金融庁 NISA特設ウェブサイト','https://www.fsa.go.jp/policy/nisa2/'],
+ nisa26:['金融庁 令和8年度税制改正について','https://www.fsa.go.jp/news/r7/sonota/20251226-2/01.pdf'],
+ ideco:['iDeCo公式サイト','https://www.ideco-koushiki.jp/'],
+ mhlw:['厚生労働省 iDeCo改正','https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/nenkin/nenkin/kyoshutsu/2025kaisei.html'],
+ nta:['国税庁','https://www.nta.go.jp/'],
+ furu:['総務省 ふるさと納税ポータル','https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/furusato/'],
+ myna:['マイナポータル','https://myna.go.jp/'],
+ haz:['ハザードマップポータルサイト','https://disaportal.gsi.go.jp/'],
+ boj:['日本銀行','https://www.boj.or.jp/'],
+ stat:['総務省統計局','https://www.stat.go.jp/'],
+ nenkin:['日本年金機構','https://www.nenkin.go.jp/'],
+ kokusen:['国民生活センター','https://www.kokusen.go.jp/'],
+ jhf:['住宅金融支援機構（フラット35）','https://www.flat35.com/']
+};
+/* article: id,c,t,s,sum[],sec[[h,[..]]],tip,warn,kw[],src[] */
+const A=[
+{id:'nisa-basic',c:'NISA・iDeCo',t:'新NISAの全体像を5分で',s:'年360万円・生涯1,800万円。2つの枠の違いと使い方。',
+ sum:['つみたて投資枠は年120万円、成長投資枠は年240万円まで','生涯の上限は1,800万円（成長投資枠は1,200万円まで）','売ると翌年以降に枠が復活。非課税期間は無期限'],
+ sec:[['2つの枠',['つみたて投資枠：金融庁の基準を満たした投資信託を積み立てで買う枠。長期・分散向けの商品に限られる。','成長投資枠：上場株式・ETF・幅広い投資信託をまとめて買える枠。ただし毎月分配型や高レバレッジ型などは対象外。','2つの枠は同じ年に併用できる。']],
+ ['上限と枠の復活',['非課税保有限度額は生涯1,800万円。買ったときの金額（簿価）で管理される。','売却すると、その簿価分が翌年に復活する。ただし年間の投資上限（360万円）は変わらない。','値上がりしても枠の消費は増えないので、長く持つほど有利になりやすい。']],
+ ['口座の決まり',['NISA口座は1人1口座。金融機関の変更は年単位で可能。','18歳以上（1月1日時点）の日本居住者が対象。','損失が出ても、ほかの口座の利益と損益通算はできない。']]],
+ tip:'まずは「つみたて投資枠で毎月一定額」から。成長投資枠は余裕ができてからで十分です。',kw:['にーさ','ニーサ','nisa','新nisa','非課税','積立','つみたて','成長投資枠','つみたて投資枠','1800万','360万','投資信託'],src:['nisa']},
+{id:'nisa-2026',c:'NISA・iDeCo',t:'2026年度改正：こどもNISAと商品拡充',s:'2027年から0〜17歳もつみたて投資枠が使える。',
+ sum:['2027年1月から0〜17歳もつみたて投資枠を使える（年60万円・上限600万円）','12歳以降、子のための使い道で本人同意があれば払出し可','つみたて投資枠の対象が公社債に投資する商品にも広がる予定'],
+ sec:[['こどもNISAのしくみ',['正式名は「未成年者特定累積投資勘定」。つみたて投資枠のみで、成長投資枠は使えない。','年間60万円、非課税保有限度額600万円。','18歳になると通常のNISAに自動で移行する。','親のNISAとは別枠で運用できる。']],
+ ['払出しのルール',['12歳以降なら払出しが可能。','条件は、資金を子のために使うこと、子の同意を示す書面、親権者などによる申出書の提出。','旧ジュニアNISAとは払出しのルールが違うので注意。']],
+ ['対象商品の拡充',['これまでつみたて投資枠は「主に株式に投資する」投資信託に限られていた。','改正で「株式または公社債に投資するもの」まで広がる予定。','債券を組み合わせたバランス型を選びやすくなる。']]],
+ warn:'制度の詳細や開始時期は、金融庁や各金融機関の案内で最新情報を確認してください。',kw:['こどもnisa','子どもnisa','ジュニアnisa','子供','教育資金','学費','未成年','税制改正','2027','債券','公社債'],src:['nisa26']},
+{id:'ideco',c:'NISA・iDeCo',t:'iDeCoの基本と2026年12月からの変更',s:'掛金が全額所得控除。会社員の上限は月62,000円へ。',
+ sum:['掛金は全額が所得控除になり、所得税・住民税が減る','原則60歳まで引き出せない','2026年12月分から上限アップ、2027年1月から70歳まで加入可能に'],
+ sec:[['3つの税の優遇',['拠出時：掛金が全額所得控除。所得税20%・住民税10%なら掛金の約3割が戻る計算。','運用時：運用益が非課税で再投資される。','受取時：一時金なら退職所得控除、年金なら公的年金等控除の対象。']],
+ ['2026年12月分からの上限',['会社員（企業年金なし）：月23,000円 → 62,000円。','自営業者など（第1号）：月68,000円 → 75,000円（国民年金基金と合算）。','企業年金がある会社員：62,000円から企業年金などの掛金を差し引いた額。','公務員：月54,000円。','2027年1月引落し分から反映。増額したい人は運営管理機関に掛金変更の届出が必要。']],
+ ['注意点',['60歳まで引き出せないので、近い将来に使うお金を入れない。','口座管理手数料が毎月かかる。金融機関ごとの差を確認。','受取時の税金も含めて考える。退職金と受け取る時期が近いと控除が減ることがある。']]],
+ tip:'iDeCoの金融機関は「口座管理手数料」と「商品ラインナップ（低コストのインデックス型があるか）」で選びます。',kw:['イデコ','いでこ','ideco','個人型確定拠出年金','確定拠出年金','dc','年金','老後','所得控除','節税','掛金','62000','6.2万'],src:['mhlw','ideco']},
+{id:'nisa-vs-ideco',c:'NISA・iDeCo',t:'NISAとiDeCo、どちらを優先する？',s:'お金を使う時期で決める。迷ったら順番の型を使う。',
+ sum:['いつでも引き出せるのがNISA、節税が強いのがiDeCo','数年以内に使うお金は投資に回さない','よくある順番：生活防衛資金 → NISA → iDeCo'],
+ sec:[['比べるポイント',['引き出し：NISAはいつでも可。iDeCoは原則60歳まで不可。','節税：iDeCoは掛金が所得控除。NISAは運用益が非課税なだけ。','上限：NISAは年360万円、iDeCoは職業や企業年金で異なる。','手数料：NISAは口座管理無料が一般的。iDeCoは毎月の手数料がかかる。']],
+ ['こんな人はこちら',['結婚・住宅購入・転職などで数年内にまとまったお金が必要：NISA中心。','所得税率が高く、老後資金を確実に作りたい：iDeCoも併用。','収入が少なく税金がほとんどかからない：iDeCoの節税効果は小さい。']]],
+ kw:['比較','どっち','優先','順番','併用','老後資金','節税'],src:['nisa','ideco']},
+{id:'fund-choose',c:'投資の基本',t:'投資信託の選び方',s:'コスト・分散・規模の3点を見る。',
+ sum:['信託報酬（毎年のコスト）は低いほど有利','広く分散したインデックス型は1本でも完結しやすい','純資産が小さく減り続けるものは避ける'],
+ sec:[['見るべき数字',['信託報酬：保有中ずっとかかる。0.1%台のインデックス型が多い。','純資産総額：ファンドの規模。小さすぎると繰上償還のリスク。','トータルリターン：手数料を引いた後の成績。','トラッキングエラー：指数との差が小さいほど良いインデックス型。']],
+ ['代表的な分類',['全世界株式：日本を含む世界中の株式。迷ったときの候補にされやすい。','先進国株式・米国株式：成長期待は高いが地域が偏る。','バランス型：株式と債券を組み合わせ、値動きを抑える。','アクティブ型：指数を上回ることを目指すが、コストが高めで成績はまちまち。']],
+ ['避けたいパターン',['毎月分配型：複利が効きにくく、元本を取り崩して分配することもある。','テーマ型の流行商品：人気が出た後に買うと高値づかみになりやすい。','手数料の高い商品を窓口で勧められたまま買う。']]],
+ warn:'特定の商品をすすめる情報ではありません。',kw:['投信','ファンド','インデックス','信託報酬','オルカン','全世界株式','s&p500','米国株','バランス型','アクティブ','手数料','コスト'],src:['nisa']},
+{id:'compound',c:'投資の基本',t:'複利と長期・積立・分散',s:'時間を味方にする3つの原則。',
+ sum:['複利は「利益にも利益がつく」こと。期間が長いほど効く','積立は買うタイミングを分散できる','分散は1つの失敗で全体が崩れないようにする'],
+ sec:[['複利の力',['毎月5万円を年4%で20年積み立てると、元本1,200万円が約1,830万円になる計算（税・手数料なし）。','同じ条件で10年なら約740万円。期間が2倍で利益は4倍近くになる。','ツール → 積立 で自分の条件を試せる。']],
+ ['積立（ドルコスト平均法）',['毎月同じ金額で買うと、安いときに多く、高いときに少なく買える。','「いつ買うか」で悩まずに済むのが最大の利点。']],
+ ['分散',['資産：株式・債券・現金など。','地域：日本・米国・新興国など。','時間：積立で買う時期をずらす。']]],
+ tip:'暴落時に積立を止めないことが、長期投資で一番大事な行動です。',kw:['複利','ドルコスト','ドルコスト平均法','長期投資','分散投資','積立投資','72の法則','リスク'],src:['nisa']},
+{id:'risk',c:'投資の基本',t:'リスクとの付き合い方',s:'下がったときに売らずにいられる金額で。',
+ sum:['投資のリスクは「値動きの幅」のこと','生活防衛資金を先に確保してから投資する','下落局面で慌てて売らない仕組みをつくる'],
+ sec:[['どれくらい下がる？',['株式中心の資産は、1年で30〜50%下がる局面が過去に何度もある。','回復に数年かかることもある。','「半分になっても続けられるか」で投資額を決める。']],
+ ['やってはいけないこと',['生活費や数年内に使うお金で投資する。','借金をして投資する。','SNSの「絶対もうかる」話に乗る。元本保証で高利回りをうたう話は詐欺を疑う。']]],
+ warn:'「元本保証」「高配当確実」をうたう勧誘は、金融庁や国民生活センターも注意を呼びかけています。',kw:['リスク','暴落','下落','損失','元本割れ','詐欺','投資詐欺','生活防衛資金','リスク許容度'],src:['kokusen']},
+{id:'stock-basic',c:'投資の基本',t:'個別株・ETF・債券の違い',s:'それぞれの特徴を一覧で。',
+ sum:['個別株は値動きが大きく、銘柄選びの手間がかかる','ETFは上場している投資信託。市場で売買できる','債券は値動きが比較的小さく、利息が受け取れる'],
+ sec:[['個別株',['1社の株を買う。値上がり益と配当、株主優待がある。','日本株は原則100株単位。単元未満株を扱う証券会社もある。','1社に集中すると、その会社の不振で大きく損をする。']],
+ ['ETF',['株価指数などに連動する投資信託が取引所に上場したもの。','リアルタイムで売買できる。信託報酬が低いものが多い。','分配金は自動で再投資されないことが多い。']],
+ ['債券',['国や会社にお金を貸し、利息を受け取る。','金利が上がると既存の債券の価格は下がる。','個人向け国債は元本割れしにくく、預金の代わりとして使われる。']]],
+ kw:['株','株式','個別株','etf','債券','国債','個人向け国債','配当','優待','高配当','単元未満株'],src:['nisa']},
+{id:'senkin',c:'貯金',t:'先取り貯金を仕組みにする',s:'給料日に自動で移すのが一番続く。',
+ sum:['給料日の翌日に、貯金用口座へ自動で移す','目安は手取りの15〜20%。最初は5%でもよい','生活防衛資金（生活費3〜6か月分）を最優先'],
+ sec:[['仕組みの作り方',['給与口座から貯金用口座への「定額自動入金」を設定する（多くのネット銀行にある）。','貯金用口座はキャッシュカードを持ち歩かない。','NISAの積立設定も給料日の後に。']],
+ ['ボーナスの扱い',['受け取る前に「貯める：使う」の割合を決めておく（例：7：3）。','大きな買い物はボーナスの使う枠から。']],
+ ['続けるコツ',['金額は少しずつ上げる。昇給したら上げ幅の半分を貯金へ。','月に1回、残高を見るだけの日を決める。']]],
+ tip:'ツール → 貯金目標 で、期限までに毎月いくら必要か計算できます。',kw:['貯金','貯蓄','先取り','先取り貯金','自動積立','定額自動入金','ボーナス','生活防衛資金','口座'],src:[]},
+{id:'emergency',c:'貯金',t:'生活防衛資金はいくら必要？',s:'生活費の3〜6か月分。会社員か自営業かで変わる。',
+ sum:['急な失業・病気・出費に備えるお金','会社員は3〜6か月分、自営業は6か月〜1年分が目安','普通預金など、すぐ引き出せる場所に置く'],
+ sec:[['金額の考え方',['毎月の生活費（手取りではなく実際に使う額）× 月数。','会社員は雇用保険や傷病手当金があるので、少なめでも対応しやすい。','転職を考えているなら、空白期間に備えて多めに。']],
+ ['置き場所',['普通預金や、すぐ引き出せるネット銀行の口座。','投資に回すお金と口座を分ける。']]],
+ kw:['生活防衛資金','緊急資金','予備費','失業','傷病手当金','雇用保険','貯金額'],src:[]},
+{id:'save-age',c:'貯金',t:'20代・30代の貯金戦略',s:'収入を増やすことと、固定費を下げることの両方。',
+ sum:['20代は「稼ぐ力」への投資が一番効く','固定費を一度下げれば毎月効く','使い道ごとに口座や枠を分ける'],
+ sec:[['20代',['資格・スキル・転職で年収を上げる余地が大きい。','手取りの1〜2割を先取りし、NISAで少額から積み立てる。','結婚・引越しなど近い出費は預金で。']],
+ ['30代',['住宅・子育て・車など大きな支出が重なりやすい。','iDeCoの節税効果が大きくなる年収帯の人も増える。','保険は必要な保障だけに絞る。']],
+ ['口座の分け方',['生活費口座：給料が入り、毎月の支払いをする。','貯金口座：生活防衛資金と近い将来の支出。','投資口座：NISA・iDeCoで長期のお金。']]],
+ kw:['20代','30代','貯金','結婚資金','住宅資金','口座分け','年代別'],src:[]},
+{id:'fixed-cost',c:'家計・節約',t:'固定費の見直し 5つの順番',s:'一度やれば毎月効く。効果の大きい順に。',
+ sum:['通信・保険・サブスク・電気ガス・住居費の順に見直す','1つ見直すだけで年に数万円変わることも','解約・変更の手間は1回だけ'],
+ sec:[['見直す順番',['通信費：格安プランや格安SIMへ。端末の分割払いが残っていないかも確認。','保険：貯蓄型や重複した保障を点検。独身で扶養家族がいなければ大きな死亡保障は不要なことが多い。','サブスク：3か月使っていないものは解約。年払いの更新日もメモ。','電気・ガス：契約プランやアンペア数を見直す。','住居費：手取りの3割以内が目安。更新のタイミングで家賃交渉の余地も。']],
+ ['見直しのコツ',['カード明細を3か月分並べて、毎月出ていくものに印をつける。','浮いた額は、その日のうちに先取り貯金の額に上乗せする。']]],
+ tip:'ツール → 家計配分 で、手取りに対する割合を確認できます。',kw:['固定費','節約','通信費','格安sim','スマホ代','保険','サブスク','光熱費','電気代','ガス代','家賃'],src:[]},
+{id:'budget-rule',c:'家計・節約',t:'家計の配分ルール',s:'割合で決めると迷わない。',
+ sum:['手取りを「必要・したい・貯める」に分ける','住居費は手取りの3割以内が目安','予備費を必ず作っておく'],
+ sec:[['よく使われる目安',['50/30/20ルール：必要な支出50%、したいこと30%、貯金20%。','一人暮らしなら住居25〜30%、食費12〜15%、通信3〜5%がひとつの目安。','自分の数字で1か月記録してから調整する。']],
+ ['家計簿が続かない人へ',['キャッシュレス決済を1〜2つにまとめて、明細を家計簿代わりにする。','細かく分けすぎない。5〜8項目で十分。']]],
+ kw:['家計','家計簿','予算','配分','50/30/20','手取り','やりくり','支出'],src:[]},
+{id:'cashless',c:'家計・節約',t:'キャッシュレスとポイントの使い方',s:'まとめるほど管理がラクになる。',
+ sum:['決済手段は1〜2つにまとめる','ポイントのために余計な買い物をしない','リボ払いは使わない'],
+ sec:[['まとめ方',['メインのクレジットカード1枚＋QRコード決済1つ。','公共料金・通信費・サブスクはカードにまとめると明細で一覧できる。']],
+ ['注意点',['リボ払い・分割払いは手数料が高い。自動でリボになる設定がないか確認。','ポイント還元率より、使いすぎないことの方が効果は大きい。','不正利用に備えて、利用通知をオンにする。']]],
+ warn:'リボ払いの手数料は年15%前後のことが多く、残高が減りにくくなります。',kw:['キャッシュレス','クレジットカード','クレカ','ポイント','ポイ活','リボ','リボ払い','qr決済','電子マネー'],src:[]},
+{id:'furusato',c:'税金',t:'ふるさと納税の基本と今のルール',s:'自己負担2,000円で返礼品。ポイント付与は終了。',
+ sum:['上限額内なら、寄附額から2,000円を引いた額が税金から控除される','会社員は5自治体以内ならワンストップ特例が使える','2025年10月から仲介サイトのポイント付与は禁止'],
+ sec:[['しくみ',['寄附した翌年の住民税（と所得税）が減る。','控除上限額は年収や家族構成で変わる。各サイトのシミュレーターで目安を確認。','1月〜12月の寄附がその年の分。']],
+ ['手続き',['ワンストップ特例：確定申告が不要な会社員で、寄附先が5自治体以内なら申請書を出すだけ。翌年1月10日必着が目安。','6自治体以上、または確定申告する人は、確定申告で寄附金控除を申告する。']],
+ ['最近のルール変更',['2025年10月から、ポイントを付与する仲介サイト経由の寄附は禁止。','クレジットカード決済で通常つくポイントは対象外。','2026年10月から返礼品の地場産品基準がより厳しくなる。']]],
+ tip:'12月は申し込みが集中し、返礼品の到着も遅れがち。秋のうちに済ませると安心です。',kw:['ふるさと納税','ふるさと','返礼品','寄附','寄付','ワンストップ','ワンストップ特例','控除上限','住民税','ポイント'],src:['furu']},
+{id:'nenshu-kabe',c:'税金',t:'2026年の「年収の壁」',s:'所得税がかかり始めるのは178万円に。',
+ sum:['2026年分から基礎控除の本則が62万円に','所得税の課税最低限は178万円に','2026年中の天引きは従来どおり。年末調整で精算'],
+ sec:[['何が変わった？',['基礎控除：本則58万円 → 62万円（物価連動）。合計所得489万円以下は特例で最大104万円。','給与所得控除の最低保障額：2026・2027年は特例で74万円。','合わせて、所得税がかかり始める年収が160万円から178万円に。']],
+ ['いつ反映される？',['2026年1〜12月の給与が対象。','毎月の天引きは変わらず、12月の年末調整で差額が戻る形。']],
+ ['注意点',['住民税の非課税ラインや、社会保険の「106万円・130万円の壁」は別のしくみ。','扶養に入っている人は、親や配偶者の控除への影響も確認する。']]],
+ kw:['年収の壁','103万','160万','178万','基礎控除','給与所得控除','扶養','パート','アルバイト','所得税','年末調整','手取り'],src:['nta']},
+{id:'nenmatsu',c:'税金',t:'年末調整で損しないために',s:'書類を出し忘れると控除が受けられない。',
+ sum:['会社が1年分の所得税を精算する手続き','生命保険・地震保険・iDeCoなどの控除証明書を出す','医療費控除やふるさと納税（6自治体以上）は確定申告で'],
+ sec:[['出す書類',['扶養控除等申告書。','保険料控除申告書：生命保険料・地震保険料・iDeCo（小規模企業共済等掛金控除）など。','住宅ローン控除の2年目以降の申告書。']],
+ ['よくある漏れ',['iDeCoの払込証明書を出していない（会社の給与天引きでない場合）。','途中入社で前職の源泉徴収票を出していない。','配偶者の収入見込みの記入漏れ。']]],
+ kw:['年末調整','源泉徴収票','保険料控除','生命保険料控除','扶養控除','控除証明書','還付'],src:['nta']},
+{id:'kakutei',c:'税金',t:'会社員でも確定申告するケース',s:'医療費控除、副業、ふるさと納税6自治体以上など。',
+ sum:['医療費が年10万円（または所得の5%）を超えたら医療費控除','副業の所得が年20万円を超えたら申告が必要','提出期間は例年2月中旬〜3月中旬'],
+ sec:[['申告が必要・お得なケース',['医療費控除：家族の分も合算できる。市販薬はセルフメディケーション税制という選択肢も。','ふるさと納税を6自治体以上にした、またはワンストップ特例を出し忘れた。','副業の所得が年20万円を超えた（住民税は20万円以下でも申告が必要）。','住宅ローン控除の1年目。','年の途中で退職し、年末調整を受けていない。']],
+ ['出し方',['e-Taxならスマホとマイナンバーカードで提出できる。','還付申告だけなら、翌年1月から5年間出せる。']]],
+ kw:['確定申告','e-tax','医療費控除','セルフメディケーション','副業','還付','住宅ローン控除','マイナンバーカード'],src:['nta']},
+{id:'tax-salary',c:'税金',t:'給与明細の読み方',s:'額面と手取りの差はどこへ行く？',
+ sum:['手取りは額面のおよそ75〜85%','引かれるのは社会保険料と税金','住民税は前年の所得で決まる'],
+ sec:[['引かれているもの',['健康保険料・厚生年金保険料・雇用保険料（社会保険料）。','所得税：毎月の概算。年末調整で精算。','住民税：前年の所得をもとに6月から翌年5月まで12回で引かれる。']],
+ ['チェックしたいところ',['残業代や手当が正しく入っているか。','4〜6月の給与で社会保険料が決まるので、残業の多さが1年の保険料に影響する。','社会人2年目の6月から住民税が引かれ始め、手取りが減ったように感じる。']]],
+ kw:['給与明細','手取り','額面','社会保険料','厚生年金','健康保険','住民税','所得税','標準報酬月額'],src:['nenkin']},
+{id:'re-yield',c:'不動産投資',t:'利回りは「実質」で見る',s:'表面利回りは空室も経費も含まない。',
+ sum:['広告の利回りはたいてい表面利回り','実質利回りは経費・空室・購入諸費用を含めて計算','ローンを使うなら年の手残りがプラスかが大事'],
+ sec:[['計算式',['表面利回り＝年間家賃 ÷ 物件価格','実質利回り＝（年間家賃 − 空室損 − 経費）÷（物件価格 ＋ 購入諸費用）','手残り（キャッシュフロー）＝実際の収入 − 経費 − ローン返済']],
+ ['経費になるもの',['管理費・修繕積立金（区分マンション）。','管理会社への委託料（家賃の5%前後が多い）。','固定資産税・都市計画税、火災保険。','入退去時の原状回復、設備交換、広告料。']]],
+ tip:'ツール → 利回り で、表面・実質・手残りをまとめて計算できます。',kw:['利回り','表面利回り','実質利回り','キャッシュフロー','cf','家賃収入','経費','空室率'],src:[]},
+{id:'re-talk',c:'不動産投資',t:'営業トークで注意したい言葉',s:'「節税になる」「年金代わり」「家賃保証」。',
+ sum:['手元のお金が減るなら「節税」とはいえない','サブリースの保証額は見直されることがある','即決を迫られたら必ず持ち帰る'],
+ sec:[['よく聞く言葉と実際',['「節税になる」：赤字で所得税が減っても、毎月持ち出しがあれば資産は減っている。','「家賃保証（サブリース）」：保証額は数年ごとに見直されることがあり、オーナー側からの解約は簡単ではない。','「団信があるから保険代わり」：今の生命保険と比べて割高でないか確認。','「年金代わりになる」：築年数とともに家賃は下がり、修繕費は増える。']],
+ ['特に慎重になりたいケース',['新築の区分ワンルーム：購入直後に価格が下がりやすい。','職場への電話やSNSから始まる勧誘。','フルローン・オーバーローンを勧められる。']]],
+ warn:'不動産投資の勧誘トラブルは国民生活センターにも多く寄せられています。迷ったら消費生活センター（188）に相談できます。',kw:['不動産投資','ワンルーム','区分マンション','サブリース','家賃保証','節税','営業','勧誘','新築','団信'],src:['kokusen']},
+{id:'re-risk',c:'不動産投資',t:'不動産投資の4つのリスク',s:'空室・金利・修繕・売りにくさ。',
+ sum:['空室が続くとローン返済を自分で払うことになる','金利が上がると返済額が増える','少額で始めたいならREITという選択肢も'],
+ sec:[['4つのリスク',['空室：駅からの距離、周辺の需要、競合物件の数を調べる。','金利：変動金利なら、金利が1〜2%上がった場合の返済額も試算する。日銀は2026年に利上げを続けている。','修繕：築年数が古いほど、大規模修繕と設備交換の費用がかかる。','流動性：売りたいときにすぐ、希望の価格で売れるとは限らない。']],
+ ['少額から始める方法',['REIT（不動産投資信託）：取引所で売買でき、数万円から複数の物件に分散できる。','NISAの成長投資枠でもREITやREITの投資信託を買える。']]],
+ kw:['リスク','空室','金利上昇','変動金利','修繕','大規模修繕','reit','リート','不動産投資信託','流動性'],src:['boj']},
+{id:'mortgage',c:'不動産投資',t:'住宅ローンの金利タイプ',s:'変動・固定・フラット35の違い。',
+ sum:['変動金利は低いが、金利が上がると返済が増える','固定金利は返済額が変わらない安心料が上乗せ','金利上昇局面では「上がっても払えるか」で考える'],
+ sec:[['3つのタイプ',['変動金利：短期金利に連動。多くは半年ごとに金利見直し。','固定期間選択型：10年など一定期間は固定、その後に選び直す。','全期間固定（フラット35など）：完済まで金利が変わらない。']],
+ ['選び方の考え方',['返済額が毎月2〜3万円増えても家計がもつなら変動も選択肢。','教育費などで余裕がない時期が長いなら固定の安心感は大きい。','繰上返済の手数料・団信の内容・保証料も比べる。']]],
+ kw:['住宅ローン','ローン','金利','変動金利','固定金利','フラット35','繰上返済','団信','マイホーム','購入'],src:['jhf']},
+{id:'career-pay',c:'キャリア',t:'年収が上がりやすい3つの掛け算',s:'職種 × 業界 × 専門性。',
+ sum:['同じ職種でも業界によって年収レンジは違う','専門性は「何ができるか」を成果と数字で示せる状態','年収は入社時の交渉で決まる部分が大きい'],
+ sec:[['掛け算の中身',['職種：エンジニア、データ分析、コンサル、法人営業など需要の高い職種ほど高くなりやすい。','業界：利益率の高い業界（IT、金融、コンサルなど）は年収レンジも高め。','専門性：ほかの人に代わりにくいスキルや経験。']],
+ ['上げる方法',['社内異動：今の業界知識を活かして職種を変える。','転職：同じ職種でより高い業界・会社へ。','副業・発信：実績を外に見せる。']]],
+ tip:'今の仕事の成果を、毎月1行でいいので数字つきでメモしておくと、評価面談でも転職でも使えます。',kw:['年収','年収アップ','高年収','給料','昇給','キャリア','市場価値','職種','業界','専門性','異動','社内公募'],src:[]},
+{id:'career-change',c:'キャリア',t:'転職活動の進め方',s:'在職中に、複数のルートで情報を集める。',
+ sum:['エージェントは2〜3社を併用する','職務経歴書は成果（数字）と工夫を中心に','内定後は年収以外の条件も確認'],
+ sec:[['流れ',['自己分析：できること、やりたいこと、条件の優先順位。','情報収集：エージェント、転職サイト、知人の紹介、企業の採用ページ。','応募・面接：1次〜最終まで2〜4回が一般的。','内定・条件交渉・退職手続き。']],
+ ['書類と面接',['職務経歴書：「担当していた」より「何をして、どうなったか」。','面接：志望理由は「なぜこの業界・この会社・この職種か」を分けて準備。','逆質問：配属先の課題や、入社後3か月で期待されることを聞く。']],
+ ['内定後に確認すること',['年収の内訳（基本給・賞与・残業代の扱い）。','評価制度と昇給の実績。','リモート・残業・休日などの働き方。']]],
+ kw:['転職','転職活動','エージェント','職務経歴書','履歴書','面接','内定','退職','年収交渉','キャリアチェンジ','未経験'],src:[]},
+{id:'career-skill',c:'キャリア',t:'スキルを見える化する',s:'ポートフォリオと発信は信用になる。',
+ sum:['作ったものを公開できる形で残す','学んだことを記事にすると整理と発信の両方になる','資格は入口として有効。実務と組み合わせて見せる'],
+ sec:[['見える化の方法',['ポートフォリオ：分析レポート、資料、コードなど。社外秘でないサンプルデータで作り直す。','技術ブログ・SNS：学んだ過程を書く。完璧でなくてよい。','資格：職種への入口として、学習の証明として使う。']],
+ ['続けるコツ',['週に1つアウトプットする日を決める。','テーマを1つに絞ると、検索や紹介で見つけてもらいやすい。']]],
+ kw:['スキル','ポートフォリオ','資格','発信','ブログ','sns','副業','学習','勉強','リスキリング'],src:[]},
+{id:'career-negotiate',c:'キャリア',t:'年収交渉のコツ',s:'根拠を持って、内定後に。',
+ sum:['交渉は内定が出てから、条件提示の場で','根拠は市場相場・現年収・ほかの選考状況','金額だけでなく入社時期や役職も交渉材料'],
+ sec:[['準備すること',['同じ職種・経験年数の求人の年収レンジを調べる。','今の年収の内訳（賞与・残業代込みか）を正確に伝える。','希望額と、最低限ゆずれない額を決めておく。']],
+ ['伝え方',['「〇〇の経験を活かして、□□で貢献できるため、△△万円を希望します」と根拠をセットで。','エージェント経由なら、担当者に交渉を任せられる。']]],
+ kw:['年収交渉','給与交渉','オファー','内定','条件交渉','昇給'],src:[]},
+{id:'naiken',c:'住まい探し',t:'内見チェックリスト',s:'写真では分からないところを見る。',
+ sum:['日当たり・音・におい・電波は現地でしか分からない','共用部の荒れ具合で管理状態が分かる','夜の道と駅までの時間も確認'],
+ sec:[['部屋の中',['日当たりと窓の向き。できれば住んだときに家にいる時間帯に。','携帯の電波、水圧、排水口のにおい。','壁の薄さ（軽く叩く）、上下左右の生活音。','収納の奥行き、冷蔵庫・洗濯機置き場の寸法、コンセントの位置。','カーテンレールの幅、エアコンの有無と古さ。']],
+ ['建物とまわり',['ゴミ置き場・郵便受け・駐輪場が荒れていないか。','オートロック、宅配ボックス、防犯カメラ。','夜道の明るさ、駅までの実際の所要時間、スーパーや病院。']],
+ ['持っていくもの',['メジャー、スマホ（写真・動画・方位）、間取り図。']]],
+ tip:'内見中の写真と動画は、帰宅後に比べるときの一番の材料になります。',kw:['内見','内覧','物件','部屋探し','賃貸','チェックリスト','日当たり','騒音','防音','引越し','一人暮らし'],src:[]},
+{id:'shoki-hiyou',c:'住まい探し',t:'初期費用と交渉のコツ',s:'家賃の4〜6か月分がよくある目安。',
+ sum:['敷金・礼金・仲介手数料・前家賃などがかかる','閑散期は礼金やフリーレントの交渉が通りやすいことも','任意の付帯サービスは外せるか確認'],
+ sec:[['内訳',['敷金：退去時の原状回復に使われ、残りは返る。','礼金：大家さんへのお礼。返らない。','仲介手数料：法律上の上限は家賃1か月分＋税。','前家賃・日割り家賃、保証会社の初回保証料、火災保険、鍵交換。']],
+ ['下げる方法',['礼金なし、フリーレント付きの物件を探す。','引越しシーズン（1〜3月）を避ける。','消毒・安心サポートなどの付帯サービスは任意のことが多い。']],
+ ['契約前に読むところ',['更新料（東京では2年ごとに1か月分が多い）。','退去時の特約（クリーニング代など）。','解約予告の期間。']]],
+ kw:['初期費用','敷金','礼金','仲介手数料','フリーレント','家賃交渉','更新料','保証会社','火災保険','契約'],src:[]},
+{id:'area',c:'住まい探し',t:'住む街の選び方',s:'家賃・通勤・生活の3つで比べる。',
+ sum:['通勤時間は毎日効く。乗り換え回数も大事','同じ路線でも急行が止まるかで家賃が変わる','ハザードマップで災害リスクを確認'],
+ sec:[['比べるポイント',['通勤：ドアツードアの時間、乗り換え回数、混雑。','家賃相場：ポータルサイトで同じ条件の物件を並べて見る。','生活：スーパー、ドラッグストア、病院、役所の出張所。','治安：街灯、人通り、夜の雰囲気。']],
+ ['家賃を下げるコツ',['人気駅の隣駅や、各駅停車だけの駅。','築年数や駅からの距離を少しゆるめる。']]],
+ kw:['街','エリア','駅','住みやすい','治安','通勤','家賃相場','一人暮らし','街選び'],src:['haz']},
+{id:'hazard',c:'住まい探し',t:'ハザードマップは必ず見る',s:'浸水・土砂・地盤を住所で確認。',
+ sum:['国のハザードマップポータルで住所から調べられる','低い階や半地下は浸水リスクに注意','重要事項説明でも水害リスクの説明がある'],
+ sec:[['確認すること',['洪水・高潮・内水氾濫の浸水想定。','土砂災害警戒区域。','避難場所までの道のり。']],
+ ['住んでからの備え',['水・食料を3日分以上。','モバイルバッテリー、懐中電灯、常備薬。','家具の転倒防止。']]],
+ kw:['ハザードマップ','災害','浸水','洪水','地震','防災','避難','備蓄'],src:['haz']},
+{id:'cleaning',c:'家事',t:'汚れの性質で洗剤を選ぶ',s:'油はアルカリ性、水垢は酸性で落とす。',
+ sum:['油汚れ・皮脂にはアルカリ性（重曹・セスキ）','水垢・石けんカスには酸性（クエン酸）','塩素系と酸性は絶対に混ぜない'],
+ sec:[['場所別',['キッチンのコンロ・換気扇：アルカリ性の洗剤やセスキ炭酸ソーダ。','浴室の鏡・蛇口の白い汚れ：クエン酸。','浴室のカビ：塩素系漂白剤。','トイレの黄ばみ：酸性洗剤。']],
+ ['時短のコツ',['使った直後にさっと拭くのが一番ラク。','週1回の「ここだけ」の日を決める（月曜は洗面台など）。']]],
+ warn:'塩素系と酸性タイプを混ぜると有毒ガスが出ます。換気と手袋を忘れずに。',kw:['掃除','そうじ','重曹','クエン酸','セスキ','カビ','水垢','油汚れ','洗剤','キッチン','風呂','トイレ'],src:[]},
+{id:'tsukurioki',c:'家事',t:'平日がラクになる作り置き',s:'週末30分で3品。',
+ sum:['主菜1品＋野菜の副菜2品から始める','冷蔵は3〜4日、それ以上は冷凍','清潔な容器と乾いた箸で取り分ける'],
+ sec:[['始めやすい組み合わせ',['主菜：鶏そぼろ、鶏ハム、豚の生姜焼き用の下味冷凍。','副菜：ゆで野菜、きんぴら、浅漬け。','主食：ごはんは1食分ずつ平らに包んで冷凍。']],
+ ['保存のコツ',['粗熱をとってから冷蔵庫へ。','容器にマスキングテープで日付を書く。','水分が多いものは日持ちしにくい。']]],
+ kw:['作り置き','料理','自炊','冷凍','お弁当','時短','献立','節約レシピ','食費'],src:[]},
+{id:'laundry',c:'家事',t:'洗濯で失敗しないために',s:'洗濯表示と分け洗い。',
+ sum:['洗う前に洗濯表示を確認','色柄物と白物、タオルとニットは分ける','部屋干しは風を当てると臭いにくい'],
+ sec:[['基本',['桶のマーク：家庭で洗える。手のマークは手洗い。×は家庭で洗えない。','ネットに入れると型崩れや毛玉を防げる。','洗剤は入れすぎると残って臭いの原因に。']],
+ ['部屋干し',['服と服の間をこぶし1つ分あける。','扇風機やサーキュレーター、除湿機を使う。','厚手のものは外側に、薄手のものを内側に干す。']]],
+ kw:['洗濯','洗濯表示','部屋干し','臭い','ニオイ','乾燥機','クリーニング','衣類'],src:[]},
+{id:'housework-system',c:'家事',t:'家事を仕組みにする',s:'毎日・毎週・毎月に分ける。',
+ sum:['やることを頻度で分けると迷わない','家電に任せられることは任せる','「ついで」に組み込む'],
+ sec:[['頻度で分ける',['毎日：食器洗い、ゴミをまとめる、洗濯。','毎週：掃除機、浴室、シーツ、買い出し。','毎月：冷蔵庫の整理、換気扇、排水口。']],
+ ['任せられる家電',['食洗機、ドラム式洗濯乾燥機、ロボット掃除機は時短効果が大きい。','ロボット掃除機を使うなら、床にものを置かない習慣も一緒に。']]],
+ kw:['家事','時短','ルーティン','家電','食洗機','ロボット掃除機','一人暮らし','整理整頓'],src:[]},
+{id:'hikkoshi',c:'役所・手続き',t:'引越しの手続き',s:'転出はオンライン、転入は14日以内に窓口。',
+ sum:['別の市区町村へは、マイナポータルで転出届をオンライン提出できる','転入先の窓口で転入届を14日以内に','電気・ガス・水道・郵便・銀行・勤務先も変更'],
+ sec:[['役所の手続き',['別の市区町村へ：引越しワンストップサービスで転出届と来庁予定の連絡ができる。','転入先では窓口での転入届が必要。引越してから14日以内。','同じ市区町村内なら転居届（14日以内）。','マイナンバーカードの住所変更も転入届と同時に。']],
+ ['見落としやすい点',['オンラインで転出すると、署名用電子証明書が転出予定日に失効する。e-Taxを使う人は再発行が必要。','マイナンバーカードの住所と今の住所が違う場合は、オンラインの転出届が使えない。','正当な理由なく住所変更をしないと過料の対象になることがある。']],
+ ['役所以外',['電気・ガス・水道（ガスの開栓は立ち会い）、インターネット。','郵便の転送（e転居）。','銀行・証券・カード・保険・スマホ・勤務先。']]],
+ tip:'ツール → 引越し にチェックリストがあります。',kw:['引越し','引っ越し','転出届','転入届','転居届','住所変更','マイナポータル','ワンストップ','e転居','郵便転送'],src:['myna']},
+{id:'mynumber',c:'役所・手続き',t:'マイナンバーカードでできること',s:'コンビニ交付、e-Tax、健康保険証として。',
+ sum:['住民票などをコンビニで取得できる','確定申告（e-Tax）や引越しの手続きがオンラインに','暗証番号は必ず控えておく'],
+ sec:[['できること',['コンビニ交付：住民票の写し、印鑑登録証明書など（自治体による）。','マイナポータル：引越しの転出届、各種証明書の確認、公金受取口座の登録。','健康保険証としての利用。','スマホへの電子証明書の搭載（対応機種）。']],
+ ['有効期限',['カード本体：発行から10回目の誕生日（18歳以上）。','電子証明書：発行から5回目の誕生日。更新の通知が届いたら早めに手続き。']],
+ ['暗証番号',['利用者証明用（数字4桁）と署名用（英数字6〜16桁）がある。','3回（署名用は5回）間違えるとロックされ、役所で再設定が必要。']]],
+ kw:['マイナンバー','マイナンバーカード','マイナカード','マイナポータル','コンビニ交付','住民票','電子証明書','暗証番号','保険証','更新'],src:['myna']},
+{id:'nenkin',c:'役所・手続き',t:'年金のきほん',s:'ねんきん定期便とねんきんネットで確認。',
+ sum:['会社員は国民年金＋厚生年金の2階建て','毎年の誕生月に「ねんきん定期便」が届く','ねんきんネットで見込み額をいつでも確認できる'],
+ sec:[['しくみ',['国民年金（基礎年金）：20歳以上の全員が加入。','厚生年金：会社員・公務員が加入。給与に応じて保険料と受給額が決まる。','その上に企業年金やiDeCoで上乗せできる。']],
+ ['確認と手続き',['ねんきん定期便で、加入記録に漏れがないか確認。','転職したら、年金手帳（基礎年金番号）の情報が引き継がれているか確認。','学生時代の未納・猶予分は10年以内なら追納できる。']]],
+ kw:['年金','国民年金','厚生年金','ねんきん定期便','ねんきんネット','老後','追納','基礎年金番号'],src:['nenkin']},
+{id:'insurance-basic',c:'役所・手続き',t:'会社員が使える公的な保障',s:'民間保険の前に知っておきたい制度。',
+ sum:['高額療養費で、医療費の自己負担には月の上限がある','病気やけがで休むと傷病手当金','失業したら雇用保険の基本手当'],
+ sec:[['主な制度',['高額療養費制度：1か月の医療費の自己負担に上限がある（収入で異なる）。','傷病手当金：病気やけがで働けないとき、給与のおよそ3分の2が最長1年6か月。','雇用保険の基本手当：離職後、ハローワークで手続き。','労災保険：仕事中や通勤中のけが。']],
+ ['民間保険を考えるときは',['公的な保障で足りない分だけを考える。','独身で扶養家族がいないなら、大きな死亡保障は不要なことが多い。']]],
+ kw:['保険','医療保険','高額療養費','傷病手当金','雇用保険','失業保険','失業手当','労災','公的保障','健康保険'],src:['nenkin']},
+{id:'news-read',c:'ニュースの読み方',t:'経済ニュースの読み方',s:'まず「金利・為替・物価」の3つ。',
+ sum:['金利は住宅ローンや預金に直結','為替は外国の資産や物価に影響','物価は控除額や年金の改定にもつながる'],
+ sec:[['3つの指標',['日銀の政策金利：2026年9月に1.25%へ引き上げ。住宅ローンの変動金利や預金金利に影響する。','為替（円相場）：円安だと外国株の投資信託の評価額は上がりやすく、輸入品は値上がりしやすい。','消費者物価指数：家計の実感に近い。2026年の控除の引き上げも物価に連動して決まった。']],
+ ['読み方のコツ',['見出しより一次情報。日銀・総務省統計局・金融庁の発表を見る。','「自分の家計のどこに効くか」に置き換える。','1日の値動きより、数か月の流れを見る。']]],
+ kw:['ニュース','経済','金利','日銀','利上げ','為替','円安','円高','物価','インフレ','cpi','株価'],src:['boj','stat']},
+{id:'news-policy',c:'ニュースの読み方',t:'制度改正を追いかけるコツ',s:'毎年12月の税制改正大綱が起点。',
+ sum:['12月に税制改正大綱が出る','翌年の国会で法律になり、施行は翌年1月以降が多い','施行日と対象者を必ず確認'],
+ sec:[['1年の流れ',['8〜9月：各省庁が「税制改正要望」を出す。','12月：与党の税制改正大綱、閣議決定。','翌年1〜3月：国会で審議・成立。','施行：翌年1月や翌々年から。']],
+ ['確認先',['金融庁（NISA）、厚生労働省（iDeCo・年金）、国税庁（所得税）、総務省（住民税・ふるさと納税）。']]],
+ kw:['税制改正','税制改正大綱','改正','制度変更','施行','法改正'],src:['nta']},
+{id:'news-industry',c:'ニュースの読み方',t:'業界ニュースを仕事に活かす',s:'自分の業界・取引先の業界を定点観測。',
+ sum:['自分の業界と、取引先の業界を決めて追う','決算・人事・提携の3種類に注目','気づいたことを1行でメモする'],
+ sec:[['見るべきニュース',['決算：売上と利益の伸び、来期の見通し。','人事・組織：トップ交代、新部署、採用強化の分野。','提携・買収：業界の勢力図の変化。']],
+ ['習慣にする方法',['朝の5分、ニュースアプリで業界キーワードをフォロー。','週に1回、気になったニュースを3つ選んで「自分の仕事への影響」を書く。','会議や商談の雑談で使うと記憶に残る。']]],
+ kw:['業界ニュース','業界研究','決算','情報収集','ビジネス','営業','インプット'],src:[]}
+];
+const TERMS=[
+ ['信託報酬','投資信託を持っている間、毎日差し引かれるコスト。年率で表示される。'],
+ ['基準価額','投資信託1口あたりの値段。1日1回算出される。'],
+ ['インデックスファンド','日経平均やS&P500などの指数と同じ動きを目指す投資信託。'],
+ ['ドルコスト平均法','毎回同じ金額で買い続ける方法。安いときに多く、高いときに少なく買える。'],
+ ['複利','運用で得た利益をさらに運用に回すことで、利益が利益を生むこと。'],
+ ['ポートフォリオ','持っている資産の組み合わせ。株式・債券・現金の割合など。'],
+ ['リバランス','資産の割合が崩れたとき、元の割合に戻すこと。'],
+ ['政策金利','日銀が誘導する短期金利の目標。2026年9月から1.25%程度。'],
+ ['長期金利','10年国債の利回り。固定型の住宅ローン金利の目安になる。'],
+ ['消費者物価指数（CPI）','家計が買うモノとサービスの値段の動きを表す指数。'],
+ ['表面利回り','年間家賃 ÷ 物件価格。経費や空室を含まない。'],
+ ['サブリース','管理会社が物件を借り上げ、入居者に又貸しするしくみ。'],
+ ['所得控除','税金を計算する前の所得から差し引ける金額。iDeCoの掛金など。'],
+ ['税額控除','計算した税金そのものから差し引ける金額。住宅ローン控除など。'],
+ ['源泉徴収','給与などを払う側が、税金を差し引いて先に納めるしくみ。'],
+ ['標準報酬月額','社会保険料を計算するための月給の区分。4〜6月の給与で決まる。'],
+ ['ワンストップ特例','確定申告なしでふるさと納税の控除を受けられる手続き。5自治体以内。'],
+ ['フリーレント','入居から一定期間の家賃が無料になる契約。'],
+ ['原状回復','退去時に部屋を借りたときの状態に戻すこと。通常の使用による傷みは借主負担ではない。'],
+ ['重要事項説明','不動産の契約前に宅地建物取引士が行う説明。水害リスクも含まれる。'],
+ ['生活防衛資金','急な失業や病気に備える、すぐ使える現金。生活費の3〜6か月分が目安。'],
+ ['ねんきん定期便','毎年誕生月に届く、年金の加入記録と見込み額のお知らせ。'],
+ ['高額療養費制度','1か月の医療費の自己負担に上限を設ける公的な制度。'],
+ ['ETF','取引所に上場している投資信託。株と同じように売買できる。'],
+ ['REIT','複数の不動産に投資し、家賃収入などを分配する投資信託。'],
+ ['為替ヘッジ','為替の変動による影響を抑える取引。コストがかかる。'],
+ ['キャッシュフロー','実際に入ってくるお金と出ていくお金の差。'],
+ ['損益通算','利益と損失を相殺して税金を計算すること。NISAの損失は対象外。']
+];
+const UPDATES=[
+ {w:'10月末',t:'iDeCo掛金アップの事前受付',p:'会社員（企業年金なし）は月23,000円→62,000円に。2026年12月分（2027年1月引落し）から。増額したい人は運営管理機関に掛金変更の届出が必要です（締切は金融機関ごとに確認）。',tag:'手続き'},
+ {w:'12月',t:'年末調整で「178万円の壁」を反映',p:'2026年分から基礎控除・給与所得控除が引き上げ。毎月の天引きは従来どおりで、差額は年末調整で精算されます。'},
+ {w:'12/31',t:'ふるさと納税の今年分の締切',p:'2025年10月から仲介サイトのポイント付与は禁止。カード決済の通常ポイントは対象外です。',tag:'期限'},
+ {w:'2027.1',t:'こどもNISAがスタート',p:'0〜17歳もつみたて投資枠が使えるように。年60万円・上限600万円、12歳以降に一定の条件で払出し可。'},
+ {w:'2027.1',t:'iDeCoに70歳まで加入可能に',p:'老齢基礎年金などを受け取っていない70歳未満が対象に広がります。'}
+];
+const TOOLS=[{id:'sim',n:'積立',l:'積立シミュレーター',c:'red'},{id:'goal',n:'貯金目標',l:'貯金目標',c:'green'},{id:'budget',n:'家計配分',l:'家計の配分',c:'amber'},{id:'yield',n:'利回り',l:'不動産の利回り',c:'blue'},{id:'move',n:'引越し',l:'引越しチェックリスト',c:'red'}];
+/* fallback news shown only if the live store is unreachable */
+const FALLBACK_NEWS={date:'2026-10-08',items:[
+ {cat:'金利',title:'日銀が政策金利を1.25%に引き上げ（9月18日）',body:'6月に続く利上げ。植田総裁は利上げを続ける方針を示しました。変動金利の住宅ローンを借りている人は返済額の見直し時期を確認しておきましょう。',src:'大和アセットマネジメント',url:'https://www.daiwa-am.co.jp/specialreport/market_letter/20260918_02.pdf'}
+]};
+
+/* ================= HELPERS ================= */
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const store={get(k,d){try{const v=localStorage.getItem('lhq-'+k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem('lhq-'+k,JSON.stringify(v))}catch(e){}}};
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const yen=n=>(Math.round(n)).toLocaleString('ja-JP')+'円';
+const man=n=>{if(Math.abs(n)>=1e8)return (n/1e8).toFixed(2)+'億円';return (Math.round(n/1e4)).toLocaleString('ja-JP')+'万円'};
+const num=id=>{const v=parseFloat($(id).value);return isFinite(v)?v:0};
+const svg=(k,cls='')=>`<svg viewBox="0 0 24 24" class="${cls}">${ICONS[k]||''}</svg>`;
+const STAR='<svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.8 6.6 19.7l1.1-6.1L3.2 9.4l6.1-.8z"/></svg>';
+const CHEV='<svg class="chev" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg>';
+const now=new Date();const dayIdx=Math.floor((Date.UTC(now.getFullYear(),now.getMonth(),now.getDate()))/864e5);
+const pick=(arr,n,salt=0)=>{const out=[];for(let i=0;i<n;i++)out.push(arr[(dayIdx*7+salt+i*Math.floor(arr.length/n+1))%arr.length]);return [...new Set(out)]};
+function toast(m){const t=$('#toast');t.textContent=m;t.hidden=false;clearTimeout(toast.h);toast.h=setTimeout(()=>t.hidden=true,1600)}
+
+/* ================= FAVORITES ================= */
+let FAV=store.get('fav',[]); /* [{id,type,title,sub,data?,at}] */
+const isFav=id=>FAV.some(f=>f.id===id);
+function toggleFav(item){
+  if(isFav(item.id)){FAV=FAV.filter(f=>f.id!==item.id);toast('お気に入りから外しました')}
+  else{FAV.unshift({...item,at:Date.now()});toast('お気に入りに追加しました')}
+  store.set('fav',FAV);syncStars();if(!$('#v-fav').hidden)renderFav();
+}
+function favItemFor(id){
+  if(id.startsWith('a:')){const a=A.find(x=>x.id===id.slice(2));return a&&{id,type:'記事',title:a.t,sub:a.s}}
+  if(id.startsWith('t:')){const t=TOOLS.find(x=>x.id===id.slice(2));return t&&{id,type:'ツール',title:t.l,sub:'ツール'}}
+  return null;
+}
+function syncStars(){$$('[data-fav]').forEach(b=>{b.innerHTML=STAR;b.setAttribute('aria-pressed',isFav(b.dataset.fav))})}
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-fav]');if(!b)return;e.stopPropagation();
+  const id=b.dataset.fav;let item=favItemFor(id);
+  if(!item&&b.dataset.payload){try{item={id,...JSON.parse(b.dataset.payload)}}catch(_){}}
+  if(item)toggleFav(item);
+});
+function renderFav(){
+  const w=$('#favwrap');
+  if(!FAV.length){w.innerHTML=`<div class="card"><div class="empty"><svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.8 6.6 19.7l1.1-6.1L3.2 9.4l6.1-.8z"/></svg><div>まだお気に入りはありません</div><div class="xs" style="margin-top:4px">記事・ツール・ニュース・用語の ☆ をタップすると、ここにまとまります。</div></div></div>`;return}
+  const groups=['記事','ツール','ニュース','用語'];
+  w.innerHTML=groups.map(g=>{const items=FAV.filter(f=>f.type===g);if(!items.length)return '';
+    return `<div class="card" style="padding-block:6px"><div class="sec-h" style="padding-top:10px"><h2>${g}</h2><span class="pill">${items.length}</span></div>${items.map(f=>favRow(f)).join('')}</div>`}).join('');
+}
+function favRow(f){
+  const open=f.type==='記事'?`data-open="${f.id.slice(2)}"`:f.type==='ツール'?`data-tool="${f.id.slice(2)}"`:'';
+  const body=f.type==='ニュース'||f.type==='用語'?`<div class="txt"><b>${esc(f.title)}</b><span style="white-space:normal">${esc(f.sub)}</span>${f.url?`<a class="xs" href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.src||'出典')}</a>`:''}</div>`:`<div class="txt"><b>${esc(f.title)}</b><span>${esc(f.sub)}</span></div>`;
+  return `<div class="row" ${open} style="cursor:${open?'pointer':'default'}">${body}<button class="star" data-fav="${esc(f.id)}" aria-pressed="true" aria-label="お気に入りから外す">${STAR}</button></div>`;
+}
+document.addEventListener('click',e=>{
+  const o=e.target.closest('[data-open]');if(o&&!e.target.closest('[data-fav]')){openArticle(o.dataset.open);return}
+  const t=e.target.closest('[data-tool]');if(t&&!e.target.closest('[data-fav]')){go('tools');setTool(t.dataset.tool)}
+});
+
+/* ================= NAV ================= */
+const VIEWS=['home','know','tools','fav','more'];
+function go(v){
+  VIEWS.forEach(x=>$('#v-'+x).hidden=x!==v);
+  $$('nav.tabs button').forEach(b=>b.dataset.go===v?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
+  if(v==='fav')renderFav();
+  closeArticle(true);window.scrollTo(0,0);
+}
+$$('[data-go]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.go)));
+$$('[data-search]').forEach(b=>b.addEventListener('click',()=>{go('know');setTimeout(()=>$('#q').focus(),50)}));
+
+/* ================= HOME ================= */
+const W='日月火水木金土';
+$('#hdate').textContent=`${now.getMonth()+1}月${now.getDate()}日（${W[now.getDay()]}）`;
+$('#catgrid').innerHTML=CATS.slice(0,7).map(c=>`<button class="ico" data-cat="${c.k}"><span class="c c-${c.c}">${svg(c.i)}</span>${c.k}</button>`).join('')+`<button class="ico" data-cat="すべて"><span class="c c-blue">${svg('news')}</span>すべて<br>見る</button>`;
+$('#catgrid').addEventListener('click',e=>{const b=e.target.closest('[data-cat]');if(!b)return;go('know');setCat(b.dataset.cat)});
+$('#toolgrid').innerHTML=TOOLS.slice(0,4).map(t=>`<button class="ico" data-tool="${t.id}"><span class="c c-${t.c}">${svg(t.id)}</span>${t.n}</button>`).join('');
+$('#updates').innerHTML=UPDATES.map(u=>`<li><span class="when">${u.w}</span><div><b>${u.t} ${u.tag?`<span class="pill amber">${u.tag}</span>`:''}</b><p>${u.p}</p></div></li>`).join('');
+const feats=pick(A,4,3);
+$('#feat').innerHTML=feats.map((a,i)=>`<button class="feat f${i%4}" data-open="${a.id}"><span>${a.c}</span><b>${a.t}</b><span>${a.s}</span></button>`).join('');
+const term=TERMS[dayIdx%TERMS.length];
+$('#term').innerHTML=`<b>${term[0]}</b><p>${term[1]}</p>`;
+const termBtn=$('#term-star');termBtn.dataset.fav='w:'+term[0];termBtn.dataset.payload=JSON.stringify({type:'用語',title:term[0],sub:term[1]});
+
+/* news (daily auto-updated via store) */
+const CATPILL={'金利':'blue','NISA':'red','iDeCo':'red','税金':'amber','不動産':'blue','キャリア':'green','暮らし':'green','制度':'amber','家計':'amber','投資':'red'};
+function newsItemHTML(n,date,i){
+  const id=`n:${date}:${i}`;
+  const payload=JSON.stringify({type:'ニュース',title:n.title,sub:n.body,url:n.url||'',src:n.src||''});
+  return `<div class="nitem"><div class="txt"><div class="meta"><span class="pill ${CATPILL[n.cat]||'blue'}">${esc(n.cat||'ニュース')}</span></div><b>${esc(n.title)}</b><p>${esc(n.body)}</p>${n.url?`<a class="xs" href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.src||'出典を見る')}</a>`:''}</div><button class="star" data-fav="${esc(id)}" data-payload="${esc(payload)}" aria-label="お気に入り"></button></div>`;
+}
+const fmtDate=d=>{const [y,m,dd]=String(d).split('-');return `${+m}月${+dd}日`};
+function renderNews(days,live){
+  const latest=days[0];
+  $('#news').innerHTML=latest.items.map((n,i)=>newsItemHTML(n,latest.date,i)).join('');
+  $('#news-upd').textContent=live?`${fmtDate(latest.date)} 更新`:'オフラインのため保存済みの内容';
+  const old=days.slice(1);
+  $('#news-more').hidden=!old.length;
+  $('#news-old').innerHTML=old.map(d=>`<div class="sec-h" style="margin-top:10px"><span class="pill blue">${fmtDate(d.date)}</span></div><div class="news">${(d.items||[]).map((n,i)=>newsItemHTML(n,d.date,i)).join('')}</div>`).join('');
+  syncStars();
+}
+$('#news-more').onclick=()=>{const o=$('#news-old');o.hidden=!o.hidden;$('#news-more').textContent=o.hidden?'過去7日分を見る':'閉じる'};
+$('#news').innerHTML='<p class="sm sub" style="margin:0">今日のニュースを読み込んでいます…</p>';
+(async()=>{
+  try{
+    const r=await fetch('news.json?t='+Date.now(),{cache:'no-store'});
+    if(!r.ok)throw 0;
+    const j=await r.json();
+    const days=(j.days||[]).filter(d=>d&&d.date&&Array.isArray(d.items)&&d.items.length).sort((a,b)=>a.date<b.date?1:-1).slice(0,7);
+    if(!days.length)throw 0;
+    renderNews(days,true);
+  }catch(e){
+    try{const c=await caches.match('news.json');const j=c&&await c.json();if(j&&j.days&&j.days.length){renderNews(j.days.slice(0,7),false);return}}catch(_){}
+    renderNews([FALLBACK_NEWS],false);
+  }
+})();
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))}
+
+/* ================= SEARCH ================= */
+const SYN={'にーさ':'nisa','ニーサ':'nisa','いでこ':'ideco','イデコ':'ideco','確定拠出':'ideco','ひっこし':'引越し','引っ越し':'引越し','ひっこす':'引越し','転居':'引越し','やちん':'家賃','ちんたい':'賃貸','てどり':'手取り','ぜいきん':'税金','せつやく':'節約','ちょきん':'貯金','貯蓄':'貯金','てんしょく':'転職','ねんしゅう':'年収','給料':'年収','給与':'年収','ほけん':'保険','そうじ':'掃除','せんたく':'洗濯','りょうり':'作り置き','自炊':'作り置き','ふるさと':'ふるさと納税','かくてい':'確定申告','まいなんばー':'マイナンバー','マイナ':'マイナンバー','ふどうさん':'不動産','マンション':'不動産','ローン':'住宅ローン','かぶ':'株','オルカン':'全世界株式','えすあんどぴー':'s&p500','sp500':'s&p500','インフレ':'物価','円安':'為替','円高':'為替','利上げ':'金利','日銀':'金利','クレカ':'クレジットカード','カード':'クレジットカード','老後':'年金','失業':'雇用保険','副業':'確定申告','内覧':'内見','部屋':'住まい'};
+const norm=s=>String(s||'').normalize('NFKC').toLowerCase().replace(/[ァ-ヶ]/g,c=>String.fromCharCode(c.charCodeAt(0)-0x60)).replace(/\s+/g,'');
+A.forEach(a=>{a._hay=norm([a.t,a.s,a.c,...a.sum,...a.sec.flatMap(s=>[s[0],...s[1]]),a.tip||'',a.warn||'',...(a.kw||[])].join(' '));a._kw=norm((a.kw||[]).join(' ')+a.t)});
+const KEYWORDS=[...new Set(A.flatMap(a=>a.kw||[]).concat(Object.keys(SYN),TERMS.map(t=>t[0])))];
+function expand(q){const n=norm(q);const out=new Set([n]);Object.entries(SYN).forEach(([k,v])=>{const nk=norm(k);if(n.includes(nk)||nk.startsWith(n)&&n.length>=2)out.add(norm(v))});return [...out].filter(Boolean)}
+function score(a,terms){let s=0;terms.forEach(t=>{if(norm(a.t).includes(t))s+=6;if(a._kw.includes(t))s+=4;if(a._hay.includes(t))s+=1});return s}
+let cat='すべて';
+$('#chips').innerHTML=['すべて',...CATS.map(c=>c.k)].map(c=>`<button class="chip" aria-pressed="${c===cat}" data-c="${c}">${c}</button>`).join('');
+function setCat(c){cat=c;$$('.chip').forEach(x=>x.setAttribute('aria-pressed',x.dataset.c===c));const el=$(`.chip[data-c="${c}"]`);el&&el.scrollIntoView({inline:'center',block:'nearest'});renderList()}
+$('#chips').addEventListener('click',e=>{const b=e.target.closest('.chip');if(b)setCat(b.dataset.c)});
+const POP=['NISA','iDeCo','ふるさと納税','年収の壁','転職','内見','初期費用','確定申告','引越し','利回り','節約','住宅ローン','金利','作り置き','マイナンバー'];
+$('#poptags').innerHTML=POP.map(p=>`<button data-q="${p}">${p}</button>`).join('');
+$('#poptags').addEventListener('click',e=>{const b=e.target.closest('[data-q]');if(!b)return;$('#q').value=b.dataset.q;onQ()});
+function rowHTML(a){const c=catOf(a.c);return `<div class="row" data-open="${a.id}" role="button" tabindex="0" style="cursor:pointer"><span class="c c-${c.c}">${svg(c.i)}</span><div class="txt"><b>${a.t}</b><span>${a.s}</span></div><button class="star" data-fav="a:${a.id}" aria-label="お気に入り"></button></div>`}
+function renderList(){
+  const q=$('#q').value.trim();const terms=q?expand(q):[];
+  let list=A.filter(a=>cat==='すべて'||a.c===cat);
+  if(terms.length){list=list.map(a=>[a,score(a,terms)]).filter(x=>x[1]>0).sort((x,y)=>y[1]-x[1]).map(x=>x[0])}
+  $('#popular').hidden=!!q;
+  $('#count').textContent=(q?`「${q}」の検索結果 `:'')+`${list.length}件`;
+  $('#list').innerHTML=list.length?list.map(rowHTML).join(''):`<div class="empty">見つかりませんでした。<br>ひらがなや別の言葉（例：「にーさ」「てどり」）でも探せます。</div>`;
+  syncStars();
+}
+function renderSugg(){
+  const q=$('#q').value.trim();const box=$('#sugg');
+  if(!q){box.hidden=true;return}
+  const n=norm(q);const terms=expand(q);
+  const kws=KEYWORDS.filter(k=>{const nk=norm(k);return nk.includes(n)||terms.some(t=>nk.includes(t))}).slice(0,5);
+  const arts=A.map(a=>[a,score(a,terms)]).filter(x=>x[1]>0).sort((x,y)=>y[1]-x[1]).slice(0,4).map(x=>x[0]);
+  const html=kws.filter(k=>norm(k)!==n).map(k=>`<button data-k="${esc(k)}"><svg viewBox="0 0 24 24" width="16" height="16" style="stroke:var(--sub);fill:none;stroke-width:2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>${esc(k)}<small>キーワード</small></button>`).join('')+arts.map(a=>`<button data-open="${a.id}"><span class="pill">${a.c}</span>${a.t}</button>`).join('');
+  box.innerHTML=html;box.hidden=!html;
+}
+function onQ(){$('#qclear').hidden=!$('#q').value;renderSugg();renderList()}
+$('#q').addEventListener('input',onQ);
+$('#q').addEventListener('keydown',e=>{if(e.key==='Enter'){$('#sugg').hidden=true;$('#q').blur()}});
+$('#sugg').addEventListener('click',e=>{const b=e.target.closest('[data-k]');if(b){$('#q').value=b.dataset.k;onQ();$('#sugg').hidden=true}});
+$('#qclear').onclick=()=>{$('#q').value='';onQ();$('#q').focus()};
+document.addEventListener('click',e=>{if(!e.target.closest('.sbar'))$('#sugg').hidden=true});
+$('#list').addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.dataset.open)openArticle(e.target.dataset.open)});
+renderList();
+
+/* ================= ARTICLE SHEET ================= */
+let lastScroll=0;
+function openArticle(id){
+  const a=A.find(x=>x.id===id);if(!a)return;
+  $('#sugg').hidden=true;
+  const c=catOf(a.c);
+  const words=a._hay.length;const mins=Math.max(1,Math.round(words/450));
+  const rel=A.filter(x=>x.c===a.c&&x.id!==a.id).slice(0,3);
+  $('#art').innerHTML=`
+   <div style="display:flex;gap:8px;align-items:center"><span class="pill">${a.c}</span><span class="xs sub">約${mins}分で読めます</span></div>
+   <h1>${a.t}</h1><p class="lead">${a.s}</p>
+   <div class="sum"><h3>ポイント</h3><ul>${a.sum.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+   ${a.sec.map(s=>`<div class="asec"><h2>${s[0]}</h2><ul>${s[1].map(x=>`<li>${x}</li>`).join('')}</ul></div>`).join('')}
+   ${a.tip?`<div class="box tip"><b>ヒント</b>${a.tip}</div>`:''}
+   ${a.warn?`<div class="box warn"><b>注意</b>${a.warn}</div>`:''}
+   ${a.src&&a.src.length?`<div class="src">出典・詳細：${a.src.map(k=>`<a href="${SRC[k][1]}" target="_blank" rel="noopener">${SRC[k][0]}</a>`).join('、')}</div>`:''}
+   ${rel.length?`<div class="card" style="padding-block:6px"><div class="sec-h" style="padding-top:10px"><h2>${a.c}の記事</h2></div>${rel.map(rowHTML).join('')}</div>`:''}`;
+  const st=$('#sheet-star');st.dataset.fav='a:'+a.id;
+  if($('#sheet').hidden)lastScroll=window.scrollY;
+  $('#sheet').hidden=false;$('#sheet').scrollTop=0;document.body.style.overflow='hidden';
+  syncStars();
+}
+function closeArticle(silent){$('#sheet').hidden=true;document.body.style.overflow='';if(!silent)window.scrollTo(0,lastScroll)}
+$('#back').onclick=()=>closeArticle();
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#sheet').hidden)closeArticle()});
+
+/* ================= TOOLS ================= */
+$('#seg').innerHTML=TOOLS.map(t=>`<button role="tab" data-t="${t.id}">${t.n}</button>`).join('');
+function setTool(t){$$('[data-panel]').forEach(p=>p.hidden=p.dataset.panel!==t);$$('#seg button').forEach(b=>b.setAttribute('aria-selected',b.dataset.t===t));store.set('tool',t)}
+$('#seg').addEventListener('click',e=>{const b=e.target.closest('[data-t]');if(b)setTool(b.dataset.t)});
+setTool(store.get('tool','sim'));
+
+function niceStep(max){const raw=max/4;const p=Math.pow(10,Math.floor(Math.log10(raw)));const n=raw/p;return (n<=1?1:n<=2?2:n<=5?5:10)*p}
+function shortMan(v){if(v===0)return '0';if(v>=1e8)return (v/1e8)+'億';return (v/1e4).toLocaleString('ja-JP')+'万'}
+function sim(){
+  const m=num('#s-m'),y=Math.max(1,Math.min(50,Math.round(num('#s-y')))),r=num('#s-r')/100/12,ini=num('#s-i');
+  let v=ini,p=ini;const pts=[[0,p,v]];
+  for(let i=1;i<=y*12;i++){v=v*(1+r)+m;p+=m;if(i%12===0)pts.push([i/12,p,v])}
+  $('#s-out').textContent=man(v);$('#s-p').textContent=man(p);$('#s-g').textContent=man(v-p);$('#s-pct').textContent=v>0?Math.round((v-p)/v*100)+'%':'—';
+  const Wd=340,H=160,L=40,B=22,T=8,R=8,max=Math.max(...pts.map(x=>x[2]),1);
+  const step=niceStep(max);const top=Math.ceil(max/step)*step;
+  const X=t=>L+(Wd-L-R)*t/y, Y=val=>T+(H-T-B)*(1-val/top);
+  let g='';
+  for(let k=0;k<=top;k+=step){g+=`<line x1="${L}" x2="${Wd-R}" y1="${Y(k)}" y2="${Y(k)}" stroke="var(--line)"/><text x="${L-6}" y="${Y(k)+3}" text-anchor="end" font-size="9" fill="var(--sub)">${shortMan(k)}</text>`}
+  const xt=y<=10?Array.from({length:y+1},(_,i)=>i).filter(i=>i%(y>5?2:1)===0):[0,Math.round(y/4),Math.round(y/2),Math.round(y*3/4),y];
+  xt.forEach(t=>g+=`<text x="${X(t)}" y="${H-6}" text-anchor="middle" font-size="9" fill="var(--sub)">${t}年</text>`);
+  const line=k=>pts.map((q,i)=>(i?'L':'M')+X(q[0]).toFixed(1)+' '+Y(q[k]).toFixed(1)).join(' ');
+  g+=`<path d="${line(2)} L${X(y)} ${Y(0)} L${X(0)} ${Y(0)}Z" fill="var(--brand-soft)"/>`;
+  g+=`<path d="${line(1)}" fill="none" stroke="var(--blue)" stroke-width="2" stroke-dasharray="4 3"/>`;
+  g+=`<path d="${line(2)}" fill="none" stroke="var(--brand)" stroke-width="2.4"/>`;
+  g+=`<circle cx="${X(y)}" cy="${Y(v)}" r="4" fill="var(--brand)"/>`;
+  g+=`<text x="${L+4}" y="${T+10}" font-size="9" fill="var(--brand)">― 評価額</text><text x="${L+56}" y="${T+10}" font-size="9" fill="var(--blue)">- - 元本</text>`;
+  $('#s-chart').innerHTML=g;
+  const annual=m*12,f=$('#s-flag');let msg,ok=true;
+  if(annual>3600000){ok=false;msg=`年間の積立が${man(annual)}で、NISAの年間枠360万円を超えます。`}
+  else if(annual>1200000)msg=`年${man(annual)}：つみたて投資枠（年120万円）を超える分は成長投資枠を使う形になります。`;
+  else msg=`年${man(annual)}：つみたて投資枠（年120万円）の範囲です。`;
+  if(p>18000000){ok=false;msg+=` 元本の合計が生涯枠1,800万円を超えます（約${Math.ceil(18000000/Math.max(annual,1))}年で到達）。`}
+  f.className='flag '+(ok?'ok':'ng');f.textContent=msg;
+}
+['#s-m','#s-y','#s-r','#s-i'].forEach(i=>$(i).addEventListener('input',sim));sim();
+
+function goal(){
+  const t=num('#g-t'),n=num('#g-n'),mo=Math.max(1,Math.round(num('#g-mo'))),b=num('#g-b');
+  const bonuses=Math.floor(mo/6);const need=Math.max(0,t-n-b*bonuses);const per=need/mo;
+  $('#g-out').textContent=need<=0?'達成済み':yen(Math.ceil(per/100)*100);
+  $('#g-note').textContent=need<=0?'今ある額とボーナスだけで届きます。':`ボーナスは半年に1回として${bonuses}回分（${man(b*bonuses)}）を差し引いています。1日あたり約${yen(Math.ceil(per/30))}。`;
+}
+['#g-t','#g-n','#g-mo','#g-b'].forEach(i=>$(i).addEventListener('input',goal));goal();
+
+const DEF=[['先取り貯金・投資',15,'var(--brand)'],['住居費',28,'var(--blue)'],['食費',14,'var(--green)'],['通信・サブスク',4,'#8b7fd6'],['水道光熱',5,'#3fb3c9'],['日用品・交際',12,'var(--amber)'],['自己投資',6,'#d96fa8'],['予備費',6,'var(--sub)']];
+let bud=store.get('budget',null)||DEF.map(x=>x[1]);
+$('#b-in').value=store.get('income',260000);
+$('#b-rows').innerHTML=DEF.map((x,i)=>`<div class="brow"><label for="b-${i}" class="sm">${x[0]}</label><input type="range" id="b-${i}" min="0" max="50" step="1" value="${bud[i]}"><output id="bo-${i}"></output></div>`).join('');
+function budget(){
+  const inc=num('#b-in');store.set('income',inc);
+  bud=DEF.map((_,i)=>+$('#b-'+i).value);store.set('budget',bud);
+  const sum=bud.reduce((a,b)=>a+b,0);
+  DEF.forEach((x,i)=>$('#bo-'+i).textContent=yen(inc*bud[i]/100).replace('円',''));
+  $('#b-bar').innerHTML=DEF.map((x,i)=>`<span style="width:${bud[i]/Math.max(sum,100)*100}%;background:${x[2]}"></span>`).join('');
+  const rest=100-sum,msgs=[];
+  msgs.push(rest<0?`配分が${-rest}%（${yen(inc*-rest/100)}）オーバーしています。`:rest===0?'ちょうど100%です。':`未配分が${rest}%（${yen(inc*rest/100)}）あります。`);
+  if(bud[1]>30)msgs.push('住居費が手取りの3割を超えています。');
+  if(bud[0]<10)msgs.push('先取り貯金は10%以上を目安に。');
+  const f=$('#b-flag');f.className='flag '+(rest<0||bud[1]>30?'ng':'ok');f.textContent=msgs.join(' ');
+}
+$('#b-rows').addEventListener('input',budget);$('#b-in').addEventListener('input',budget);
+$('#b-reset').onclick=()=>{DEF.forEach((x,i)=>$('#b-'+i).value=x[1]);budget()};
+budget();
+
+function yld(){
+  const p=num('#y-p')*1e4,c=num('#y-c')*1e4,rent=num('#y-r')*12,vac=num('#y-v')/100,e=num('#y-e')*1e4,l=num('#y-l')*1e4;
+  const gross=p>0?rent/p*100:0,netInc=rent*(1-vac)-e,net=(p+c)>0?netInc/(p+c)*100:0,cf=netInc-l;
+  $('#y-g').textContent=gross.toFixed(2)+'%';$('#y-n').textContent=net.toFixed(2)+'%';$('#y-cf').textContent=man(cf);
+  const f=$('#y-flag');f.className='flag '+(cf<0?'ng':'ok');
+  f.textContent=cf<0?`ローン返済後の手残りが年${man(-cf)}のマイナス。毎月約${yen(-cf/12)}を持ち出す計算です。`:`表面と実質の差は${(gross-net).toFixed(2)}ポイント。金利が上がった場合の返済額でも試してみてください。`;
+}
+['#y-p','#y-c','#y-r','#y-v','#y-e','#y-l'].forEach(i=>$(i).addEventListener('input',yld));yld();
+
+const MV=[
+ ['1か月前',[['退去の連絡','解約予告期間（1か月前が多い）を契約書で確認'],['引越し業者の見積もり','2〜3社で比較。3〜4月の繁忙期は早めに'],['不用品の処分','粗大ごみは自治体への予約が必要']]],
+ ['2週間前',[['転出届（オンライン可）','マイナポータルの引越しワンストップサービス。同じ市区町村内なら不要'],['電気・ガス・水道の停止と開始','ガスの開栓は立ち会いが必要'],['インターネット回線の移転','工事に数週間かかることも'],['郵便の転送（e転居）','1年間、旧住所あての郵便を転送']]],
+ ['引越し後14日以内',[['転入届（または転居届）','新住所の役所の窓口で。転入は14日以内'],['マイナンバーカードの住所変更','転入届と同時に。暗証番号を控えていく'],['国民健康保険・年金（該当者）','会社員は勤務先経由']]],
+ ['落ち着いたら',[['勤務先へ住所変更の届出','通勤手当・年末調整に影響'],['銀行・証券・カードの住所変更','NISA口座のある証券会社も'],['運転免許証の住所変更','新住所の警察署など'],['スマホ・保険・通販サイトの登録住所','']]]
+];
+let mvDone=store.get('move',{});
+function renderMove(){
+  let total=0,done=0;
+  $('#m-list').innerHTML=MV.map((ph,pi)=>`<div class="phase">${ph[0]}</div>`+ph[1].map((it,ii)=>{const k=pi+'-'+ii;total++;if(mvDone[k])done++;return `<label class="check${mvDone[k]?' done':''}"><input type="checkbox" data-k="${k}" ${mvDone[k]?'checked':''}><div><b>${it[0]}</b>${it[1]?`<p>${it[1]}</p>`:''}</div></label>`}).join('')).join('');
+  $('#m-prog').textContent=`${done} / ${total}`;
+}
+$('#m-list').addEventListener('change',e=>{const k=e.target.dataset.k;if(!k)return;mvDone[k]=e.target.checked;store.set('move',mvDone);renderMove()});
+$('#m-reset').onclick=()=>{mvDone={};store.set('move',mvDone);renderMove()};
+renderMove();
+
+/* links */
+$('#links').innerHTML=Object.values(SRC).map(s=>`<a class="row" href="${s[1]}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none"><div class="txt"><b style="font-weight:500">${s[0]}</b></div>${CHEV}</a>`).join('');
+
+syncStars();
+const h=(location.hash||'').slice(1);if(VIEWS.includes(h))go(h);
+</script>
+
+</body>
+</html>
