@@ -902,9 +902,13 @@ $('#news-more').onclick=()=>{const o=$('#news-old');o.hidden=!o.hidden;$('#news-
 $('#news').innerHTML='<p class="sm sub" style="margin:0">今日のニュースを読み込んでいます…</p>';
 (async()=>{
   try{
-    const r=await fetch('news.json?t='+Date.now(),{cache:'no-store'});
-    if(!r.ok)throw 0;
-    const j=await r.json();
+    const RAW='https://raw.githubusercontent.com/qinglong-ytr/Life-HaQ/main/news.json';
+    let j=null;
+    for(const u of [RAW+'?t='+Date.now(),'news.json?t='+Date.now()]){
+      try{const r=await fetch(u,{cache:'no-store'});if(r.ok){const x=await r.json();if(!j||(x.updated||'')>(j.updated||''))j=x;if(u.startsWith(RAW))break}}catch(_){}
+    }
+    if(!j)throw 0;
+    try{(await caches.open('lifehaq-v3')).put('news.json',new Response(JSON.stringify(j),{headers:{'Content-Type':'application/json'}}))}catch(_){}
     const days=(j.days||[]).filter(d=>d&&d.date&&Array.isArray(d.items)&&d.items.length).sort((a,b)=>a.date<b.date?1:-1).slice(0,7);
     if(!days.length)throw 0;
     renderNews(days,true);
