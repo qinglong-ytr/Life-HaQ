@@ -40,7 +40,7 @@ TRUSTED = ['日本経済新聞', '日経', 'NHK', '共同通信', '時事', '朝
 BLOCK_SRC = ['note', 'Yahoo!ファイナンス', 'みんかぶ', '株探', 'PR TIMES', 'YouTube', 'Instagram', 'スポーツ', 'スポニチ',
              'サンスポ', 'スポ', '女性自身', '週刊女性', 'FRIDAY', '文春', 'ポストセブン', 'ENCOUNT', 'まいどなニュース',
              'ABEMA', 'Togetter', 'はてな', 'アメーバ', 'Ameba', 'Wikipedia', '知恵袋']
-BLOCK_TITLE = r'株価・株式情報|【\d{4}】|PTS|銘柄|芸能|女優|俳優|アイドル|タレント|パパ活|飲酒|不倫|炎上|逮捕|容疑|インスタ|YouTube|動画|ドラマ|\｜'
+BLOCK_TITLE = r'株価・株式情報|【\d{4}】|PTS|銘柄|芸能|女優|俳優|アイドル|タレント|パパ活|飲酒|不倫|炎上|逮捕|容疑|インスタ|YouTube|動画|ドラマ|漏えい|漏洩|誤送信|企業版|\｜'
 # Google ニュースが取れなかったときの予備（NHK 経済）
 FALLBACK_FEEDS = [('https://www3.nhk.or.jp/rss/news/cat5.xml', 'NHK')]
 FALLBACK_RULES = [
