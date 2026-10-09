@@ -179,9 +179,72 @@ a{color:var(--blue)}
 .chart{width:100%;height:auto;display:block}
 .flag{font-size:.82rem;border-radius:10px;padding:9px 12px}
 .flag.ok{background:var(--green-soft)} .flag.ng{background:var(--amber-soft)}
-.brow{display:grid;grid-template-columns:7em 1fr 5.6em;gap:10px;align-items:center}
-.brow input[type=range]{width:100%;accent-color:var(--brand)}
-.brow output{text-align:right;font-size:.85rem;font-variant-numeric:tabular-nums}
+.brow{display:flex;flex-direction:column;gap:6px;padding:10px 0;border-top:1px solid var(--line)}
+.brow:first-child{border-top:0}
+.brow-top{display:flex;align-items:center;gap:8px}
+.brow-top label{flex:1;min-width:0}
+.brow input[type=range]{width:100%;accent-color:var(--brand);margin:0}
+.pct{font-size:.78rem;color:var(--sub);font-variant-numeric:tabular-nums;min-width:3.4em;text-align:right}
+.yenin{display:flex;align-items:center;gap:4px;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:0 10px;width:8.6em;flex:none}
+.yenin.wide{width:100%}
+.yenin:focus-within{border-color:var(--brand)}
+.yenin input{border:0;background:transparent;width:100%;min-width:0;text-align:right;padding:8px 0;font-size:16px;font-variant-numeric:tabular-nums;outline:none}
+.yenin span{font-size:.8rem;color:var(--sub)}
+/* 家計簿・出納帳 */
+.monthnav{display:flex;align-items:center;justify-content:center;gap:14px}
+.mbtn{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;padding:0}
+.mbtn svg{width:18px;height:18px;stroke:var(--ink);fill:none;stroke-width:2.2}
+.mlabel{font-size:1.02rem;min-width:7.5em;text-align:center;font-variant-numeric:tabular-nums}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.kpis div{background:var(--bg);border-radius:12px;padding:10px;display:flex;flex-direction:column;min-width:0}
+.kpis span{font-size:.72rem;color:var(--sub)}
+.kpis b{font-size:.98rem;font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.balance{display:flex;align-items:baseline;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.balance span{font-size:.85rem;color:var(--sub)}
+.balance b{font-size:1.75rem;font-weight:800;font-variant-numeric:tabular-nums}
+.pos{color:var(--green)} .neg{color:var(--brand)}
+.tgl{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;background:var(--bg);border-radius:12px;padding:4px;gap:4px}
+.tgl button{border:0;background:transparent;border-radius:9px;padding:8px;font-weight:600;color:var(--sub)}
+.tgl button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+.amt{display:flex;align-items:center;gap:6px;border-bottom:2px solid var(--line);padding:2px}
+.amt:focus-within{border-color:var(--brand)}
+.amt span{font-size:1.4rem;color:var(--sub);font-weight:700}
+.amt input{flex:1;min-width:0;border:0;background:transparent;font-size:2rem;font-weight:800;outline:none;font-variant-numeric:tabular-nums;padding:2px 0}
+.cats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.cats button{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:8px 2px;font-size:.76rem;line-height:1.3}
+.cats button[aria-pressed="true"]{background:var(--brand-soft);border-color:var(--brand);color:var(--brand-deep);font-weight:700}
+.field select{padding:11px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);width:100%;font-size:16px;color:var(--ink)}
+.primary{border:0;background:var(--brand);color:var(--brand-ink);border-radius:12px;padding:13px;font-weight:700;font-size:1rem}
+.cmp{display:flex;flex-direction:column;gap:4px;padding:8px 0;border-top:1px solid var(--line)}
+.cmp:first-child{border-top:0}
+.cmp-top{display:flex;justify-content:space-between;gap:8px;font-size:.86rem}
+.cmp-top span:last-child{font-variant-numeric:tabular-nums;color:var(--sub);white-space:nowrap}
+.meter{height:8px;border-radius:99px;background:var(--line);overflow:hidden}
+.meter i{display:block;height:100%;background:var(--brand);border-radius:99px}
+.meter i.over{background:var(--amber)} .meter i.good{background:var(--green)}
+.cmp .note{font-size:.74rem;color:var(--sub)} .cmp .note.over{color:var(--amber);font-weight:700} .cmp .note.good{color:var(--green);font-weight:700}
+.dayh{font-size:.76rem;color:var(--sub);font-weight:700;padding:12px 0 2px}
+.txr{display:flex;align-items:center;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
+.dayh+.txr{border-top:0}
+.txr .dot{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-size:.78rem;font-weight:700;flex:none}
+.txr .txt{flex:1;min-width:0}
+.txr .txt b{display:block;font-size:.9rem;font-weight:600}
+.txr .txt span{display:block;font-size:.76rem;color:var(--sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.txr .am{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.del{border:0;background:none;color:var(--sub);width:30px;height:30px;border-radius:8px;font-size:1.05rem;flex:none;padding:0}
+.accs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.accs::-webkit-scrollbar{display:none}
+.tblwrap{overflow-x:auto}
+table.led{width:100%;border-collapse:collapse;font-size:.8rem;min-width:330px}
+.led th{font-weight:600;color:var(--sub);text-align:right;padding:6px 4px;border-bottom:1px solid var(--line);font-size:.72rem;white-space:nowrap}
+.led th:nth-child(2){text-align:left}
+.led td{padding:7px 4px;border-bottom:1px solid var(--line);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.led td:nth-child(1){color:var(--sub)}
+.led td:nth-child(2){text-align:left;white-space:normal;word-break:break-all;min-width:6.5em}
+.led td.inm{color:var(--green)} .led td.outm{color:var(--brand)}
+.led tr.carry td{color:var(--sub);background:var(--bg)}
+.led td:last-child{width:30px;padding:0}
+.tact{background:none;border:0;color:var(--amber);font-weight:700;margin-left:14px;padding:0;font-size:.84rem}
 .bar{display:flex;height:12px;border-radius:99px;overflow:hidden;background:var(--line)}
 .check{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-top:1px solid var(--line)}
 .check input{width:22px;height:22px;margin-top:2px;accent-color:var(--brand);flex:none}
@@ -267,7 +330,63 @@ nav.tabs button[aria-current="page"]{color:var(--brand);font-weight:700}
   <h1 class="pagetitle">ツール</h1>
   <div class="seg" role="tablist" id="seg"></div>
   <div class="pad stack" style="margin-top:10px">
-    <div class="card" data-panel="sim">
+    <!-- 家計簿 -->
+    <div class="card" data-panel="book" hidden>
+      <div class="tool-h"><h2>家計簿</h2><button class="star" data-fav="t:book" aria-label="お気に入り"></button></div>
+      <div class="monthnav"><button class="mbtn" data-mon="-1" aria-label="前の月"><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></button><b class="mlabel"></b><button class="mbtn" data-mon="1" aria-label="次の月"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></button></div>
+      <div class="balance"><span>今月の収支</span><b id="k-net"></b></div>
+      <div class="kpis"><div><span>収入</span><b id="k-in"></b></div><div><span>支出</span><b id="k-out"></b></div><div><span>貯金・投資</span><b id="k-save"></b></div></div>
+    </div>
+    <div class="card" data-panel="book" hidden>
+      <h2 style="margin:0;font-size:1.02rem">記録する</h2>
+      <div class="tgl" id="f1-type"><button type="button" data-v="out">支出</button><button type="button" data-v="in">収入</button></div>
+      <div class="amt"><span>¥</span><input id="f1-amt" type="text" inputmode="numeric" placeholder="0" autocomplete="off" aria-label="金額"></div>
+      <div class="cats" id="f1-cats"></div>
+      <div class="g2">
+        <div class="field"><label for="f1-acc" id="f1-acclbl">支払い方法</label><select id="f1-acc"></select></div>
+        <div class="field"><label for="f1-date">日付</label><input id="f1-date" type="date"></div>
+      </div>
+      <div class="field"><label for="f1-memo">メモ（任意）</label><input id="f1-memo" type="text" placeholder="例：スーパー、ランチ" autocomplete="off"></div>
+      <button class="primary" id="f1-add">記録する</button>
+    </div>
+    <div class="card" data-panel="book" hidden>
+      <div class="sec-h"><h2>予算との比較</h2><button class="link" data-tool="budget">予算を変える</button></div>
+      <div id="cmp"></div>
+      <p class="xs sub" style="margin:0">予算は「家計配分」で決めた金額です。</p>
+    </div>
+    <div class="card" data-panel="book" hidden>
+      <div class="sec-h"><h2>明細</h2><span class="pill blue" id="b-count"></span></div>
+      <div id="b-list"></div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" id="b-csv">CSVで書き出す</button></div>
+      <p class="xs sub" style="margin:0">記録はこの端末にだけ保存されます。ときどきCSVで書き出しておくと安心です。</p>
+    </div>
+    <!-- 出納帳 -->
+    <div class="card" data-panel="ledger" hidden>
+      <div class="tool-h"><h2>出納帳</h2><button class="star" data-fav="t:ledger" aria-label="お気に入り"></button></div>
+      <div class="accs" id="l-accs" role="toolbar" aria-label="口座"></div>
+      <div class="balance"><span id="l-acclabel"></span><b id="l-bal"></b></div>
+      <div class="field"><label for="l-open">はじめの残高（記録を始める前の残高）</label><div class="yenin wide"><input id="l-open" type="text" inputmode="numeric" autocomplete="off"><span>円</span></div></div>
+      <p class="xs sub" id="l-cardnote" style="margin:0" hidden>クレジットカードは、マイナスの金額が未払いの利用額です。引き落としは「振替」で銀行口座からカードへ移します。</p>
+    </div>
+    <div class="card" data-panel="ledger" hidden>
+      <h2 style="margin:0;font-size:1.02rem"><span id="f2-acc"></span>に記録する</h2>
+      <div class="tgl" id="f2-type"><button type="button" data-v="in">入金</button><button type="button" data-v="out">出金</button><button type="button" data-v="move">振替</button></div>
+      <div class="amt"><span>¥</span><input id="f2-amt" type="text" inputmode="numeric" placeholder="0" autocomplete="off" aria-label="金額"></div>
+      <div class="g2">
+        <div class="field" id="f2-catwrap"><label for="f2-cat">科目</label><select id="f2-cat"></select></div>
+        <div class="field" id="f2-towrap" hidden><label for="f2-to">移動先</label><select id="f2-to"></select></div>
+        <div class="field"><label for="f2-date">日付</label><input id="f2-date" type="date"></div>
+      </div>
+      <div class="field"><label for="f2-memo">摘要（任意）</label><input id="f2-memo" type="text" placeholder="例：ATMで引き出し、給与振込" autocomplete="off"></div>
+      <button class="primary" id="f2-add">記録する</button>
+      <p class="xs sub" style="margin:0">入金・出金は家計簿にも反映されます。振替（ATMでの引き出し、カードの引き落としなど）は残高だけが動きます。</p>
+    </div>
+    <div class="card" data-panel="ledger" hidden>
+      <div class="monthnav"><button class="mbtn" data-mon="-1" aria-label="前の月"><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></button><b class="mlabel"></b><button class="mbtn" data-mon="1" aria-label="次の月"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></button></div>
+      <div class="tblwrap"><table class="led"><thead><tr><th>日付</th><th>摘要</th><th>入金</th><th>出金</th><th>残高</th><th><span class="xs" style="position:absolute;left:-9999px">削除</span></th></tr></thead><tbody id="l-tbody"></tbody></table></div>
+      <p class="sm sub" id="l-empty" style="margin:0">この月の記録はまだありません。</p>
+    </div>
+    <div class="card" data-panel="sim" hidden>
       <div class="tool-h"><h2>積立シミュレーター</h2><button class="star" data-fav="t:sim" aria-label="お気に入り"></button></div>
       <div class="g2">
         <div class="field"><label for="s-m">毎月の積立額（円）</label><input id="s-m" type="number" inputmode="numeric" value="50000" step="1000" min="0"></div>
@@ -296,10 +415,10 @@ nav.tabs button[aria-current="page"]{color:var(--brand);font-weight:700}
       <div class="tool-h"><h2>家計の配分</h2><button class="star" data-fav="t:budget" aria-label="お気に入り"></button></div>
       <div class="field"><label for="b-in">毎月の手取り（円）</label><input id="b-in" type="number" inputmode="numeric" value="260000" step="5000"></div>
       <div class="bar" id="b-bar" aria-hidden="true"></div>
-      <div id="b-rows" style="display:flex;flex-direction:column;gap:8px"></div>
+      <div id="b-rows"></div>
       <div class="flag" id="b-flag"></div>
       <div><button class="btn" id="b-reset">目安の配分に戻す</button></div>
-      <p class="xs sub" style="margin:0">初期値は一人暮らしの例です。入力はこの端末にだけ保存されます。</p>
+      <p class="xs sub" style="margin:0">金額を直接入力するか、バーを動かして決めます。初期値は一人暮らしの例です。入力はこの端末にだけ保存されます。</p>
     </div>
     <div class="card" data-panel="yield" hidden>
       <div class="tool-h"><h2>不動産の利回り</h2><button class="star" data-fav="t:yield" aria-label="お気に入り"></button></div>
@@ -345,7 +464,7 @@ nav.tabs button[aria-current="page"]{color:var(--brand);font-weight:700}
     <div class="card">
       <h2 style="margin:0;font-size:1.02rem">毎日の更新について</h2>
       <p class="sm" style="margin:0">「今日のニュース」は毎朝自動で新しい内容に更新されます。オフラインのときは最後に読み込んだ内容が表示されます。「今日のおすすめ」と「今日の用語」は日付ごとに入れ替わります。</p>
-      <p class="sm sub" style="margin:0">お気に入り、家計配分、チェックリストは、この端末のブラウザにだけ保存されます。ブラウザのデータを消すと消えます。</p>
+      <p class="sm sub" style="margin:0">お気に入り、家計簿・出納帳、家計配分、チェックリストは、この端末のブラウザにだけ保存されます。家計簿はときどき「CSVで書き出す」で保存しておくと安心です。ブラウザのデータを消すと消えます。</p>
     </div>
     <div class="card">
       <h2 style="margin:0;font-size:1.02rem">このアプリについて</h2>
@@ -391,6 +510,8 @@ const ICONS={
  tool:'<rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 7h8M8 12h2M14 12h2M8 16h2M14 16h2"/>',
  sim:'<path d="M3 17l6-6 4 4 8-8"/>',goal:'<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".8"/>',
  budget:'<path d="M12 3v9l7 4"/><circle cx="12" cy="12" r="9"/>',yield:'<path d="M4 20 20 4"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/>',
+ book:'<path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11M9 8h6"/>',
+ ledger:'<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M10 9v12M4 15h16"/>',
  move:'<path d="M3 7h11v10H3zM14 10h4l3 3v4h-7"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/>'
 };
 const CATS=[
@@ -679,7 +800,7 @@ const UPDATES=[
  {w:'2027.1',t:'こどもNISAがスタート',p:'0〜17歳もつみたて投資枠が使えるように。年60万円・上限600万円、12歳以降に一定の条件で払出し可。'},
  {w:'2027.1',t:'iDeCoに70歳まで加入可能に',p:'老齢基礎年金などを受け取っていない70歳未満が対象に広がります。'}
 ];
-const TOOLS=[{id:'sim',n:'積立',l:'積立シミュレーター',c:'red'},{id:'goal',n:'貯金目標',l:'貯金目標',c:'green'},{id:'budget',n:'家計配分',l:'家計の配分',c:'amber'},{id:'yield',n:'利回り',l:'不動産の利回り',c:'blue'},{id:'move',n:'引越し',l:'引越しチェックリスト',c:'red'}];
+const TOOLS=[{id:'book',n:'家計簿',l:'家計簿',c:'green'},{id:'ledger',n:'出納帳',l:'出納帳',c:'blue'},{id:'sim',n:'積立',l:'積立シミュレーター',c:'red'},{id:'goal',n:'貯金目標',l:'貯金目標',c:'green'},{id:'budget',n:'家計配分',l:'家計の配分',c:'amber'},{id:'yield',n:'利回り',l:'不動産の利回り',c:'blue'},{id:'move',n:'引越し',l:'引越しチェックリスト',c:'red'}];
 /* fallback news shown only if the live store is unreachable */
 const FALLBACK_NEWS={date:'2026-10-08',items:[
  {cat:'金利',title:'日銀が政策金利を1.25%に引き上げ（9月18日）',body:'6月に続く利上げ。植田総裁は利上げを続ける方針を示しました。変動金利の住宅ローンを借りている人は返済額の見直し時期を確認しておきましょう。',src:'大和アセットマネジメント',url:'https://www.daiwa-am.co.jp/specialreport/market_letter/20260918_02.pdf'}
@@ -697,7 +818,7 @@ const STAR='<svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.5 4.2 1.1 6.
 const CHEV='<svg class="chev" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg>';
 const now=new Date();const dayIdx=Math.floor((Date.UTC(now.getFullYear(),now.getMonth(),now.getDate()))/864e5);
 const pick=(arr,n,salt=0)=>{const out=[];for(let i=0;i<n;i++)out.push(arr[(dayIdx*7+salt+i*Math.floor(arr.length/n+1))%arr.length]);return [...new Set(out)]};
-function toast(m){const t=$('#toast');t.textContent=m;t.hidden=false;clearTimeout(toast.h);toast.h=setTimeout(()=>t.hidden=true,1600)}
+function toast(m,act,fn){const t=$('#toast');t.textContent=m;if(act){const b=document.createElement('button');b.className='tact';b.textContent=act;b.onclick=()=>{t.hidden=true;fn()};t.append(b)}t.hidden=false;clearTimeout(toast.h);toast.h=setTimeout(()=>t.hidden=true,act?4500:1600)}
 
 /* ================= FAVORITES ================= */
 let FAV=store.get('fav',[]); /* [{id,type,title,sub,data?,at}] */
@@ -866,7 +987,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#sheet').hidden
 $('#seg').innerHTML=TOOLS.map(t=>`<button role="tab" data-t="${t.id}">${t.n}</button>`).join('');
 function setTool(t){$$('[data-panel]').forEach(p=>p.hidden=p.dataset.panel!==t);$$('#seg button').forEach(b=>b.setAttribute('aria-selected',b.dataset.t===t));store.set('tool',t)}
 $('#seg').addEventListener('click',e=>{const b=e.target.closest('[data-t]');if(b)setTool(b.dataset.t)});
-setTool(store.get('tool','sim'));
+setTool(store.get('tool','book'));
 
 function niceStep(max){const raw=max/4;const p=Math.pow(10,Math.floor(Math.log10(raw)));const n=raw/p;return (n<=1?1:n<=2?2:n<=5?5:10)*p}
 function shortMan(v){if(v===0)return '0';if(v>=1e8)return (v/1e8)+'億';return (v/1e4).toLocaleString('ja-JP')+'万'}
@@ -907,23 +1028,39 @@ function goal(){
 ['#g-t','#g-n','#g-mo','#g-b'].forEach(i=>$(i).addEventListener('input',goal));goal();
 
 const DEF=[['先取り貯金・投資',15,'var(--brand)'],['住居費',28,'var(--blue)'],['食費',14,'var(--green)'],['通信・サブスク',4,'#8b7fd6'],['水道光熱',5,'#3fb3c9'],['日用品・交際',12,'var(--amber)'],['自己投資',6,'#d96fa8'],['予備費',6,'var(--sub)']];
-let bud=store.get('budget',null)||DEF.map(x=>x[1]);
-$('#b-in').value=store.get('income',260000);
-$('#b-rows').innerHTML=DEF.map((x,i)=>`<div class="brow"><label for="b-${i}" class="sm">${x[0]}</label><input type="range" id="b-${i}" min="0" max="50" step="1" value="${bud[i]}"><output id="bo-${i}"></output></div>`).join('');
-function budget(){
-  const inc=num('#b-in');store.set('income',inc);
-  bud=DEF.map((_,i)=>+$('#b-'+i).value);store.set('budget',bud);
-  const sum=bud.reduce((a,b)=>a+b,0);
-  DEF.forEach((x,i)=>$('#bo-'+i).textContent=yen(inc*bud[i]/100).replace('円',''));
-  $('#b-bar').innerHTML=DEF.map((x,i)=>`<span style="width:${bud[i]/Math.max(sum,100)*100}%;background:${x[2]}"></span>`).join('');
-  const rest=100-sum,msgs=[];
-  msgs.push(rest<0?`配分が${-rest}%（${yen(inc*-rest/100)}）オーバーしています。`:rest===0?'ちょうど100%です。':`未配分が${rest}%（${yen(inc*rest/100)}）あります。`);
-  if(bud[1]>30)msgs.push('住居費が手取りの3割を超えています。');
-  if(bud[0]<10)msgs.push('先取り貯金は10%以上を目安に。');
-  const f=$('#b-flag');f.className='flag '+(rest<0||bud[1]>30?'ng':'ok');f.textContent=msgs.join(' ');
+var bookReady=false;
+const parseYen=v=>{const n=parseInt(String(v??'').normalize('NFKC').replace(/[^\d]/g,''),10);return isFinite(n)?n:0};
+const fmt=n=>Math.round(n).toLocaleString('ja-JP');
+let inc0=store.get('income',260000);
+$('#b-in').value=inc0;
+let budYen=store.get('budgetYen',null);
+if(!Array.isArray(budYen)||budYen.length!==DEF.length){const p=store.get('budget',null)||DEF.map(x=>x[1]);budYen=DEF.map((x,i)=>Math.round(inc0*(+p[i]||0)/100/100)*100)}
+$('#b-rows').innerHTML=DEF.map((x,i)=>`<div class="brow"><div class="brow-top"><label for="ba-${i}" class="sm">${x[0]}</label><span class="pct" id="bp-${i}"></span><div class="yenin"><input id="ba-${i}" type="text" inputmode="numeric" autocomplete="off"><span>円</span></div></div><input type="range" id="b-${i}" min="0" max="50" step="0.5" aria-label="${x[0]}の割合（％）"></div>`).join('');
+function budget(skip){
+  const inc=num('#b-in');store.set('income',inc);store.set('budgetYen',budYen);
+  const sum=budYen.reduce((a,b)=>a+b,0);
+  const pc=i=>inc>0?budYen[i]/inc*100:0;
+  DEF.forEach((x,i)=>{
+    if(i!==skip)$('#ba-'+i).value=fmt(budYen[i]);
+    $('#b-'+i).value=Math.min(50,pc(i));
+    $('#bp-'+i).textContent=(Math.round(pc(i)*10)/10)+'%';
+  });
+  $('#b-bar').innerHTML=DEF.map((x,i)=>`<span style="width:${budYen[i]/Math.max(sum,inc,1)*100}%;background:${x[2]}"></span>`).join('');
+  const rest=inc-sum,msgs=[];
+  msgs.push(rest<0?`配分の合計が手取りを${yen(-rest)}オーバーしています。`:rest===0?'手取りをちょうど配分できています。':`未配分が${yen(rest)}（手取りの${Math.round(rest/Math.max(inc,1)*1000)/10}%）あります。`);
+  if(pc(1)>30)msgs.push('住居費が手取りの3割を超えています。');
+  if(pc(0)<10)msgs.push('先取り貯金は手取りの10%以上を目安に。');
+  const f=$('#b-flag');f.className='flag '+(rest<0||pc(1)>30?'ng':'ok');f.textContent=msgs.join(' ');
+  if(bookReady)renderBook();
 }
-$('#b-rows').addEventListener('input',budget);$('#b-in').addEventListener('input',budget);
-$('#b-reset').onclick=()=>{DEF.forEach((x,i)=>$('#b-'+i).value=x[1]);budget()};
+$('#b-rows').addEventListener('input',e=>{
+  const id=e.target.id;
+  if(id.startsWith('ba-')){const i=+id.slice(3);budYen[i]=parseYen(e.target.value);budget(i)}
+  else if(id.startsWith('b-')){const i=+id.slice(2);budYen[i]=Math.round(num('#b-in')*(+e.target.value)/100/100)*100;budget()}
+});
+$('#b-rows').addEventListener('focusout',e=>{if(e.target.id.startsWith('ba-'))budget()});
+$('#b-in').addEventListener('input',()=>budget());
+$('#b-reset').onclick=()=>{const inc=num('#b-in');budYen=DEF.map(x=>Math.round(inc*x[1]/100/100)*100);budget()};
 budget();
 
 function yld(){
@@ -950,6 +1087,154 @@ function renderMove(){
 $('#m-list').addEventListener('change',e=>{const k=e.target.dataset.k;if(!k)return;mvDone[k]=e.target.checked;store.set('move',mvDone);renderMove()});
 $('#m-reset').onclick=()=>{mvDone={};store.set('move',mvDone);renderMove()};
 renderMove();
+
+
+/* ================= 家計簿・出納帳 ================= */
+const ACC=[['cash','現金'],['bank','銀行口座'],['emoney','電子マネー・QR'],['card','クレジットカード']];
+const accName=k=>(ACC.find(a=>a[0]===k)||['',k])[1];
+/* 支出カテゴリ → 家計配分の項目（DEFの番号） */
+const EXP=[['食費',2],['外食',2],['日用品',5],['交際費',5],['衣服・美容',5],['趣味・娯楽',5],['交通費',7],['医療',7],['住居費',1],['水道光熱',4],['通信・サブスク',3],['家具・家電',7],['税金・保険',7],['自己投資',6],['貯金・投資',0],['その他',7]];
+const INC=['給与','賞与','副業','ポイント・還元','臨時収入','還付・給付','お祝い','その他'];
+const exGroup=c=>{const e=EXP.find(x=>x[0]===c);return e?e[1]:7};
+const ymd=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+const signYen=n=>(n<0?'−':'')+'¥'+fmt(Math.abs(n));
+let TX=store.get('tx',[]);if(!Array.isArray(TX))TX=[];
+let OPEN=Object.assign({cash:0,bank:0,emoney:0,card:0},store.get('open',{}));
+const saveTX=()=>store.set('tx',TX);
+let curMon=ymd(new Date()).slice(0,7);
+const monLabel=m=>{const [y,mm]=m.split('-');return `${y}年${+mm}月`};
+const inMon=t=>t.d.slice(0,7)===curMon;
+const byDate=(a,b)=>a.d<b.d?-1:a.d>b.d?1:(a.id<b.id?-1:1);
+function shiftMon(k){const [y,m]=curMon.split('-').map(Number);curMon=ymd(new Date(y,m-1+k,1)).slice(0,7);renderBook();renderLedger()}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-mon]');if(b)shiftMon(+b.dataset.mon)});
+function addTx(tx){tx.id=Date.now().toString(36)+Math.random().toString(36).slice(2,6);TX.push(tx);saveTX();curMon=tx.d.slice(0,7);renderBook();renderLedger()}
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-del]');if(!b)return;
+  const i=TX.findIndex(t=>t.id===b.dataset.del);if(i<0)return;
+  const [rm]=TX.splice(i,1);saveTX();renderBook();renderLedger();
+  toast('削除しました','元に戻す',()=>{TX.splice(i,0,rm);saveTX();renderBook();renderLedger()});
+});
+/* 金額欄は3桁区切りで表示 */
+['#f1-amt','#f2-amt'].forEach(id=>$(id).addEventListener('input',e=>{const v=parseYen(e.target.value);e.target.value=v?fmt(v):''}));
+$('#f1-date').value=$('#f2-date').value=ymd(new Date());
+
+/* --- 家計簿 --- */
+const fb={type:'out',cat:'食費'};
+$('#f1-acc').innerHTML=ACC.map(a=>`<option value="${a[0]}">${a[1]}</option>`).join('');
+$('#f1-acc').value=store.get('lastAcc','cash');
+function renderBookForm(){
+  $$('#f1-type button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v===fb.type));
+  const list=fb.type==='out'?EXP.map(x=>x[0]):INC;
+  if(!list.includes(fb.cat))fb.cat=list[0];
+  $('#f1-cats').innerHTML=list.map(c=>`<button type="button" data-c="${c}" aria-pressed="${c===fb.cat}">${c}</button>`).join('');
+  $('#f1-acclbl').textContent=fb.type==='out'?'支払い方法':'入金先';
+}
+$('#f1-type').addEventListener('click',e=>{const b=e.target.closest('[data-v]');if(!b)return;fb.type=b.dataset.v;if(fb.type==='in'&&$('#f1-acc').value==='card')$('#f1-acc').value='bank';renderBookForm()});
+$('#f1-cats').addEventListener('click',e=>{const b=e.target.closest('[data-c]');if(!b)return;fb.cat=b.dataset.c;renderBookForm()});
+$('#f1-add').onclick=()=>{
+  const a=parseYen($('#f1-amt').value);
+  if(!a){toast('金額を入力してください');$('#f1-amt').focus();return}
+  addTx({d:$('#f1-date').value||ymd(new Date()),t:fb.type,a,c:fb.cat,acc:$('#f1-acc').value,m:$('#f1-memo').value.trim().slice(0,60)});
+  store.set('lastAcc',$('#f1-acc').value);
+  $('#f1-amt').value='';$('#f1-memo').value='';
+  toast(`${fb.cat} ¥${fmt(a)} を記録しました`);
+};
+function txRow(t){
+  const inc=t.t==='in',col=inc?'var(--green)':DEF[exGroup(t.c)][2];
+  return `<div class="txr"><span class="dot" style="color:${col};background:color-mix(in srgb,${col} 14%,transparent)">${esc(String(t.c||'?').slice(0,1))}</span><div class="txt"><b>${esc(t.c)}</b><span>${esc([t.m,accName(t.acc)].filter(Boolean).join('・'))}</span></div><span class="am ${inc?'pos':''}">${inc?'+':'−'}¥${fmt(t.a)}</span><button class="del" data-del="${t.id}" aria-label="${esc(t.c)} ¥${fmt(t.a)} を削除">×</button></div>`;
+}
+function renderBook(){
+  if(!bookReady)return;
+  $$('.mlabel').forEach(x=>x.textContent=monLabel(curMon));
+  const list=TX.filter(t=>inMon(t)&&t.t!=='move');
+  let inc=0,out=0,save=0;
+  list.forEach(t=>{if(t.t==='in')inc+=t.a;else if(t.c==='貯金・投資')save+=t.a;else out+=t.a});
+  $('#k-in').textContent='¥'+fmt(inc);$('#k-out').textContent='¥'+fmt(out);$('#k-save').textContent='¥'+fmt(save);
+  const net=inc-out-save,n=$('#k-net');n.textContent=(net>0?'+':'')+signYen(net);n.className=net<0?'neg':net>0?'pos':'';
+  const act=DEF.map(()=>0);list.filter(t=>t.t==='out').forEach(t=>act[exGroup(t.c)]+=t.a);
+  const rows=DEF.map((g,i)=>({i,name:g[0],bud:budYen[i]||0,act:act[i]})).filter(r=>r.bud||r.act);
+  $('#cmp').innerHTML=rows.map(r=>{
+    const w=r.bud?Math.min(100,r.act/r.bud*100):(r.act?100:0);
+    let cls='',note;
+    if(r.i===0){cls=r.bud&&r.act>=r.bud?'good':'';note=!r.bud?'予算なし':r.act>=r.bud?'今月の目標を達成':`目標まであと ¥${fmt(r.bud-r.act)}`}
+    else if(!r.bud){cls='over';note='予算なし'}
+    else if(r.act>r.bud){cls='over';note=`¥${fmt(r.act-r.bud)} オーバー`}
+    else note=`残り ¥${fmt(r.bud-r.act)}`;
+    return `<div class="cmp"><div class="cmp-top"><span>${r.name}</span><span>¥${fmt(r.act)} / ¥${fmt(r.bud)}</span></div><div class="meter"><i class="${cls}" style="width:${w}%"></i></div><span class="note ${cls}">${note}</span></div>`;
+  }).join('');
+  const sorted=list.slice().sort(byDate).reverse();
+  $('#b-count').textContent=`${sorted.length}件`;
+  if(!sorted.length){$('#b-list').innerHTML=`<div class="empty" style="padding:18px 8px">${monLabel(curMon)}の記録はまだありません。<br>上の「記録する」から1件目を入れてみましょう。</div>`;return}
+  let html='',last='';
+  sorted.forEach(t=>{if(t.d!==last){last=t.d;const dt=new Date(t.d+'T00:00:00');html+=`<div class="dayh">${dt.getMonth()+1}月${dt.getDate()}日（${W[dt.getDay()]}）</div>`}html+=txRow(t)});
+  $('#b-list').innerHTML=html;
+}
+$('#b-csv').onclick=()=>{
+  if(!TX.length){toast('まだ記録がありません');return}
+  const T={out:'支出',in:'収入',move:'振替'};
+  const rows=[['日付','種類','カテゴリ','金額','口座','振替先','メモ']].concat(TX.slice().sort(byDate).map(t=>[t.d,T[t.t],t.t==='move'?'':t.c,t.a,accName(t.acc),t.to?accName(t.to):'',t.m||'']));
+  const csv='﻿'+rows.map(r=>r.map(v=>{v=String(v);return /[",\r\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v}).join(',')).join('\r\n');
+  const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));
+  const a=document.createElement('a');a.href=url;a.download=`life-haq-kakeibo-${ymd(new Date())}.csv`;document.body.append(a);a.click();a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),3000);
+};
+
+/* --- 出納帳 --- */
+let ledAcc=store.get('ledAcc','cash');if(!ACC.some(a=>a[0]===ledAcc))ledAcc='cash';
+const fl={type:'out'};
+$('#l-accs').innerHTML=ACC.map(a=>`<button class="chip" data-acc="${a[0]}">${a[1]}</button>`).join('');
+$('#l-accs').addEventListener('click',e=>{const b=e.target.closest('[data-acc]');if(!b)return;ledAcc=b.dataset.acc;store.set('ledAcc',ledAcc);renderLedger()});
+const eff=(t,k)=>t.t==='in'?(t.acc===k?t.a:0):t.t==='out'?(t.acc===k?-t.a:0):(t.acc===k?-t.a:0)+(t.to===k?t.a:0);
+const touches=(t,k)=>t.acc===k||t.to===k;
+function renderLedgerForm(){
+  const k=ledAcc;
+  $$('#f2-type button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v===fl.type));
+  $('#f2-catwrap').hidden=fl.type==='move';$('#f2-towrap').hidden=fl.type!=='move';
+  const cl=fl.type==='in'?INC:EXP.map(x=>x[0]);const cur=$('#f2-cat').value;
+  $('#f2-cat').innerHTML=cl.map(c=>`<option>${c}</option>`).join('');
+  if(cl.includes(cur))$('#f2-cat').value=cur;else if(fl.type==='out')$('#f2-cat').value='食費';
+  const to=ACC.filter(a=>a[0]!==k),curTo=$('#f2-to').value;
+  $('#f2-to').innerHTML=to.map(a=>`<option value="${a[0]}">${a[1]}</option>`).join('');
+  if(to.some(a=>a[0]===curTo))$('#f2-to').value=curTo;
+  $('#f2-acc').textContent=accName(k);
+}
+function renderLedger(){
+  if(!bookReady)return;
+  const k=ledAcc;
+  $$('.mlabel').forEach(x=>x.textContent=monLabel(curMon));
+  $$('#l-accs .chip').forEach(b=>b.setAttribute('aria-pressed',b.dataset.acc===k));
+  const all=TX.filter(t=>touches(t,k)).sort(byDate);
+  const total=OPEN[k]+all.reduce((s,t)=>s+eff(t,k),0);
+  $('#l-acclabel').textContent=`${accName(k)}の今の残高`;
+  const bl=$('#l-bal');bl.textContent=signYen(total);bl.className=total<0?'neg':'';
+  if(document.activeElement!==$('#l-open'))$('#l-open').value=(OPEN[k]<0?'-':'')+fmt(Math.abs(OPEN[k]));
+  $('#l-cardnote').hidden=k!=='card';
+  const start=curMon+'-01';
+  let bal=OPEN[k]+all.filter(t=>t.d<start).reduce((s,t)=>s+eff(t,k),0);
+  const rows=all.filter(inMon);
+  let html=`<tr class="carry"><td></td><td>前月から繰越</td><td></td><td></td><td>${signYen(bal)}</td><td></td></tr>`;
+  rows.forEach(t=>{
+    const v=eff(t,k);bal+=v;
+    const desc=t.t==='move'?(t.acc===k?`振替 → ${accName(t.to)}`:`振替 ← ${accName(t.acc)}`)+(t.m?`・${t.m}`:''):[t.c,t.m].filter(Boolean).join('・');
+    const [,mm,dd]=t.d.split('-');
+    html+=`<tr><td>${+mm}/${+dd}</td><td>${esc(desc)}</td><td class="inm">${v>0?fmt(v):''}</td><td class="outm">${v<0?fmt(-v):''}</td><td>${signYen(bal)}</td><td><button class="del" data-del="${t.id}" aria-label="削除">×</button></td></tr>`;
+  });
+  $('#l-tbody').innerHTML=html;
+  $('#l-empty').hidden=rows.length>0;
+  renderLedgerForm();
+}
+$('#f2-type').addEventListener('click',e=>{const b=e.target.closest('[data-v]');if(!b)return;fl.type=b.dataset.v;renderLedgerForm()});
+$('#f2-add').onclick=()=>{
+  const a=parseYen($('#f2-amt').value);
+  if(!a){toast('金額を入力してください');$('#f2-amt').focus();return}
+  const tx={d:$('#f2-date').value||ymd(new Date()),t:fl.type,a,acc:ledAcc,m:$('#f2-memo').value.trim().slice(0,60)};
+  if(fl.type==='move')tx.to=$('#f2-to').value;else tx.c=$('#f2-cat').value;
+  addTx(tx);$('#f2-amt').value='';$('#f2-memo').value='';
+  toast(fl.type==='move'?`${accName(tx.acc)} → ${accName(tx.to)} ¥${fmt(a)} を記録しました`:`¥${fmt(a)} を記録しました`);
+};
+$('#l-open').addEventListener('input',e=>{const neg=/^\s*[-−ー]/.test(String(e.target.value).normalize('NFKC'));OPEN[ledAcc]=(neg?-1:1)*parseYen(e.target.value);store.set('open',OPEN);renderLedger()});
+$('#l-open').addEventListener('focusout',()=>renderLedger());
+bookReady=true;renderBookForm();renderBook();renderLedger();
 
 /* links */
 $('#links').innerHTML=Object.values(SRC).map(s=>`<a class="row" href="${s[1]}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none"><div class="txt"><b style="font-weight:500">${s[0]}</b></div>${CHEV}</a>`).join('');
