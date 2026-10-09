@@ -15,13 +15,32 @@ UA = 'Mozilla/5.0 (Life-HaQ news updater; +https://github.com/qinglong-ytr/Life-
 
 # (カテゴリ, Google ニュースの検索語)
 QUERIES = [
-    ('金利',     '日銀 OR 政策金利 OR 長期金利 OR 為替'),
-    ('NISA',    'NISA OR iDeCo OR 新NISA'),
-    ('税金',     '税制改正 OR ふるさと納税 OR 確定申告 OR 年末調整 OR 所得税'),
-    ('不動産',   '住宅ローン金利 OR 家賃 OR マンション価格 OR 不動産価格'),
-    ('キャリア', '賃上げ OR 実質賃金 OR 転職 OR 最低賃金 OR 求人倍率'),
-    ('暮らし',   'マイナンバーカード OR 年金 OR 社会保険料 OR 物価 OR 値上げ'),
+    ('金利',     '日銀 金利 OR 長期金利 OR 円相場'),
+    ('NISA',    'NISA OR iDeCo'),
+    ('税金',     '税制改正 OR ふるさと納税 OR 確定申告 OR 所得税 OR 控除'),
+    ('不動産',   '"住宅ローン" 金利 OR "家賃" 上昇 OR "マンション価格" OR 地価'),
+    ('キャリア', '賃上げ OR 実質賃金 OR 最低賃金 OR 有効求人倍率 OR 転職市場'),
+    ('暮らし',   '年金 OR 社会保険料 OR マイナンバーカード OR 消費者物価 OR 電気代'),
 ]
+# 見出しがそのカテゴリの話題か確認する
+RELEVANT = {
+    '金利': r'日銀|金利|円相場|為替|円安|円高|利上げ|国債',
+    'NISA': r'NISA|ＮＩＳＡ|iDeCo|イデコ|投資信託|積立|資産形成',
+    '税金': r'税|ふるさと納税|確定申告|控除|年末調整',
+    '不動産': r'住宅ローン|家賃|マンション|不動産|地価|住宅',
+    'キャリア': r'賃金|賃上げ|求人|転職|雇用|最低賃金|年収|ボーナス',
+    '暮らし': r'年金|保険料|マイナ|物価|値上げ|電気代|ガス代|料金|給付',
+}
+# 信頼できる配信元を優先（部分一致）
+TRUSTED = ['日本経済新聞', '日経', 'NHK', '共同通信', '時事', '朝日新聞', '毎日新聞', '読売新聞', '産経', '東京新聞',
+           '東洋経済', 'ダイヤモンド', 'ロイター', 'Reuters', 'Bloomberg', 'ブルームバーグ', 'ITmedia', 'テレ東', 'TBS',
+           '日テレ', 'FNN', 'ANN', 'Impress', 'マネーポスト', 'ZAi', 'プレジデント', 'ニッセイ基礎研究所',
+           '金融庁', '厚生労働省', '財務省', '総務省', '国税庁', '日本銀行', 'デジタル庁', '国土交通省']
+# 載せない配信元・見出し
+BLOCK_SRC = ['note', 'Yahoo!ファイナンス', 'みんかぶ', '株探', 'PR TIMES', 'YouTube', 'Instagram', 'スポーツ', 'スポニチ',
+             'サンスポ', 'スポ', '女性自身', '週刊女性', 'FRIDAY', '文春', 'ポストセブン', 'ENCOUNT', 'まいどなニュース',
+             'ABEMA', 'Togetter', 'はてな', 'アメーバ', 'Ameba', 'Wikipedia', '知恵袋']
+BLOCK_TITLE = r'株価・株式情報|【\d{4}】|PTS|銘柄|芸能|女優|俳優|アイドル|タレント|パパ活|飲酒|不倫|炎上|逮捕|容疑|インスタ|YouTube|動画|ドラマ|\｜'
 # Google ニュースが取れなかったときの予備（NHK 経済）
 FALLBACK_FEEDS = [('https://www3.nhk.or.jp/rss/news/cat5.xml', 'NHK')]
 FALLBACK_RULES = [
@@ -86,24 +105,30 @@ def google_news(q):
 def collect(now, seen):
     picked, used = [], set(seen)
     cutoff = now - datetime.timedelta(days=2)
-    def ok(x):
+    def ok(x, cat):
         k = norm(x['title'])
-        return k and k not in used and (x['pub'] is None or x['pub'] >= cutoff)
+        if not k or k in used: return False
+        if x['pub'] is not None and x['pub'] < cutoff: return False
+        if any(b.lower() in (x['src'] or '').lower() for b in BLOCK_SRC): return False
+        if re.search(BLOCK_TITLE, x['title']): return False
+        return bool(re.search(RELEVANT[cat], x['title']))
+    def rank(x):
+        trusted = any(t.lower() in (x['src'] or '').lower() for t in TRUSTED)
+        return (0 if trusted else 1, -(x['pub'] or cutoff).timestamp())
     pools = {}
     for cat, q in QUERIES:
         try:
             items = google_news(q)
         except Exception as e:
             print(f'[warn] {cat}: {e}', file=sys.stderr); items = []
-        items.sort(key=lambda x: x['pub'] or cutoff, reverse=True)
-        pools[cat] = [x for x in items if ok(x)]
+        pools[cat] = sorted([x for x in items if ok(x, cat)], key=rank)
     if not any(pools.values()):
         for url, name in FALLBACK_FEEDS:
             try:
                 for x in parse_rss(fetch(url)):
                     x['src'] = x['src'] or name
                     for cat, pat in FALLBACK_RULES:
-                        if re.search(pat, x['title']) and ok(x):
+                        if re.search(pat, x['title']) and ok(x, cat):
                             pools.setdefault(cat, []).append(x); break
             except Exception as e:
                 print(f'[warn] fallback {url}: {e}', file=sys.stderr)
