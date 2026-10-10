@@ -50,7 +50,8 @@ button,input{font:inherit;color:inherit}
 button{cursor:pointer}
 :focus-visible{outline:2px solid var(--blue);outline-offset:2px}
 a{color:var(--blue)}
-.app{max-width:560px;margin:0 auto;padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+.app{max-width:560px;margin:0 auto;padding-bottom:calc(84px + env(safe-area-inset-bottom,0px));min-height:calc(100vh + 1px)}
+.pill.new{background:var(--brand);color:var(--brand-ink)}
 .pad{padding-inline:16px}
 /* header */
 .hero{background:var(--brand);color:var(--brand-ink);padding:14px 16px 46px;border-radius:0 0 22px 22px}
@@ -875,8 +876,15 @@ $('#catgrid').innerHTML=CATS.slice(0,7).map(c=>`<button class="ico" data-cat="${
 $('#catgrid').addEventListener('click',e=>{const b=e.target.closest('[data-cat]');if(!b)return;go('know');setCat(b.dataset.cat)});
 $('#toolgrid').innerHTML=TOOLS.slice(0,4).map(t=>`<button class="ico" data-tool="${t.id}"><span class="c c-${t.c}">${svg(t.id)}</span>${t.n}</button>`).join('');
 $('#updates').innerHTML=UPDATES.map(u=>`<li><span class="when">${u.w}</span><div><b>${u.t} ${u.tag?`<span class="pill amber">${u.tag}</span>`:''}</b><p>${u.p}</p></div></li>`).join('');
-const feats=pick(A,4,3);
-$('#feat').innerHTML=feats.map((a,i)=>`<button class="feat f${i%4}" data-open="${a.id}"><span>${a.c}</span><b>${a.t}</b><span>${a.s}</span></button>`).join('');
+const todayStr=(d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`)(new Date());
+const isNew=a=>!!a.d&&(Date.parse(todayStr)-Date.parse(a.d))<=2*864e5;
+function renderFeats(){
+  const fresh=A.filter(a=>a.d).sort((x,y)=>y.d.localeCompare(x.d)).slice(0,2);
+  const feats=[...fresh,...pick(A.filter(a=>!a.d),4,3)].slice(0,4);
+  $('#feat').innerHTML=feats.map((a,i)=>`<button class="feat f${i%4}" data-open="${a.id}"><span>${a.d&&a.d>=fmtYmdMinus(2)?'NEW・':''}${a.c}</span><b>${a.t}</b><span>${a.s}</span></button>`).join('');
+}
+const fmtYmdMinus=k=>{const d=new Date(Date.now()-k*864e5);return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
+renderFeats();
 const term=TERMS[dayIdx%TERMS.length];
 $('#term').innerHTML=`<b>${term[0]}</b><p>${term[1]}</p>`;
 const termBtn=$('#term-star');termBtn.dataset.fav='w:'+term[0];termBtn.dataset.payload=JSON.stringify({type:'用語',title:term[0],sub:term[1]});
@@ -908,7 +916,7 @@ $('#news').innerHTML='<p class="sm sub" style="margin:0">今日のニュース�
       try{const r=await fetch(u,{cache:'no-store'});if(r.ok){const x=await r.json();if(!j||(x.updated||'')>(j.updated||''))j=x;if(u.startsWith(RAW))break}}catch(_){}
     }
     if(!j)throw 0;
-    try{(await caches.open('lifehaq-v3')).put('news.json',new Response(JSON.stringify(j),{headers:{'Content-Type':'application/json'}}))}catch(_){}
+    try{(await caches.open('lifehaq-v4')).put('news.json',new Response(JSON.stringify(j),{headers:{'Content-Type':'application/json'}}))}catch(_){}
     const days=(j.days||[]).filter(d=>d&&d.date&&Array.isArray(d.items)&&d.items.length).sort((a,b)=>a.date<b.date?1:-1).slice(0,7);
     if(!days.length)throw 0;
     renderNews(days,true);
@@ -922,25 +930,28 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
 /* ================= SEARCH ================= */
 const SYN={'にーさ':'nisa','ニーサ':'nisa','いでこ':'ideco','イデコ':'ideco','確定拠出':'ideco','ひっこし':'引越し','引っ越し':'引越し','ひっこす':'引越し','転居':'引越し','やちん':'家賃','ちんたい':'賃貸','てどり':'手取り','ぜいきん':'税金','せつやく':'節約','ちょきん':'貯金','貯蓄':'貯金','てんしょく':'転職','ねんしゅう':'年収','給料':'年収','給与':'年収','ほけん':'保険','そうじ':'掃除','せんたく':'洗濯','りょうり':'作り置き','自炊':'作り置き','ふるさと':'ふるさと納税','かくてい':'確定申告','まいなんばー':'マイナンバー','マイナ':'マイナンバー','ふどうさん':'不動産','マンション':'不動産','ローン':'住宅ローン','かぶ':'株','オルカン':'全世界株式','えすあんどぴー':'s&p500','sp500':'s&p500','インフレ':'物価','円安':'為替','円高':'為替','利上げ':'金利','日銀':'金利','クレカ':'クレジットカード','カード':'クレジットカード','老後':'年金','失業':'雇用保険','副業':'確定申告','内覧':'内見','部屋':'住まい'};
 const norm=s=>String(s||'').normalize('NFKC').toLowerCase().replace(/[ァ-ヶ]/g,c=>String.fromCharCode(c.charCodeAt(0)-0x60)).replace(/\s+/g,'');
-A.forEach(a=>{a._hay=norm([a.t,a.s,a.c,...a.sum,...a.sec.flatMap(s=>[s[0],...s[1]]),a.tip||'',a.warn||'',...(a.kw||[])].join(' '));a._kw=norm((a.kw||[]).join(' ')+a.t)});
+function indexArticle(a){a._hay=norm([a.t,a.s,a.c,...a.sum,...a.sec.flatMap(s=>[s[0],...s[1]]),a.tip||'',a.warn||'',...(a.kw||[])].join(' '));a._kw=norm((a.kw||[]).join(' ')+a.t)}
+A.forEach(indexArticle);
 const KEYWORDS=[...new Set(A.flatMap(a=>a.kw||[]).concat(Object.keys(SYN),TERMS.map(t=>t[0])))];
 function expand(q){const n=norm(q);const out=new Set([n]);Object.entries(SYN).forEach(([k,v])=>{const nk=norm(k);if(n.includes(nk)||nk.startsWith(n)&&n.length>=2)out.add(norm(v))});return [...out].filter(Boolean)}
 function score(a,terms){let s=0;terms.forEach(t=>{if(norm(a.t).includes(t))s+=6;if(a._kw.includes(t))s+=4;if(a._hay.includes(t))s+=1});return s}
 let cat='すべて';
-$('#chips').innerHTML=['すべて',...CATS.map(c=>c.k)].map(c=>`<button class="chip" aria-pressed="${c===cat}" data-c="${c}">${c}</button>`).join('');
+$('#chips').innerHTML=['すべて','新着',...CATS.map(c=>c.k)].map(c=>`<button class="chip" aria-pressed="${c===cat}" data-c="${c}">${c}</button>`).join('');
 function setCat(c){cat=c;$$('.chip').forEach(x=>x.setAttribute('aria-pressed',x.dataset.c===c));const el=$(`.chip[data-c="${c}"]`);el&&el.scrollIntoView({inline:'center',block:'nearest'});renderList()}
 $('#chips').addEventListener('click',e=>{const b=e.target.closest('.chip');if(b)setCat(b.dataset.c)});
 const POP=['NISA','iDeCo','ふるさと納税','年収の壁','転職','内見','初期費用','確定申告','引越し','利回り','節約','住宅ローン','金利','作り置き','マイナンバー'];
 $('#poptags').innerHTML=POP.map(p=>`<button data-q="${p}">${p}</button>`).join('');
 $('#poptags').addEventListener('click',e=>{const b=e.target.closest('[data-q]');if(!b)return;$('#q').value=b.dataset.q;onQ()});
-function rowHTML(a){const c=catOf(a.c);return `<div class="row" data-open="${a.id}" role="button" tabindex="0" style="cursor:pointer"><span class="c c-${c.c}">${svg(c.i)}</span><div class="txt"><b>${a.t}</b><span>${a.s}</span></div><button class="star" data-fav="a:${a.id}" aria-label="お気に入り"></button></div>`}
+function rowHTML(a){const c=catOf(a.c);return `<div class="row" data-open="${a.id}" role="button" tabindex="0" style="cursor:pointer"><span class="c c-${c.c}">${svg(c.i)}</span><div class="txt"><b>${isNew(a)?'<span class="pill new" style="margin-right:6px;vertical-align:1px">NEW</span>':''}${a.t}</b><span>${a.s}</span></div><button class="star" data-fav="a:${a.id}" aria-label="お気に入り"></button></div>`}
 function renderList(){
   const q=$('#q').value.trim();const terms=q?expand(q):[];
-  let list=A.filter(a=>cat==='すべて'||a.c===cat);
+  let list=A.filter(a=>cat==='すべて'||(cat==='新着'?!!a.d:a.c===cat)).slice().sort((x,y)=>(y.d||'').localeCompare(x.d||''));
   if(terms.length){list=list.map(a=>[a,score(a,terms)]).filter(x=>x[1]>0).sort((x,y)=>y[1]-x[1]).map(x=>x[0])}
   $('#popular').hidden=!!q;
-  $('#count').textContent=(q?`「${q}」の検索結果 `:'')+`${list.length}件`;
-  $('#list').innerHTML=list.length?list.map(rowHTML).join(''):`<div class="empty">見つかりませんでした。<br>ひらがなや別の言葉（例：「にーさ」「てどり」）でも探せます。</div>`;
+  const added=A.filter(a=>a.d).length,todayN=A.filter(a=>a.d===todayStr).length;
+  $('#count').textContent=(q?`「${q}」の検索結果 `:'')+`${list.length}件`+(!q&&cat==='すべて'&&added?`（毎日追加：これまで${added}本${todayN?`・今日+${todayN}本`:''}）`:'');
+  if(!q&&cat==='新着'&&!list.length)$('#list').innerHTML='';
+  $('#list').innerHTML=list.length?list.map(rowHTML).join(''):cat==='新着'&&!q?`<div class="empty">新着記事は毎朝追加されます。</div>`:`<div class="empty">見つかりませんでした。<br>ひらがなや別の言葉（例：「にーさ」「てどり」）でも探せます。</div>`;
   syncStars();
 }
 function renderSugg(){
@@ -961,6 +972,34 @@ document.addEventListener('click',e=>{if(!e.target.closest('.sbar'))$('#sugg').h
 $('#list').addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.dataset.open)openArticle(e.target.dataset.open)});
 renderList();
 
+/* ================= 毎日追加される記事 ================= */
+const CATKEYS=CATS.map(c=>c.k);
+function cleanArticle(x){
+  const str=v=>typeof v==='string'&&v.trim()?esc(v.trim()):null;
+  const arr=(v,min,max)=>Array.isArray(v)&&v.length>=min?v.slice(0,max).map(str).filter(Boolean):null;
+  if(!x||typeof x!=='object'||!/^[a-z0-9-]{3,60}$/.test(x.id||'')||!CATKEYS.includes(x.c)||!/^\d{4}-\d{2}-\d{2}$/.test(x.d||''))return null;
+  const t=str(x.t),s2=str(x.s),sum=arr(x.sum,2,5);
+  const sec=Array.isArray(x.sec)?x.sec.map(q=>Array.isArray(q)&&str(q[0])&&arr(q[1],1,8)?[str(q[0]),arr(q[1],1,8)]:null).filter(Boolean):[];
+  if(!t||!s2||!sum||sec.length<1)return null;
+  const src=Array.isArray(x.src)?x.src.filter(q=>Array.isArray(q)&&str(q[0])&&/^https:\/\//.test(q[1]||'')).slice(0,5).map(q=>[esc(q[0]),esc(q[1])]):[];
+  return {id:x.id,c:x.c,d:x.d,t,s:s2,sum,sec,tip:str(x.tip)||'',warn:str(x.warn)||'',kw:Array.isArray(x.kw)?x.kw.filter(k=>typeof k==='string').slice(0,20):[],src};
+}
+function addArticles(list){
+  let n=0;
+  (list||[]).forEach(x=>{const a=cleanArticle(x);if(!a||A.some(b=>b.id===a.id))return;indexArticle(a);A.push(a);(a.kw||[]).forEach(k=>{if(!KEYWORDS.includes(k))KEYWORDS.push(k)});n++});
+  if(n){renderList();renderFeats();syncStars()}
+}
+(async()=>{
+  const RAWA='https://raw.githubusercontent.com/qinglong-ytr/Life-HaQ/main/articles.json';
+  let j=null;
+  for(const u of [RAWA+'?t='+Date.now(),'articles.json?t='+Date.now()]){
+    try{const r=await fetch(u,{cache:'no-store'});if(r.ok){const x=await r.json();if(!j||(x.updated||'')>(j.updated||''))j=x;if(u.startsWith(RAWA))break}}catch(_){}
+  }
+  if(j){try{(await caches.open('lifehaq-v4')).put('articles.json',new Response(JSON.stringify(j),{headers:{'Content-Type':'application/json'}}))}catch(_){}}
+  else{try{const c=await caches.match('articles.json');j=c&&await c.json()}catch(_){}}
+  if(j&&Array.isArray(j.articles))addArticles(j.articles);
+})();
+
 /* ================= ARTICLE SHEET ================= */
 let lastScroll=0;
 function openArticle(id){
@@ -970,13 +1009,13 @@ function openArticle(id){
   const words=a._hay.length;const mins=Math.max(1,Math.round(words/450));
   const rel=A.filter(x=>x.c===a.c&&x.id!==a.id).slice(0,3);
   $('#art').innerHTML=`
-   <div style="display:flex;gap:8px;align-items:center"><span class="pill">${a.c}</span><span class="xs sub">約${mins}分で読めます</span></div>
+   <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span class="pill">${a.c}</span>${a.d?`<span class="pill blue">${fmtDate(a.d)}追加</span>`:''}<span class="xs sub">約${mins}分で読めます</span></div>
    <h1>${a.t}</h1><p class="lead">${a.s}</p>
    <div class="sum"><h3>ポイント</h3><ul>${a.sum.map(x=>`<li>${x}</li>`).join('')}</ul></div>
    ${a.sec.map(s=>`<div class="asec"><h2>${s[0]}</h2><ul>${s[1].map(x=>`<li>${x}</li>`).join('')}</ul></div>`).join('')}
    ${a.tip?`<div class="box tip"><b>ヒント</b>${a.tip}</div>`:''}
    ${a.warn?`<div class="box warn"><b>注意</b>${a.warn}</div>`:''}
-   ${a.src&&a.src.length?`<div class="src">出典・詳細：${a.src.map(k=>`<a href="${SRC[k][1]}" target="_blank" rel="noopener">${SRC[k][0]}</a>`).join('、')}</div>`:''}
+   ${a.src&&a.src.length?`<div class="src">出典・詳細：${a.src.map(k=>Array.isArray(k)?k:SRC[k]).filter(Boolean).map(x=>`<a href="${x[1]}" target="_blank" rel="noopener">${x[0]}</a>`).join('、')}</div>`:''}
    ${rel.length?`<div class="card" style="padding-block:6px"><div class="sec-h" style="padding-top:10px"><h2>${a.c}の記事</h2></div>${rel.map(rowHTML).join('')}</div>`:''}`;
   const st=$('#sheet-star');st.dataset.fav='a:'+a.id;
   if($('#sheet').hidden)lastScroll=window.scrollY;
