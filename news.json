@@ -1,6 +1,53 @@
 {
- "updated": "2026-10-09",
+ "updated": "2026-10-10",
  "days": [
+  {
+   "date": "2026-10-10",
+   "items": [
+    {
+     "cat": "金利",
+     "title": "日銀、再利上げ観測も円安基調 １ドル１５０円台後半、「後手に回る」懸念払拭できず",
+     "body": "金利や為替は、ローンの返済額や外国資産の評価額に影響します。1日の動きより数か月の流れで見るのがおすすめです。",
+     "src": "朝日新聞",
+     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE16TG05blNCeTVCUDU4ZkotSHlWbDFYc0xMTmZPSlZCWTNUeG4yUV84Njl5MkhxNkRZSzJmMERKcjJGLXdRcGVxOE05N19Gb2hiNnpOSzdod2lySDRt?oc=5"
+    },
+    {
+     "cat": "NISA",
+     "title": "楽天証券、こどもNISA専用で「信託報酬ゼロ」投資信託",
+     "body": "制度の変更は施行日と対象者が大事です。手続きが必要かどうかは金融機関の案内でも確認できます。",
+     "src": "Impress Watch",
+     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1BQzNKbW1YX3pFTDRZdWNEVEsyRDhVN2p2RXdsX2U4MU44ZlFiOHhPNS1XYWF6OFVpZXY0QmcyaWI3cXhpa1JrY2lQeEhwYnhYa183MzlsUnZJbjdCV1Ywbm5JMjE?oc=5"
+    },
+    {
+     "cat": "税金",
+     "title": "「越前ガニ」にICタグ ふるさと納税返礼品の不適切表示問題、福井県が信頼回復へ方針",
+     "body": "税制の変更は、決まってから実際に始まるまで時間があります。いつから・誰が対象かをチェックしておきましょう。",
+     "src": "産経ニュース",
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9ReHVOZnRydHpHZzB3ZjA0UDNILXZzMjVuVnFCWmM5YkF5ZGU3S0xrX2ZzYWtIOEdvaVQwRXV1MzNQX28tbHMtdWJZbUxuQmtpT0hJMlItTGs5MV9oSnNJUk5zTmZLU3d4cE9HZmJxbHZ5cDltLVE?oc=5"
+    },
+    {
+     "cat": "不動産",
+     "title": "街角景気は9月は0.6ポイント上昇、秋物・大型連休が支え 住宅関連には金利上昇の影響も",
+     "body": "住宅ローンや家賃は家計の中で一番大きな固定費です。金利タイプごとの返済額の違いも試算しておくと安心です。",
+     "src": "Reuters",
+     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNNWhaYkhtQWpvM0ZDdkFmMlBOYUYzdzZ0ZW9KUHRDa1E2bFVCRFQ2eUNVbUZOcVFhZjVVcWxBWjNSQzE5eS12cGlzS0k1aF9PSzRxWkl4Ymw2X1dINVRac0lQT3VlandwZFlLaFRZaXVMaVo3U2ZhTmlSdXdkZ3hFQ3RIcnBLdw?oc=5"
+    },
+    {
+     "cat": "キャリア",
+     "title": "「日本版DOGE」本格始動 賃上げ税制、コロナワクチン基金に照準 消費減税の財源狙う",
+     "body": "賃金や求人の動きは転職のタイミングにも関わります。今の市場価値を知る材料にしましょう。",
+     "src": "産経ニュース",
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBkWVk4YjlJd0pHbkN5TUsxY21UNU5fanNlRUdmdDVpNllOZ0lXNnNZTTVOcXJST1JVdVZlSFNvT2stRFB1dVFXZUFBVXhIc0hQbXpkbmswOVlIYzJsRndJNzZ5QkpsZFZ1MDdhRG4yYVNqM3VEd3c?oc=5"
+    },
+    {
+     "cat": "暮らし",
+     "title": "「緩やかに持ち直している」判断引き上げ 消費者物価指数は前年同期比1.8ポイント上昇（山形県経済動向）",
+     "body": "物価や社会保険料の変化は手取りに直結します。固定費の見直しとあわせてチェックしておきましょう。",
+     "src": "TBS NEWS DIG",
+     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5BOFU5eTViWUI3dDJlQzlfUmdjS0FDeEw3aUhyY0F1Q3NXZUw4Vm43TnVDbF9rSHlHYXplcFQ0RFViN0hoZnE2d2tXdkhCU01Wd3R3dDFpYko1X3VaRVJfMmhEYks?oc=5"
+    }
+   ]
+  },
   {
    "date": "2026-10-09",
    "items": [
