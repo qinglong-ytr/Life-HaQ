@@ -245,6 +245,23 @@ table.led{width:100%;border-collapse:collapse;font-size:.8rem;min-width:330px}
 .led td.inm{color:var(--green)} .led td.outm{color:var(--brand)}
 .led tr.carry td{color:var(--sub);background:var(--bg)}
 .led td:last-child{width:30px;padding:0}
+.presets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+.presets button{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:8px 10px;text-align:left;display:flex;justify-content:space-between;gap:6px;font-size:.78rem;line-height:1.35}
+.presets button small{color:var(--sub);white-space:nowrap;font-variant-numeric:tabular-nums}
+.bigrem{display:flex;flex-direction:column;align-items:center;gap:2px;padding:4px 0}
+.bigrem span{font-size:.8rem;color:var(--sub)}
+.bigrem b{font-size:2rem;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.2}
+.plan{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.plan div{background:var(--bg);border-radius:12px;padding:10px;display:flex;flex-direction:column;min-width:0}
+.plan span{font-size:.72rem;color:var(--sub)}
+.plan b{font-size:1.05rem;font-variant-numeric:tabular-nums}
+.plan small{font-size:.72rem;color:var(--sub)}
+.steps2{margin:0;padding-left:1.2em;font-size:.88rem}
+.steps2 li{margin:4px 0}
+details.set summary{cursor:pointer;color:var(--blue);font-size:.88rem;font-weight:600;list-style:none;padding:4px 0}
+details.set summary::-webkit-details-marker{display:none}
+details.set[open] summary{margin-bottom:8px}
+.mealh{font-size:.76rem;color:var(--sub);font-weight:700;padding:10px 0 2px;display:flex;justify-content:space-between}
 .tact{background:none;border:0;color:var(--amber);font-weight:700;margin-left:14px;padding:0;font-size:.84rem}
 .bar{display:flex;height:12px;border-radius:99px;overflow:hidden;background:var(--line)}
 .check{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-top:1px solid var(--line)}
@@ -387,6 +404,70 @@ nav.tabs button[aria-current="page"]{color:var(--brand);font-weight:700}
       <div class="tblwrap"><table class="led"><thead><tr><th>日付</th><th>摘要</th><th>入金</th><th>出金</th><th>残高</th><th><span class="xs" style="position:absolute;left:-9999px">削除</span></th></tr></thead><tbody id="l-tbody"></tbody></table></div>
       <p class="sm sub" id="l-empty" style="margin:0">この月の記録はまだありません。</p>
     </div>
+    <!-- 体重管理 -->
+    <div class="card" data-panel="body" hidden>
+      <div class="tool-h"><h2>体重管理</h2><button class="star" data-fav="t:body" aria-label="お気に入り"></button></div>
+      <div id="bd-empty" class="sm sub" hidden>下の「目標と体の情報」を入れると、目標までに必要なことと1日の目安が出ます。</div>
+      <div id="bd-sum">
+        <div class="kpis"><div><span>今の体重</span><b id="bd-cur"></b></div><div><span>目標</span><b id="bd-goalv"></b></div><div><span id="bd-restl">あと</span><b id="bd-rest"></b></div></div>
+      </div>
+      <div id="bd-prog" style="display:flex;flex-direction:column;gap:4px"><div class="meter"><i id="bd-progbar" style="width:0%"></i></div><span class="xs sub" id="bd-progt"></span></div>
+      <svg class="chart" id="bd-chart" viewBox="0 0 340 150" role="img" aria-label="体重の推移"></svg>
+      <p class="xs sub" id="bd-chartnote" style="margin:0"></p>
+    </div>
+    <div class="card" data-panel="body" hidden>
+      <div class="monthnav"><button class="mbtn" data-bday="-1" aria-label="前の日"><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></button><b class="mlabel" id="bd-dlabel" style="min-width:9em"></b><button class="mbtn" data-bday="1" aria-label="次の日"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></button></div>
+      <div class="field"><label for="bw-in">この日の体重</label><div style="display:flex;gap:8px"><div class="yenin" style="flex:1;width:auto;min-width:0"><input id="bw-in" type="text" inputmode="decimal" autocomplete="off" placeholder="例：62.4"><span>kg</span></div><button class="btn" id="bw-save" style="flex:none">記録</button></div><span class="xs sub" id="bw-diff"></span></div>
+      <div class="bigrem"><span id="bd-remlabel">あと食べられる目安</span><b id="bd-rem"></b></div>
+      <div class="cmp"><div class="cmp-top"><span>食事</span><span id="bd-eat"></span></div><div class="meter"><i id="bd-eatbar"></i></div></div>
+      <div class="cmp"><div class="cmp-top"><span>運動</span><span id="bd-ex"></span></div><div class="meter"><i id="bd-exbar" class="good"></i></div></div>
+      <div class="cmp"><div class="cmp-top"><span>たんぱく質</span><span id="bd-pro"></span></div><div class="meter"><i id="bd-probar" class="good"></i></div></div>
+    </div>
+    <div class="card" data-panel="body" hidden>
+      <h2 style="margin:0;font-size:1.02rem">食事を記録</h2>
+      <div class="tgl" id="bf-meal"><button type="button" data-v="朝">朝</button><button type="button" data-v="昼">昼</button><button type="button" data-v="夜">夜</button><button type="button" data-v="間食">間食</button></div>
+      <div class="xs sub">よく食べるもの（タップで追加・数値は目安）</div>
+      <div class="presets" id="bf-presets"></div>
+      <div class="field"><label for="bf-name">自分で入力</label><input id="bf-name" type="text" placeholder="例：定食、パスタ" autocomplete="off"></div>
+      <div class="g2">
+        <div class="field"><label for="bf-kcal">カロリー（kcal）</label><input id="bf-kcal" type="text" inputmode="numeric" autocomplete="off"></div>
+        <div class="field"><label for="bf-p">たんぱく質（g・任意）</label><input id="bf-p" type="text" inputmode="decimal" autocomplete="off"></div>
+      </div>
+      <button class="primary" id="bf-add">食事を追加</button>
+      <div id="bf-list"></div>
+    </div>
+    <div class="card" data-panel="body" hidden>
+      <h2 style="margin:0;font-size:1.02rem">運動を記録</h2>
+      <div class="g2">
+        <div class="field"><label for="bx-type">運動</label><select id="bx-type"></select></div>
+        <div class="field" id="bx-minwrap"><label for="bx-min">時間（分）</label><input id="bx-min" type="text" inputmode="numeric" autocomplete="off" placeholder="30"></div>
+        <div class="field" id="bx-kwrap" hidden><label for="bx-kcal">消費（kcal）</label><input id="bx-kcal" type="text" inputmode="numeric" autocomplete="off"></div>
+      </div>
+      <span class="xs sub" id="bx-prev"></span>
+      <button class="primary" id="bx-add">運動を追加</button>
+      <div id="bx-list"></div>
+      <p class="xs sub" style="margin:0">消費カロリー＝1.05 × メッツ × 時間 × 体重 で計算した目安です（メッツは国立健康・栄養研究所「身体活動のメッツ表」）。</p>
+    </div>
+    <div class="card" data-panel="body" hidden>
+      <div class="sec-h"><h2>目標達成に必要なこと</h2><span class="pill" id="bd-mode"></span></div>
+      <div id="bd-plan"></div>
+      <details class="set" id="bd-set">
+        <summary>目標と体の情報を入力・変更する</summary>
+        <div class="stack" style="gap:10px">
+          <div class="tgl" id="bd-sex"><button type="button" data-v="f">女性</button><button type="button" data-v="m">男性</button></div>
+          <div class="g2">
+            <div class="field"><label for="bd-age">年齢</label><input id="bd-age" type="text" inputmode="numeric" autocomplete="off"></div>
+            <div class="field"><label for="bd-h">身長（cm）</label><input id="bd-h" type="text" inputmode="decimal" autocomplete="off"></div>
+            <div class="field"><label for="bd-w">今の体重（kg）</label><input id="bd-w" type="text" inputmode="decimal" autocomplete="off"></div>
+            <div class="field"><label for="bd-goal">目標体重（kg）</label><input id="bd-goal" type="text" inputmode="decimal" autocomplete="off"></div>
+            <div class="field"><label for="bd-weeks">期間（週）</label><input id="bd-weeks" type="text" inputmode="numeric" autocomplete="off" placeholder="12"></div>
+            <div class="field"><label for="bd-pal">ふだんの活動量</label><select id="bd-pal"></select></div>
+          </div>
+          <button class="primary" id="bd-save">目標を保存</button>
+        </div>
+      </details>
+      <p class="xs sub" style="margin:0">基礎代謝量は厚生労働省「日本人の食事摂取基準（2025年版）」の基礎代謝基準値と身体活動レベルで計算し、体脂肪1kg≒7,200kcalとして必要なカロリーを出した目安です。持病がある人、妊娠中・治療中の人は医師に相談してください。入力はこの端末にだけ保存されます。</p>
+    </div>
     <div class="card" data-panel="sim" hidden>
       <div class="tool-h"><h2>積立シミュレーター</h2><button class="star" data-fav="t:sim" aria-label="お気に入り"></button></div>
       <div class="g2">
@@ -465,7 +546,7 @@ nav.tabs button[aria-current="page"]{color:var(--brand);font-weight:700}
     <div class="card">
       <h2 style="margin:0;font-size:1.02rem">毎日の更新について</h2>
       <p class="sm" style="margin:0">「今日のニュース」は毎朝自動で新しい内容に更新されます。オフラインのときは最後に読み込んだ内容が表示されます。「今日のおすすめ」と「今日の用語」は日付ごとに入れ替わります。</p>
-      <p class="sm sub" style="margin:0">お気に入り、家計簿・出納帳、家計配分、チェックリストは、この端末のブラウザにだけ保存されます。家計簿はときどき「CSVで書き出す」で保存しておくと安心です。ブラウザのデータを消すと消えます。</p>
+      <p class="sm sub" style="margin:0">お気に入り、家計簿・出納帳、体重管理、家計配分、チェックリストは、この端末のブラウザにだけ保存されます。家計簿はときどき「CSVで書き出す」で保存しておくと安心です。ブラウザのデータを消すと消えます。</p>
     </div>
     <div class="card">
       <h2 style="margin:0;font-size:1.02rem">このアプリについて</h2>
@@ -487,7 +568,7 @@ nav.tabs button[aria-current="page"]{color:var(--brand);font-weight:700}
 
 <nav class="tabs" aria-label="メイン">
   <button data-go="home" aria-current="page"><svg viewBox="0 0 24 24"><path d="M3 11 12 4l9 7v9h-6v-6H9v6H3z"/></svg>ホーム</button>
-  <button data-go="know"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>さがす</button>
+  <button data-go="know"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>ノウハウ</button>
   <button data-go="tools"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 7h8M8 12h2M14 12h2M8 16h2M14 16h2"/></svg>ツール</button>
   <button data-go="fav"><svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.8 6.6 19.7l1.1-6.1L3.2 9.4l6.1-.8z"/></svg>お気に入り</button>
   <button data-go="more"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg>使い方</button>
@@ -513,6 +594,7 @@ const ICONS={
  budget:'<path d="M12 3v9l7 4"/><circle cx="12" cy="12" r="9"/>',yield:'<path d="M4 20 20 4"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/>',
  book:'<path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11M9 8h6"/>',
  ledger:'<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M10 9v12M4 15h16"/>',
+ body:'<path d="M6 20h12l1.5-11h-15z"/><path d="M9 9a3 3 0 0 1 6 0"/><path d="m12 15 1.6-2.2"/>',
  move:'<path d="M3 7h11v10H3zM14 10h4l3 3v4h-7"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/>'
 };
 const CATS=[
@@ -801,7 +883,7 @@ const UPDATES=[
  {w:'2027.1',t:'こどもNISAがスタート',p:'0〜17歳もつみたて投資枠が使えるように。年60万円・上限600万円、12歳以降に一定の条件で払出し可。'},
  {w:'2027.1',t:'iDeCoに70歳まで加入可能に',p:'老齢基礎年金などを受け取っていない70歳未満が対象に広がります。'}
 ];
-const TOOLS=[{id:'book',n:'家計簿',l:'家計簿',c:'green'},{id:'ledger',n:'出納帳',l:'出納帳',c:'blue'},{id:'sim',n:'積立',l:'積立シミュレーター',c:'red'},{id:'goal',n:'貯金目標',l:'貯金目標',c:'green'},{id:'budget',n:'家計配分',l:'家計の配分',c:'amber'},{id:'yield',n:'利回り',l:'不動産の利回り',c:'blue'},{id:'move',n:'引越し',l:'引越しチェックリスト',c:'red'}];
+const TOOLS=[{id:'book',n:'家計簿',l:'家計簿',c:'green'},{id:'ledger',n:'出納帳',l:'出納帳',c:'blue'},{id:'body',n:'体重管理',l:'体重管理',c:'red'},{id:'sim',n:'積立',l:'積立シミュレーター',c:'red'},{id:'goal',n:'貯金目標',l:'貯金目標',c:'green'},{id:'budget',n:'家計配分',l:'家計の配分',c:'amber'},{id:'yield',n:'利回り',l:'不動産の利回り',c:'blue'},{id:'move',n:'引越し',l:'引越しチェックリスト',c:'red'}];
 /* fallback news shown only if the live store is unreachable */
 const FALLBACK_NEWS={date:'2026-10-08',items:[
  {cat:'金利',title:'日銀が政策金利を1.25%に引き上げ（9月18日）',body:'6月に続く利上げ。植田総裁は利上げを続ける方針を示しました。変動金利の住宅ローンを借りている人は返済額の見直し時期を確認しておきましょう。',src:'大和アセットマネジメント',url:'https://www.daiwa-am.co.jp/specialreport/market_letter/20260918_02.pdf'}
@@ -1278,6 +1360,173 @@ $('#f2-add').onclick=()=>{
 $('#l-open').addEventListener('input',e=>{const neg=/^\s*[-−ー]/.test(String(e.target.value).normalize('NFKC'));OPEN[ledAcc]=(neg?-1:1)*parseYen(e.target.value);store.set('open',OPEN);renderLedger()});
 $('#l-open').addEventListener('focusout',()=>renderLedger());
 bookReady=true;renderBookForm();renderBook();renderLedger();
+
+
+/* ================= 体重管理 ================= */
+/* 基礎代謝基準値（kcal/kg/日）：日本人の食事摂取基準（2025年版） */
+const BMR_STD={m:[[29,23.7],[49,22.5],[64,21.8],[74,21.6],[999,21.5]],f:[[29,22.1],[49,21.9],[64,20.7],[74,20.7],[999,20.7]]};
+const PALS=[[1.50,'低い（座り仕事が中心・運動はほぼなし）'],[1.75,'ふつう（通勤や家事で歩く・軽い運動）'],[2.00,'高い（立ち仕事や移動が多い・運動習慣あり）']];
+/* メッツ：国立健康・栄養研究所「身体活動のメッツ表」 */
+const EXS=[['ふつうの歩行',3.0],['速歩き',4.3],['ジョギング',7.0],['ランニング（時速8km）',8.3],['自転車（通勤・ふつう）',4.0],['筋トレ（ふつう）',3.5],['筋トレ（きつい）',6.0],['エアロビクス',7.3],['ヨガ',2.5],['ストレッチ',2.3],['掃除機がけ',3.3],['その他（kcalを入力）',0]];
+/* よく食べるもの [名前, kcal, たんぱく質g]（日本食品標準成分表などからの目安） */
+const FOODS=[['ごはん 茶碗1杯（150g）',234,3.8],['おにぎり 鮭（1個）',180,5],['食パン 6枚切（1枚）',149,5.3],['卵（1個）',71,6.1],['納豆（1パック）',86,7.4],['鶏むね肉 皮なし（100g）',105,23.3],['サラダチキン（1個）',120,24],['牛乳（200ml）',126,6.8],['ヨーグルト 無糖（100g）',56,3.6],['バナナ（1本）',93,1.1],['味噌汁（1杯）',40,2.5],['サラダ ドレッシングあり',80,1.5],['コンビニ弁当',700,22],['牛丼 並',650,20],['ラーメン（1杯）',500,20],['菓子パン（1個）',350,7]];
+let BODY=store.get('body',null);if(!BODY||typeof BODY!=='object')BODY={p:null,days:{}};if(!BODY.days)BODY.days={};
+const saveBody=()=>store.set('body',BODY);
+const bday=d=>BODY.days[d]||(BODY.days[d]={w:null,f:[],x:[]});
+const peekDay=d=>BODY.days[d]||{w:null,f:[],x:[]};
+const num1=v=>{const n=parseFloat(String(v??'').normalize('NFKC').replace(/[^\d.]/g,''));return isFinite(n)?n:0};
+const r10=n=>Math.round(n/10)*10;
+const kg=n=>(Math.round(n*10)/10).toFixed(1)+'kg';
+let bDate=ymd(new Date());
+let bMeal=(h=>h<10?'朝':h<15?'昼':h<18?'間食':'夜')(new Date().getHours());
+let bSex=(BODY.p&&BODY.p.sex)||'f';
+function latestW(upTo){
+  const ds=Object.keys(BODY.days).filter(d=>BODY.days[d].w&&(!upTo||d<=upTo)).sort();
+  return ds.length?BODY.days[ds[ds.length-1]].w:(BODY.p?BODY.p.w0:null);
+}
+function bodyPlan(){
+  const p=BODY.p;if(!p)return null;
+  const cur=latestW()||p.w0,h=p.h/100;
+  const std=BMR_STD[p.sex].find(x=>p.age<=x[0])[1];
+  const bmr=std*cur,tdee=bmr*p.pal;
+  const diff=p.goal-cur;
+  const weeksPassed=Math.max(0,(Date.parse(ymd(new Date()))-Date.parse(p.start))/(7*864e5));
+  const wl=Math.max(1,p.weeks-weeksPassed);
+  const delta=diff*7200/(wl*7);
+  const bmi=cur/(h*h),gbmi=p.goal/(h*h);
+  const mode=Math.abs(diff)<0.3?'keep':diff<0?'loss':'gain';
+  const blocked=mode==='loss'&&gbmi<18.5;
+  let intake=r10(tdee),exGoal=0,food=0,warns=[];
+  if(mode==='loss'&&!blocked){
+    const D=-delta;exGoal=r10(Math.min(D/3,400));food=D-exGoal;intake=r10(tdee-food);
+    const pace=-diff/wl;
+    if(pace>cur*0.01)warns.push(`1週間に約${pace.toFixed(1)}kg減らすペースで、速すぎます。期間を${Math.ceil(-diff/(cur*0.01))}週以上にするのがおすすめです。`);
+    if(intake<bmr){warns.push(`食事の目標が基礎代謝量（約${r10(bmr)}kcal）を下回っています。期間を${Math.ceil(-diff*7200/((tdee-bmr+exGoal)*7))}週以上に延ばしましょう。`);intake=Math.max(intake,r10(bmr))}
+  }else if(mode==='gain'){
+    intake=r10(tdee+delta);
+    const pace=diff/wl;
+    if(pace>0.5)warns.push(`1週間に約${pace.toFixed(1)}kg増やすペースで、脂肪がつきやすくなります。期間を${Math.ceil(diff/0.5)}週以上にするのがおすすめです。`);
+  }
+  const lo=p.age>=65?0.15:p.age>=50?0.14:0.13;
+  return {p,cur,bmr,tdee,diff,wl,delta,bmi,gbmi,mode,blocked,intake,exGoal,food,warns,pmin:Math.round(intake*lo/4),pmax:Math.round(intake*0.20/4)};
+}
+const bmiLabel=b=>b<18.5?'低体重':b<25?'普通体重':'肥満（1度以上）';
+const MODE={loss:'減量',gain:'増量',keep:'維持'};
+const TIPS={
+  loss:['たんぱく質を毎食とる（肉・魚・卵・大豆製品）','主食は抜かずに、量を少し減らす','甘い飲み物とお酒のカロリーを見直す','通勤でひと駅歩くなど、歩く量を増やす','睡眠をしっかりとる','体重は毎朝同じ条件で量り、1週間の平均で見る'],
+  gain:['1日3食を抜かずに食べる','間食で +200〜300kcal（おにぎり＋牛乳など）','毎食たんぱく質をとる','筋トレを週2〜3回','体重は毎朝同じ条件で量る','増え方が速すぎるときは間食を減らして調整'],
+  keep:['体重は毎朝同じ条件で量り、1週間の平均で見る','増えてきたら、まず間食と飲み物から見直す','歩く習慣と週2回ほどの筋トレで体力を保つ']
+};
+function renderBodyChart(goal){
+  const ds=Object.keys(BODY.days).filter(d=>BODY.days[d].w).sort().slice(-60);
+  const svgEl=$('#bd-chart');
+  if(ds.length<2){svgEl.innerHTML='';svgEl.style.display='none';$('#bd-chartnote').textContent='体重を2日以上記録すると、ここに推移のグラフが出ます。';return}
+  svgEl.style.display='';$('#bd-chartnote').textContent=`最近${ds.length}回の記録`+(goal?'・点線は目標':'');
+  const ws=ds.map(d=>BODY.days[d].w);const all=goal?ws.concat(goal):ws;
+  let lo=Math.floor(Math.min(...all)-0.5),hi=Math.ceil(Math.max(...all)+0.5);if(hi-lo<2){hi+=1;lo-=1}
+  const W=340,H=150,L=34,R=10,T=10,B=22;
+  const t0=Date.parse(ds[0]),t1=Date.parse(ds[ds.length-1]);
+  const X=d=>L+(W-L-R)*((Date.parse(d)-t0)/Math.max(1,t1-t0)),Y=v=>T+(H-T-B)*(1-(v-lo)/(hi-lo));
+  const step=(hi-lo)<=4?1:(hi-lo)<=10?2:5;
+  let g='';
+  for(let v=Math.ceil(lo/step)*step;v<=hi;v+=step)g+=`<line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)"/><text x="${L-5}" y="${Y(v)+3}" text-anchor="end" font-size="9" fill="var(--sub)">${v}</text>`;
+  if(goal&&goal>=lo&&goal<=hi)g+=`<line x1="${L}" x2="${W-R}" y1="${Y(goal)}" y2="${Y(goal)}" stroke="var(--green)" stroke-width="1.5" stroke-dasharray="4 3"/>`;
+  const lab=d=>{const [,m,dd]=d.split('-');return `${+m}/${+dd}`};
+  g+=`<text x="${L}" y="${H-6}" font-size="9" fill="var(--sub)">${lab(ds[0])}</text><text x="${W-R}" y="${H-6}" text-anchor="end" font-size="9" fill="var(--sub)">${lab(ds[ds.length-1])}</text>`;
+  g+=`<path d="${ds.map((d,i)=>(i?'L':'M')+X(d).toFixed(1)+' '+Y(BODY.days[d].w).toFixed(1)).join(' ')}" fill="none" stroke="var(--brand)" stroke-width="2.2" stroke-linejoin="round"/>`;
+  const ld=ds[ds.length-1];g+=`<circle cx="${X(ld)}" cy="${Y(BODY.days[ld].w)}" r="4" fill="var(--brand)"/>`;
+  svgEl.innerHTML=g;
+}
+function renderBody(){
+  const pl=bodyPlan(),p=BODY.p;
+  $('#bd-empty').hidden=!!p;$('#bd-sum').hidden=!p;$('#bd-prog').hidden=!p;
+  if(p){
+    $('#bd-cur').textContent=kg(pl.cur);$('#bd-goalv').textContent=kg(p.goal);
+    $('#bd-restl').textContent=pl.mode==='gain'?'あと増やす':pl.mode==='loss'?'あと減らす':'目標との差';
+    $('#bd-rest').textContent=kg(Math.abs(pl.diff));
+    const total=Math.abs(p.goal-p.w0),done=total?Math.max(0,Math.min(1,(p.w0-pl.cur)/(p.w0-p.goal))):1;
+    $('#bd-progbar').style.width=(done*100)+'%';$('#bd-progbar').className=done>=1?'good':'';
+    $('#bd-progt').textContent=`スタート ${kg(p.w0)} から ${Math.round(done*100)}% 達成・BMI ${pl.bmi.toFixed(1)}（${bmiLabel(pl.bmi)}）`;
+  }
+  renderBodyChart(p&&p.goal);
+  /* その日 */
+  const dt=new Date(bDate+'T00:00:00');
+  $('#bd-dlabel').textContent=`${dt.getMonth()+1}月${dt.getDate()}日（${W[dt.getDay()]}）${bDate===ymd(new Date())?'・今日':''}`;
+  const day=peekDay(bDate);
+  if(document.activeElement!==$('#bw-in'))$('#bw-in').value=day.w?day.w.toFixed(1):'';
+  const prevW=latestW(ymd(new Date(Date.parse(bDate)-864e5)));
+  $('#bw-diff').textContent=day.w&&prevW?`前回の記録から ${day.w-prevW>=0?'+':'−'}${Math.abs(day.w-prevW).toFixed(1)}kg`:'';
+  const eaten=day.f.reduce((s,x)=>s+x.k,0),burned=day.x.reduce((s,x)=>s+x.k,0),pro=day.f.reduce((s,x)=>s+(x.p||0),0);
+  const target=pl?pl.intake:0;
+  const rem=pl?(pl.mode==='loss'&&!pl.blocked?target-eaten:target-eaten+burned):null;
+  $('#bd-remlabel').textContent=!pl?'目標を入れると、1日の目安が出ます':pl.mode==='gain'?'あと食べたい目安':'あと食べられる目安';
+  const rb=$('#bd-rem');rb.textContent=pl?(rem<0?'−':'')+fmt(Math.abs(rem))+' kcal':'—';rb.className=pl&&rem<0&&pl.mode!=='gain'?'neg':pl&&pl.mode==='gain'&&rem<=0?'pos':'';
+  $('#bd-eat').textContent=`${fmt(eaten)} / ${pl?fmt(target):'—'} kcal`;
+  const eb=$('#bd-eatbar');eb.style.width=(pl?Math.min(100,eaten/Math.max(1,target)*100):0)+'%';eb.className=pl&&eaten>target&&pl.mode!=='gain'?'over':pl&&pl.mode==='gain'&&eaten>=target?'good':'';
+  $('#bd-ex').textContent=pl&&pl.exGoal?`${fmt(burned)} / ${fmt(pl.exGoal)} kcal`:`${fmt(burned)} kcal`;
+  $('#bd-exbar').style.width=(pl&&pl.exGoal?Math.min(100,burned/pl.exGoal*100):(burned?100:0))+'%';
+  $('#bd-pro').textContent=pl?`${Math.round(pro)} / ${pl.pmin}〜${pl.pmax} g`:`${Math.round(pro)} g`;
+  $('#bd-probar').style.width=(pl?Math.min(100,pro/Math.max(1,pl.pmin)*100):0)+'%';
+  /* 食事一覧 */
+  $$('#bf-meal button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v===bMeal));
+  const meals=['朝','昼','夜','間食'];
+  $('#bf-list').innerHTML=day.f.length?meals.filter(m=>day.f.some(x=>x.m===m)).map(m=>{const it=day.f.filter(x=>x.m===m);return `<div class="mealh"><span>${m}</span><span>${fmt(it.reduce((s,x)=>s+x.k,0))} kcal</span></div>`+it.map(x=>`<div class="txr" style="padding:6px 0"><div class="txt"><b style="font-weight:500">${esc(x.n)}</b><span>${x.p?`たんぱく質 ${x.p}g`:''}</span></div><span class="am">${fmt(x.k)} kcal</span><button class="del" data-bdel="f:${x.id}" aria-label="${esc(x.n)}を削除">×</button></div>`).join('')}).join(''):'<p class="sm sub" style="margin:0">この日の食事はまだ記録していません。</p>';
+  $('#bx-list').innerHTML=day.x.length?day.x.map(x=>`<div class="txr" style="padding:6px 0"><div class="txt"><b style="font-weight:500">${esc(x.n)}</b><span>${x.min?x.min+'分':''}</span></div><span class="am pos">−${fmt(x.k)} kcal</span><button class="del" data-bdel="x:${x.id}" aria-label="${esc(x.n)}を削除">×</button></div>`).join(''):'';
+  updateExPrev();
+  /* 計画 */
+  $('#bd-mode').textContent=pl?MODE[pl.mode]:'未設定';
+  if(!pl){$('#bd-plan').innerHTML='<p class="sm" style="margin:0">性別・年齢・身長・体重・目標体重を入れてください。減量・増量・維持のどれにも対応します。</p>';return}
+  if(pl.blocked){
+    $('#bd-plan').innerHTML=`<div class="box warn"><b>注意</b>目標体重がBMI ${pl.gbmi.toFixed(1)}で、低体重（18.5未満）の範囲です。健康のため、この目標での減量プランは出していません。目標を見直すか、医師や管理栄養士に相談してください。</div>`;return;
+  }
+  const exMin=pl.exGoal?Math.round(pl.exGoal/(1.05*4.3*pl.cur/60)):0;
+  let steps=[];
+  if(pl.mode==='loss')steps=[`食事は1日 約${fmt(pl.intake)}kcal を目安に（ふだんより約${fmt(r10(pl.food))}kcal 少なく）`,`運動で1日 約${fmt(pl.exGoal)}kcal 消費（速歩きなら約${exMin}分）`,`たんぱく質は1日 ${pl.pmin}〜${pl.pmax}g`];
+  else if(pl.mode==='gain')steps=[`食事は1日 約${fmt(pl.intake)}kcal を目安に（ふだんより約${fmt(r10(pl.delta))}kcal 多く）`,`たんぱく質は1日 ${pl.pmin}〜${pl.pmax}g`,'筋トレを週2〜3回。運動した日は消費した分も食べる'];
+  else steps=[`食事は1日 約${fmt(pl.intake)}kcal を目安に`,`たんぱく質は1日 ${pl.pmin}〜${pl.pmax}g`,'運動した日は消費した分も食べてOK'];
+  $('#bd-plan').innerHTML=`
+    <div class="plan">
+      <div><span>1日の摂取目標</span><b>${fmt(pl.intake)} kcal</b><small>ふだんの消費 約${fmt(r10(pl.tdee))}kcal</small></div>
+      <div><span>${pl.mode==='keep'?'目標との差':'1週間のペース'}</span><b>${pl.mode==='keep'?kg(Math.abs(pl.diff)):(pl.diff<0?'−':'+')+(Math.abs(pl.diff)/pl.wl).toFixed(2)+'kg'}</b><small>${pl.mode==='keep'?'維持の範囲です':`あと約${Math.round(pl.wl)}週`}</small></div>
+      <div><span>基礎代謝量</span><b>${fmt(r10(pl.bmr))} kcal</b><small>何もしなくても使う量</small></div>
+      <div><span>目標のBMI</span><b>${pl.gbmi.toFixed(1)}</b><small>${bmiLabel(pl.gbmi)}</small></div>
+    </div>
+    <ol class="steps2" style="margin-top:10px">${steps.map(x=>`<li>${x}</li>`).join('')}</ol>
+    ${pl.warns.map(w=>`<div class="box warn" style="margin-top:8px"><b>注意</b>${w}</div>`).join('')}
+    <div class="box tip" style="margin-top:8px"><b>続けるコツ</b>${TIPS[pl.mode].join('／')}</div>`;
+}
+function fillBodyForm(){
+  const p=BODY.p||{};
+  $$('#bd-sex button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v===bSex));
+  $('#bd-age').value=p.age||'';$('#bd-h').value=p.h||'';$('#bd-w').value=(latestW()||p.w0||'');$('#bd-goal').value=p.goal||'';$('#bd-weeks').value=p.weeks||12;
+  $('#bd-pal').innerHTML=PALS.map(x=>`<option value="${x[0]}">${x[1]}</option>`).join('');$('#bd-pal').value=[...$('#bd-pal').options].find(o=>+o.value===(p.pal||1.5)).value;
+  $('#bd-set').open=!BODY.p;
+}
+$('#bd-sex').addEventListener('click',e=>{const b=e.target.closest('[data-v]');if(!b)return;bSex=b.dataset.v;$$('#bd-sex button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.v===bSex))});
+$('#bd-save').onclick=()=>{
+  const age=Math.round(num1($('#bd-age').value)),h=num1($('#bd-h').value),w=num1($('#bd-w').value),goal=num1($('#bd-goal').value),weeks=Math.max(1,Math.round(num1($('#bd-weeks').value)||12));
+  if(age<18||age>100){toast('年齢は18〜100で入力してください');return}
+  if(h<120||h>220){toast('身長をcmで入力してください');return}
+  if(w<30||w>200||goal<30||goal>200){toast('体重と目標体重をkgで入力してください');return}
+  BODY.p={sex:bSex,age,h,w0:w,goal,weeks,pal:+$('#bd-pal').value,start:ymd(new Date())};
+  bday(ymd(new Date())).w=Math.round(w*10)/10;
+  saveBody();$('#bd-set').open=false;renderBody();toast('目標を保存しました');
+};
+$('#bw-save').onclick=()=>{const w=num1($('#bw-in').value);if(w<30||w>200){toast('体重をkgで入力してください');$('#bw-in').focus();return}bday(bDate).w=Math.round(w*10)/10;saveBody();$('#bw-in').blur();renderBody();toast(`${kg(w)} を記録しました`)};
+document.addEventListener('click',e=>{const b=e.target.closest('[data-bday]');if(!b)return;const d=new Date(Date.parse(bDate+'T00:00:00')+(+b.dataset.bday)*864e5);bDate=ymd(d);renderBody()});
+$('#bf-meal').addEventListener('click',e=>{const b=e.target.closest('[data-v]');if(!b)return;bMeal=b.dataset.v;renderBody()});
+$('#bf-presets').innerHTML=FOODS.map((f,i)=>`<button type="button" data-food="${i}"><span>${f[0]}</span><small>${f[1]}kcal</small></button>`).join('');
+const bid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,5);
+function addFood(n,k,p){bday(bDate).f.push({id:bid(),m:bMeal,n,k:Math.round(k),p:Math.round(p*10)/10||0});saveBody();renderBody();toast(`${bMeal}：${n} ${fmt(k)}kcal を追加しました`)}
+$('#bf-presets').addEventListener('click',e=>{const b=e.target.closest('[data-food]');if(!b)return;const f=FOODS[+b.dataset.food];addFood(f[0],f[1],f[2])});
+$('#bf-add').onclick=()=>{const n=$('#bf-name').value.trim().slice(0,40)||'食事',k=parseYen($('#bf-kcal').value);if(!k){toast('カロリーを入力してください');$('#bf-kcal').focus();return}addFood(n,k,num1($('#bf-p').value));$('#bf-name').value='';$('#bf-kcal').value='';$('#bf-p').value=''};
+$('#bx-type').innerHTML=EXS.map((x,i)=>`<option value="${i}">${x[0]}${x[1]?`（${x[1]}メッツ）`:''}</option>`).join('');
+function exKcal(){const ex=EXS[+$('#bx-type').value];if(!ex[1])return parseYen($('#bx-kcal').value);const w=latestW(bDate)||latestW()||(BODY.p&&BODY.p.w0)||60;return Math.round(1.05*ex[1]*(parseYen($('#bx-min').value)/60)*w)}
+function updateExPrev(){const ex=EXS[+$('#bx-type').value];$('#bx-kwrap').hidden=!!ex[1];$('#bx-minwrap').hidden=!ex[1];const k=exKcal();$('#bx-prev').textContent=ex[1]&&k?`消費の目安：約${fmt(k)}kcal`:''}
+['#bx-type','#bx-min','#bx-kcal'].forEach(id=>$(id).addEventListener('input',updateExPrev));$('#bx-type').addEventListener('change',updateExPrev);
+$('#bx-add').onclick=()=>{const ex=EXS[+$('#bx-type').value],k=exKcal(),min=parseYen($('#bx-min').value);if(!k){toast(ex[1]?'時間を入力してください':'消費カロリーを入力してください');return}bday(bDate).x.push({id:bid(),n:ex[1]?ex[0]:'その他の運動',min:ex[1]?min:0,k});saveBody();$('#bx-min').value='';$('#bx-kcal').value='';renderBody();toast(`運動 ${fmt(k)}kcal を記録しました`)};
+document.addEventListener('click',e=>{const b=e.target.closest('[data-bdel]');if(!b)return;const [t,id]=b.dataset.bdel.split(':');const day=bday(bDate),arr=t==='f'?day.f:day.x;const i=arr.findIndex(x=>x.id===id);if(i<0)return;const [rm]=arr.splice(i,1);saveBody();renderBody();toast('削除しました','元に戻す',()=>{arr.splice(i,0,rm);saveBody();renderBody()})});
+fillBodyForm();renderBody();
 
 /* links */
 $('#links').innerHTML=Object.values(SRC).map(s=>`<a class="row" href="${s[1]}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none"><div class="txt"><b style="font-weight:500">${s[0]}</b></div>${CHEV}</a>`).join('');
