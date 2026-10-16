@@ -1,6 +1,53 @@
 {
- "updated": "2026-10-16",
+ "updated": "2026-10-17",
  "days": [
+  {
+   "date": "2026-10-17",
+   "items": [
+    {
+     "cat": "金利",
+     "title": "日銀植田総裁“物価2％超の上昇容認せず” 今後も利上げ進める",
+     "body": "住宅ローンの変動金利や預金の金利に関わるニュースです。変動金利で借りている人は、次の金利見直しの時期を確認しておきましょう。",
+     "src": "NHKニュース",
+     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFB6YnJtOVJOcUVmWk80TU9fdjQ3RWg0WmRIaGl4YmhSc21CRTRSX0JjRVhvQkwwYzRZTG93UVZtS3A3TDdvc3RQMWJxTXJXcDhndUZfV09RYm1fYllIZ2tv?oc=5"
+    },
+    {
+     "cat": "NISA",
+     "title": "NISAで人気の「中国株」ランキング【2026年10月】楽天証券の「NISA口座(成長投資枠)」で買われている「中国株」の買付金額＆保有残高ランキングを発表！",
+     "body": "NISA・iDeCoの制度や使い方に関わるニュースです。自分の枠や掛金の設定に影響がないか確認しておきましょう。",
+     "src": "ダイヤモンド・オンライン",
+     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE12U29JYTltR25JV1BNUW05UkNYQmFyODNLWFEwa2VEdDlBT0tpcUVYRGRvQ21ZalRTcWFmSC1VT1NiR1BYNjNzQnNZZTg0NGllSGow?oc=5"
+    },
+    {
+     "cat": "税金",
+     "title": "公明「8万円給付」、国民「住民税の控除引き上げ」 消費減税に対案",
+     "body": "税金や控除に関わるニュースです。年末調整や確定申告で手取りが変わることがあるので、対象になるか確認しておきましょう。",
+     "src": "朝日新聞",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1CVnJQTnRZS3ZxX2NaMGtXUnhTYXJMV1g2NE5sb2tnQzhVbXRFeTIxZGphSlpBc0FLTmw3M2ptNEtZZEVFWDRlVXlCNzNfaDZZZDlmb0Y4OHBENUE3TTJzbUdIRGo1V0k?oc=5"
+    },
+    {
+     "cat": "不動産",
+     "title": "50年住宅ローン、金利リスク高く 金融庁が監視方針",
+     "body": "住まいのお金に関わるニュースです。家賃の更新や住宅購入・借り換えを考えている人は、相場の流れを押さえておきましょう。",
+     "src": "日本経済新聞",
+     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5Rd2RmWnZic0FndG93NnROQWhSbXY3dTdHZmRZMzEwQnhQRENmRWpWZjBCMDVJdGNHLWx5NVhqVlNiQ2dXZVRKWjlvbWZuMVMzZnlsUVBybF96N0FieThUdmhNcFFfcW9vUkZBSw?oc=5"
+    },
+    {
+     "cat": "キャリア",
+     "title": "【内部留保を溜め込む日本企業】「もっと賃上げや設備投資に回せ」という批判が“的外れ”である理由",
+     "body": "働き方や収入に関わるニュースです。自分の職種・業界の相場と比べて、年収を見直すきっかけにしましょう。",
+     "src": "ダイヤモンド・オンライン",
+     "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBETXdyVUw3ZEk5UFBMbVhNYjJ1RTVocmtvb2hQVmZOQ1VpeUYwZzJpUVBOZzRuY0lmUHU1azBQQ0l0NkJmTTVjWUYzcXnSAU9BVV95cUxNYXF4NEl6Nl9tbC1VWU5KQ2ktZXowX1haUXdzLUh4ZVZ5dXhCTWY1Y1QwLVRMclJGOEREbTJQSjFORjlFLUhya0N0VHUxbmxz?oc=5"
+    },
+    {
+     "cat": "暮らし",
+     "title": "米消費者物価 伸び加速 幅広い品目で上昇",
+     "body": "毎日の暮らしと手続きに関わるニュースです。自分に必要な手続きや、家計への影響がないか確認しておきましょう。",
+     "src": "テレ東BIZ",
+     "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE12TzZod0hEMVZlZS0tNk8ySEtoNGRVYUNscGZPbjBfSkp0enlyMmZXdzZDbkllR0VuYWc4bmt4WHR3SHBFTWltT25VakUwQlQ5c1ZxWm8xd3UyM2x4N1FXNGw3OA?oc=5"
+    }
+   ]
+  },
   {
    "date": "2026-10-16",
    "items": [
@@ -280,53 +327,6 @@
      "body": "物価や社会保険料の変化は手取りに直結します。固定費の見直しとあわせてチェックしておきましょう。",
      "src": "TBS NEWS DIG",
      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5BOFU5eTViWUI3dDJlQzlfUmdjS0FDeEw3aUhyY0F1Q3NXZUw4Vm43TnVDbF9rSHlHYXplcFQ0RFViN0hoZnE2d2tXdkhCU01Wd3R3dDFpYko1X3VaRVJfMmhEYks?oc=5"
-    }
-   ]
-  },
-  {
-   "date": "2026-10-09",
-   "items": [
-    {
-     "cat": "金利",
-     "title": "強まる利上げ観測、でもなぜ円高にならない？ 根強い日銀への疑念",
-     "body": "住宅ローンの変動金利や預金の金利に関わるニュースです。変動金利で借りている人は、次の金利見直しの時期を確認しておきましょう。",
-     "src": "朝日新聞",
-     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9DYld5N1FQdE04cERLRVhVWThRQVNEQjZjZjdnWU8yX2dGNWY0dlQzWVJEMFl0aEgtbExSWnZGeFh6cTZVNXEwNHhuUEllMDhFX3U3dVFxOTJ3X3VNQzBYYTNLZnNJbm8?oc=5"
-    },
-    {
-     "cat": "NISA",
-     "title": "「こどもNISA」はどう使う? NISA・iDeCo・ふるさと納税で家計を守る",
-     "body": "NISA・iDeCoの制度や使い方に関わるニュースです。自分の枠や掛金の設定に影響がないか確認しておきましょう。",
-     "src": "Impress Watch",
-     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBLbF9xMEZXdmpfTXp3RzFuMHlKcVZFZXJ2ZFJKcnJMZmdiOHdGSEY2ZXMwMUlMNE9sR3dkbFFMSVdDdG1WZXBXeUpEblVFcEpjWDNPbjUwY0dVZ0FROEVPdm9EcV9vNlRpVWtzNA?oc=5"
-    },
-    {
-     "cat": "税金",
-     "title": "糸魚川 ふるさと納税の効果的な活用考えるセミナー",
-     "body": "税金や控除に関わるニュースです。年末調整や確定申告で手取りが変わることがあるので、対象になるか確認しておきましょう。",
-     "src": "NHKニュース",
-     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5iSWJ3WW9TYnRTUjVpOGxvWEhYLUNZYms4ZVhUZkIzYnBQb0pyTV90RFVDcjV6V25BWU4zcmVJdmVtMlI0MzF4NEQ1RTJBZnladUc1WjBfbGNNZ2pkdzZv?oc=5"
-    },
-    {
-     "cat": "不動産",
-     "title": "米住宅ローン金利 上昇続く 借り換え申請も大幅減",
-     "body": "住まいのお金に関わるニュースです。家賃の更新や住宅購入・借り換えを考えている人は、相場の流れを押さえておきましょう。",
-     "src": "テレ東BIZ",
-     "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBlVzFBZWF4bVc1UUxfRlJ6OFlXcEV2TWR1a1czWEtEbjNLV1JiMFdWYUV3YUNDRF9EUHI3X01YU0RwWUJOOGl2ZXJiM0RZeUFkYnVBRm9pTXNHeU14RkM5OVVodw?oc=5"
-    },
-    {
-     "cat": "キャリア",
-     "title": "実質賃金が、10年ぶりに8か月連続プラスになりました",
-     "body": "働き方や収入に関わるニュースです。自分の職種・業界の相場と比べて、年収を見直すきっかけにしましょう。",
-     "src": "やさしい朝日新聞",
-     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBvUzByMjRuWEVMOW1BX1NCM1cxR3RGYzkzLUp0cWZDZ3N5eHhtRzJHWEZkSDlnSENBa2FWcm5rY01kQ0pVVEItR2l2cWk1OFVtVVJMZUFXcjlpcjBLREpJZFZDamtzMG8?oc=5"
-    },
-    {
-     "cat": "暮らし",
-     "title": "普及率8割の「マイナンバーカード」で忘れがちな“2つの有効期限”とは…利便性向上の裏で更新には窓口へ行く必要も",
-     "body": "毎日の暮らしと手続きに関わるニュースです。自分に必要な手続きや、家計への影響がないか確認しておきましょう。",
-     "src": "TBS NEWS DIG",
-     "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPdUFHZ2RYS3lxOVc2MDJGZFRualpTRFVTZVhFa1N0ZmVpOUh1Uzhvblc2blVwU2NNVHI0UmFXLWsyQkZ0NnhLc1l1Q01NbUJxLTA2TlV3MFM1Y001c2VDV05EM2xlN09SUXlTcTg2Sk5yZDRRQy1tb0h0OW1JQXhwZ3JQNHZnWXNoVmFRS0lma2lxZm9ybUlFb3U2OXNkbks2aEtTQVJPWXpxU09OclhBcld0SFJEMW5TODFPaXhDRmYza0xsVUJUdHlvMF9xNnFOeFZHanNKRzNySTRCS2RzQXdXbWk3N3lVdUp3MzFDY0xCdHROTWc?oc=5"
     }
    ]
   }
