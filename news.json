@@ -1,6 +1,53 @@
 {
- "updated": "2026-10-20",
+ "updated": "2026-10-21",
  "days": [
+  {
+   "date": "2026-10-21",
+   "items": [
+    {
+     "cat": "金利",
+     "title": "（検証 高市政権１年：２）国債買い増し、日銀に注文 止まらぬ長期金利上昇、警戒",
+     "body": "住宅ローンの変動金利や預金の金利に関わるニュースです。変動金利で借りている人は、次の金利見直しの時期を確認しておきましょう。",
+     "src": "朝日新聞",
+     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5jamNSLThmekZHcHZXdlBHbl9qS0gzOEZmcFVvb3k4NTloempLRnJBSVF1NjRhaWg3c2tuSFh4UGVjbnRpSFF0LXoyTWtYWlp4MGFrWU5pMXJGM1F6?oc=5"
+    },
+    {
+     "cat": "NISA",
+     "title": "「こどもNISA」誕生日など印字したメモリアル通帳が人気 0歳から対象拡大 最大600万円非課税 2026年1月開始",
+     "body": "NISA・iDeCoの制度や使い方に関わるニュースです。自分の枠や掛金の設定に影響がないか確認しておきましょう。",
+     "src": "TBS NEWS DIG",
+     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBMbEV1amhRTDNxTExQWXpUd2xsNGhRTk9KellHQzRDVVdkNEVBb2QyZFJiZ2NzLS1zRS01OXBQMnVZa0Eyd2NjdGNCREhVUEp0M3NZNi1HVm5tUlVpRG9V?oc=5"
+    },
+    {
+     "cat": "税金",
+     "title": "ふるさと納税の「ふるさとチョイス」、会員情報445万件流出 寄附控除試算額も（画像）（1/3枚目）",
+     "body": "税金や控除に関わるニュースです。年末調整や確定申告で手取りが変わることがあるので、対象になるか確認しておきましょう。",
+     "src": "ITmedia",
+     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1HTGptaFRJN2Vsc3MydU81eVhLWDFfd3dMd1pNYkc2UVdpSk5PaFA0OVZHVWYyNHhqUHdKM1kwcEpjWUVEOUk4VnJoQXdubFg1Z20wbm40R3A3VUVOclowYVBpak01bUtRSWhwRW1xSnJCQ1JXTWJ0RzVxQkJMQQ?oc=5"
+    },
+    {
+     "cat": "不動産",
+     "title": "首都圏新築マンション１億円突破「とても手が出ない」、建設費高騰などで半期初…金利上昇で需要冷え込む恐れも",
+     "body": "住まいのお金に関わるニュースです。家賃の更新や住宅購入・借り換えを考えている人は、相場の流れを押さえておきましょう。",
+     "src": "読売新聞",
+     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9ycTFRYjZFSmR5QlZiLWh6aDlIcGtpenp3T3BvdTFaRVdJNEVNUExxdDNoR3NFd2ZsZl9fbzNQTkNaMTZvOTFELXo3SV8wUDcyYV9LeE1UYl9jSnJqV25YbUNTc1I?oc=5"
+    },
+    {
+     "cat": "キャリア",
+     "title": "フォルクスワーゲン 2030年まで賃上げを凍結か 労組側は反発",
+     "body": "働き方や収入に関わるニュースです。自分の職種・業界の相場と比べて、年収を見直すきっかけにしましょう。",
+     "src": "NHKニュース",
+     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5WUl9abTlZZU4zbDRQUFBDZzZFb3h6ZDlNeHBCQmYtUXQ3SmZSMFpYNzZ1bkZwcTBhWnVKTEdES1J0VnN0a3lhSmJJRUItZm1UaHktQ0pRa2NpRGhKOG9F?oc=5"
+    },
+    {
+     "cat": "暮らし",
+     "title": "画像 | 今年は型落ちを買ってはいけない…家電ライター直伝｢エアコンの電気代を最大34.7%節約できる機種と畳数｣",
+     "body": "毎日の暮らしと手続きに関わるニュースです。自分に必要な手続きや、家計への影響がないか確認しておきましょう。",
+     "src": "PRESIDENT Online（プレジデントオンライン）",
+     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5VempYckt0Rms3N2dBek16ZEVZOWZ6T1dlbG5jVWs5dHF3M2pURExUQ013bU5xVFBkTDZNZXVYN1lkR3RydnRBYWhBeUxrRklhaV9jNQ?oc=5"
+    }
+   ]
+  },
   {
    "date": "2026-10-20",
    "items": [
@@ -280,53 +327,6 @@
      "body": "毎日の暮らしと手続きに関わるニュースです。自分に必要な手続きや、家計への影響がないか確認しておきましょう。",
      "src": "時事ドットコム",
      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9pbG90a2ZxeXo0ZDJKWTRRYWpFb3djeWU2WEI5cDZjSEl0U0c5RHhTTmNwR1dWZHBLLUdrRnUwdE9pbVFjN2lzYzNJSDdrMXBTbHZjZE9tNC0zYXBqX0ZhalA2TQ?oc=5"
-    }
-   ]
-  },
-  {
-   "date": "2026-10-14",
-   "items": [
-    {
-     "cat": "金利",
-     "title": "日銀利上げと個人向け国債の関係性 9月の利上げでどんな変化が?【お金の教室】",
-     "body": "金利や為替は、ローンの返済額や外国資産の評価額に影響します。1日の動きより数か月の流れで見るのがおすすめです。",
-     "src": "Impress Watch",
-     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5TOGpsS3pVRzJ4c29hWjgyUnpOTW14c1l4Q2ptUGhJTWhLdDBESktLUnc1d25vNnczaVFpTjg4NWkxaEpzdGctTV95T20tYUlDS0hSMlVmeFRtekIzdllKYlVLRkx3TlVuNF9ob0dXU3ZoZmN3?oc=5"
-    },
-    {
-     "cat": "NISA",
-     "title": "楽天銀行・証券の「マネーブリッジ」、未成年口座に対応 こどもNISAも",
-     "body": "制度の変更は施行日と対象者が大事です。手続きが必要かどうかは金融機関の案内でも確認できます。",
-     "src": "Impress Watch",
-     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1fdHJBb2ZBQkhXa2dyOHZodHAtNVVEVTJRY1pWWXNWQXUtVUlxSVdsNUZjVE1iZFB5djB6UFNjcTRLZ19nbXV1TGZlZGdEM0dMNmE0N3NueklqTWZMd3duaVRiQVU?oc=5"
-    },
-    {
-     "cat": "税金",
-     "title": "PFUのキーボード「HHKB」、石川県かほく市のふるさと納税返礼品に",
-     "body": "税制の変更は、決まってから実際に始まるまで時間があります。いつから・誰が対象かをチェックしておきましょう。",
-     "src": "日本経済新聞",
-     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFA5dk9TOE9pUnNKR1BNTW1vd1o2S2dOY3hteFlmZ0F1YktLVHRDZVBsT2hROWVvZHFoRUc2VkVLaVpfQlFIWjJrQkJyS0hmaDhzQmQ5Wkd5VlhKVnZ0SlhPdE5pWS15X0JBb0hsRA?oc=5"
-    },
-    {
-     "cat": "不動産",
-     "title": "米中古住宅販売、9月は予想外の1.5％増 住宅ローン金利上昇で先行き懸念も",
-     "body": "住宅ローンや家賃は家計の中で一番大きな固定費です。金利タイプごとの返済額の違いも試算しておくと安心です。",
-     "src": "Reuters",
-     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOSUl2empwSVVaSGNXR19PWFNjbU5TR3V1QVcwRW9MR1dZWmNnV2ZXWHBuOGUtSVFVWFFMdGkxYXRldWZuOVQ0R0pGekFmTV9nSUQ4dlF1YmRVelZTa1JUeldtUG0yQU9LSnRXdnl1NERwaU9kN3BMdnkxdElUbjgxYnltYXdQUQ?oc=5"
-    },
-    {
-     "cat": "キャリア",
-     "title": "12月2日から最低賃金1086円へ – 宮古毎日新聞社ホームページ -宮古島の最新ニュースが満載！-",
-     "body": "賃金や求人の動きは転職のタイミングにも関わります。今の市場価値を知る材料にしましょう。",
-     "src": "宮古毎日新聞社ホームページ",
-     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5oLXBGczYyVXBoTlpiM1F6VVQtMFEzcjdVOC1CVU9uNXBFVERzcU91c1doX054TU9yelB6bFpweThXT0JZSTVjZmlSUENrQ0pDQzBOQm9HenBFUXhL?oc=5"
-    },
-    {
-     "cat": "暮らし",
-     "title": "【2026年電気代調査】1か月の電気代「10,000円以上」が41.8％で最多",
-     "body": "物価や社会保険料の変化は手取りに直結します。固定費の見直しとあわせてチェックしておきましょう。",
-     "src": "朝日新聞",
-     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE81bkFteDhOeXhESjlRZVpmMnByMTJDWW56X0RmeE9jckcxREF5V2FOUnJJR3k3cDhMcU0wdmxTNHNmZm96MFdiVDMyOWJDZUxNVENzTDFQQVFHakU?oc=5"
     }
    ]
   }
