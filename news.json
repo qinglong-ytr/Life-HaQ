@@ -1,6 +1,53 @@
 {
- "updated": "2026-10-22",
+ "updated": "2026-10-23",
  "days": [
+  {
+   "date": "2026-10-23",
+   "items": [
+    {
+     "cat": "金利",
+     "title": "高市政権1年で円安・金利上昇が止まらない、利上げしても為替介入しても円高に転じない根本原因は「政策発信」と「貿易赤字」",
+     "body": "住宅ローンの変動金利や預金の金利に関わるニュースです。変動金利で借りている人は、次の金利見直しの時期を確認しておきましょう。",
+     "src": "ダイヤモンド・オンライン",
+     "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9GX1Z3M25yaFhnYlU0UFBwcU8wSEllbFpjY2F2UTJSWGNqZTA3UjRqNHN0aHRqTk1sOW1BbDZscTQzSWlHWXFYM29TVHTSAU9BVV95cUxNbEtveWVaTmx2SGh5YWZPZDJ4OVZGR1dZVGpnWW8zWW9ZUUZ4XzBMa1NaT0N1SHRLekwwZGJNREUxd05KRzJ2WFA4TWl6NldB?oc=5"
+    },
+    {
+     "cat": "NISA",
+     "title": "こどもNISA、自分で考えて商品選び 金融機関は成年後も見据えて決定",
+     "body": "NISA・iDeCoの制度や使い方に関わるニュースです。自分の枠や掛金の設定に影響がないか確認しておきましょう。",
+     "src": "日本経済新聞",
+     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE45NC0yNFptOV9JNnR3dWNyN3lselRjTmhMeVhTWjlLZU1QZVVwX3ZfbGxIRVJSOTJQaXJvMnJxZ1FCMFZxYk1tdkdPTk1tWGhyZ2g3WDZyWFNLdEJfZTAxMzJka2xid3RiMHpTdw?oc=5"
+    },
+    {
+     "cat": "税金",
+     "title": "ふるさと納税ポータルサイト「ふるさとチョイス」に不正アクセス、泉大津市で寄附の受付ができない状況に",
+     "body": "税金や控除に関わるニュースです。年末調整や確定申告で手取りが変わることがあるので、対象になるか確認しておきましょう。",
+     "src": "ScanNetSecurity",
+     "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBFQTZacFNvYmlyek8wUFhBVTV6blg0MTY2cE1MbWo1RHNxUkRoODAyOFN6NlQ0ejY4UTRsX3h5eXl4QTN6RUxwNzRRQlg0TVE3U0l4Q0lGMEJDdFVZNjItc0s1RWJtRkV5?oc=5"
+    },
+    {
+     "cat": "不動産",
+     "title": "米住宅市場の需要減速 金利高止まりで",
+     "body": "住まいのお金に関わるニュースです。家賃の更新や住宅購入・借り換えを考えている人は、相場の流れを押さえておきましょう。",
+     "src": "テレ東BIZ",
+     "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBiaWVNU0V4UnhpUnhXMmw0OW9LZ2IySC04dEtDN0lSQUpMRmpEclVFX2ZfMkl6WUFNcEk3TmxMdEo4MmZINGw5czE4LTdUYmNqVVREQkxJX1Vsako5cXc?oc=5"
+    },
+    {
+     "cat": "キャリア",
+     "title": "実質賃金プラスでも根強い家計の不安、高市政権2年目で問われる成果",
+     "body": "働き方や収入に関わるニュースです。自分の職種・業界の相場と比べて、年収を見直すきっかけにしましょう。",
+     "src": "Bloomberg.com",
+     "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE91N2thbGhaS0hWTnRQVzkyajVRYjZlWVY1MXRsREo1dFB2UFRQTkdtbzh2NVF6Y0lwUHBzYmJtSUtwYlV6WThDSUdSQlRuLXZiX1ctRXFLODhjMnBzY2NlS1MzNWI1N0llZXhNMkhsMWpOMXJ1aVRR?oc=5"
+    },
+    {
+     "cat": "暮らし",
+     "title": "9月消費者物価 生鮮食品除く指数 前年同月比＋2.1％",
+     "body": "毎日の暮らしと手続きに関わるニュースです。自分に必要な手続きや、家計への影響がないか確認しておきましょう。",
+     "src": "NHKニュース",
+     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1MODltaUJranBVeWR2aEJDOFpwcmQtdno4RHBOdWNrRlkwblU4Uk1WOHNhZ1dJWFJEZVlBZ1pKY215bVdacnhOWGFmeUlvTjQzTW5ESmNCQkQ4OWR1ZlFz?oc=5"
+    }
+   ]
+  },
   {
    "date": "2026-10-22",
    "items": [
@@ -280,53 +327,6 @@
      "body": "毎日の暮らしと手続きに関わるニュースです。自分に必要な手続きや、家計への影響がないか確認しておきましょう。",
      "src": "テレ東BIZ",
      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE12TzZod0hEMVZlZS0tNk8ySEtoNGRVYUNscGZPbjBfSkp0enlyMmZXdzZDbkllR0VuYWc4bmt4WHR3SHBFTWltT25VakUwQlQ5c1ZxWm8xd3UyM2x4N1FXNGw3OA?oc=5"
-    }
-   ]
-  },
-  {
-   "date": "2026-10-16",
-   "items": [
-    {
-     "cat": "金利",
-     "title": "2027年に金利はどこまで上がるのか？インフレだけでは説明できない世界の「金利上昇」の構造",
-     "body": "金利や為替は、ローンの返済額や外国資産の評価額に影響します。1日の動きより数か月の流れで見るのがおすすめです。",
-     "src": "ダイヤモンド・オンライン",
-     "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1BTUVOd0ZZV0k1LTVWTFA5S2F5bG5sTTc4c2RwNFB2a0FtclpvcnNoY05SQ01oVVZQMEEzcFN0NlA1a013U042WV9RNllGSWvSAU9BVV95cUxNQU1FTndGWVdJNS01VkxQOUtheWxubE03OHNkcDRQdmtBbXJab3JzaGNOUkNNaFVWUDBBM3BTdDZQNWtNd1NONllfUTZZRklr?oc=5"
-    },
-    {
-     "cat": "NISA",
-     "title": "地方在住のパパがこどもNISAより優先すべきこと",
-     "body": "制度の変更は施行日と対象者が大事です。手続きが必要かどうかは金融機関の案内でも確認できます。",
-     "src": "MonJa〈もんじゃ〉お金と暮らしの情報サイト",
-     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE16TERNYVQ0RHVYWXgzMmNRR2FEZmx2eVhsTmFlSU9BRTkxb2pCc2diQVFyem5GUldTbThoQnpDa05Ub2pzbk1Cem14NjdxYjg0QldRdDJtNGx4U1BLUzFZalU5X1c0bEM4NmtjZg?oc=5"
-    },
-    {
-     "cat": "税金",
-     "title": "TOPPAN 受託の「保険料控除証明書 発行サービス 」運用業務で 177,426 名分のデータ誤送付",
-     "body": "税制の変更は、決まってから実際に始まるまで時間があります。いつから・誰が対象かをチェックしておきましょう。",
-     "src": "ScanNetSecurity",
-     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFA5NDBMaGpCZ2VIaU1iODFJb0VNSVRQb1d3YVJCeEVyMFRfNXVfSF9yUmJyV0N6a2dwQ1dvNWJqbFo0OHU1QWFOeHpRN095SjR3Wm13SjFzRGtRbFZjMU92WmUtUElIOTF1eU9uUg?oc=5"
-    },
-    {
-     "cat": "不動産",
-     "title": "住宅ローンシニアアドバイザー制度が2027年4月に新設、長期有資格者の専門性を評価",
-     "body": "住宅ローンや家賃は家計の中で一番大きな固定費です。金利タイプごとの返済額の違いも試算しておくと安心です。",
-     "src": "リヴプラス",
-     "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0wbldod2dqN0MxTlhVRVhhWXNQaDJvdzRFNVJob3dwQzFISHNtSW14UnRFOTQ2V1l2djFDMjFJT0R0MGc3TG12NVBuOFRZaVhpd1E?oc=5"
-    },
-    {
-     "cat": "キャリア",
-     "title": "連合、賃上げ要求「５％以上」で調整 ４年連続、持続的上昇へ―２７年春闘",
-     "body": "賃金や求人の動きは転職のタイミングにも関わります。今の市場価値を知る材料にしましょう。",
-     "src": "時事ドットコム",
-     "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1zb2lVeTdzMll1N0RYaWN0N0xGeWJKWU5ITGgwRzAxS2NiVGtxMWNTVENKTEFNaURBQXVqMTY4MG5pbVl1T0tEYlByeWdXX21QcVFxMFZCbTBpUy1BeGFPRXkzOA?oc=5"
-    },
-    {
-     "cat": "暮らし",
-     "title": "年金支給日に“年金一揆”「生活厳しい」年金おろして5％オフのスーパーへ",
-     "body": "物価や社会保険料の変化は手取りに直結します。固定費の見直しとあわせてチェックしておきましょう。",
-     "src": "TBS NEWS DIG",
-     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9vcnhzQi11TThYVlVPTXpOdEJkMEVrd3FKLTFmYUw3ZHhaVHJWNkFxTG40bFdrNTlCQlVCd3NxbXItNjdFamNyYXJOYjU2bjNBWXdsYUo4bVRIanVmNmhn?oc=5"
     }
    ]
   }
