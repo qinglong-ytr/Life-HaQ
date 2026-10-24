@@ -1,6 +1,53 @@
 {
- "updated": "2026-10-23",
+ "updated": "2026-10-24",
  "days": [
+  {
+   "date": "2026-10-24",
+   "items": [
+    {
+     "cat": "金利",
+     "title": "日銀 29日から金融政策決定会合 基調的な物価上昇率「2%到達」判断の公算大 政策金利は据え置きの見通し",
+     "body": "金利や為替は、ローンの返済額や外国資産の評価額に影響します。1日の動きより数か月の流れで見るのがおすすめです。",
+     "src": "TBS NEWS DIG",
+     "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBTeEdaNHRVS2ozV182NTBmNGNCcFlUZ0RTVlBGeVBzQTZLTHhBOHZiSElfTVFCMWYyZWxOQVZkcVZxcHlhbmZnQU1ibk9PME8yNjV0X2Zraw?oc=5"
+    },
+    {
+     "cat": "NISA",
+     "title": "【新NISA】つみたて投資枠対象となる投資信託・ETF等一覧 :投資信託 :マーケット :日経電子版",
+     "body": "制度の変更は施行日と対象者が大事です。手続きが必要かどうかは金融機関の案内でも確認できます。",
+     "src": "日本経済新聞",
+     "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOa08tMnd5aXRSVWRaZkIwcld2RGRCWjBLYlUxMFdEOVJ6STR0YVB3a2VORjRWbWZCUmlneUprOXlneFMzNWxhMFNSWlFuNFQzajBqXzJ1N2E3N0FYd0JoTUREUktGeDZ5ZUV0dzZKcXF0V3liTjZQZFBjYTJYZG9PamI2UEtvWVpscjhqWEZqdjY4MUVsR2dXZ3lsVnpaYXRnSkVhT204eTRZWkdXajRmWjdzQ3FoYy1EM2tRYXlvM1A0dWtW?oc=5"
+    },
+    {
+     "cat": "税金",
+     "title": "ふるさと納税の「ふるさとチョイス」、寄付者5人の情報流出を確認",
+     "body": "税制の変更は、決まってから実際に始まるまで時間があります。いつから・誰が対象かをチェックしておきましょう。",
+     "src": "日本経済新聞",
+     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBINDBscjBJSmJmbEVhNUJDWXdtOTNFNFFpVjAxeURHUW8yaFdqdTRMd05UV3pGVW1vN1MwVkhhSk94NExIaHlNTFJYWjNUYkhOR1lwaW5QdF9jdkY1X3lpRE40c2hvdm5mNF9XNw?oc=5"
+    },
+    {
+     "cat": "不動産",
+     "title": "9月の都心の中古マンション価格、5カ月連続で下落－下げ率1.6%に拡大",
+     "body": "住宅ローンや家賃は家計の中で一番大きな固定費です。金利タイプごとの返済額の違いも試算しておくと安心です。",
+     "src": "TBS NEWS DIG",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5JSUc0dnR2WEhrbHJlZWlJMzRSRkdyNVhWS0wydFNDRWtQejZtaVlOY3BVeXdJMGVKRU1ON09zMHJVRE9KaXBmQjktNG1UTFdPOUhNNTFFdDI4MWtRYndjLWVMeXQ2MVVHT19HNVpuTWdjOEpR?oc=5"
+    },
+    {
+     "cat": "キャリア",
+     "title": "最低賃金引き上げへ…ハローワークでは「生活が楽になる」 経営者は「正直どうしよう」 鹿児島",
+     "body": "賃金や求人の動きは転職のタイミングにも関わります。今の市場価値を知る材料にしましょう。",
+     "src": "TBS NEWS DIG",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5HSlRWd0N5QnFTa04tR2N2UTd5YWVsMTVRTGxOcDVocEdXbWVxZENYSzgwZklCdFduNGpzVkRFUk5mMjZ5NFdfODJYUUFvbHhpZTFNOWZlQ09XQW1mQzhXTjB3N0hWNDQ?oc=5"
+    },
+    {
+     "cat": "暮らし",
+     "title": "質問なるほドリ：電気代、今後どうなる？ 10月分から国補助終了で負担増 来年再開検討＝回答・佐久間一輝",
+     "body": "物価や社会保険料の変化は手取りに直結します。固定費の見直しとあわせてチェックしておきましょう。",
+     "src": "毎日新聞",
+     "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1pdVRiMFNlUDZqQ29OQTBqM085SHBEWUM1a3lzWVZkc0kxeWo4bjJJaW1wMnZIa3lBdk9uMnBLcHBlWThOYi1uOXBTdkRRWUVScTl0a0lwNzZQYlR3MnZfeTJkNkxqVlNx?oc=5"
+    }
+   ]
+  },
   {
    "date": "2026-10-23",
    "items": [
@@ -280,53 +327,6 @@
      "body": "物価や社会保険料の変化は手取りに直結します。固定費の見直しとあわせてチェックしておきましょう。",
      "src": "テレ東BIZ",
      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9BVmlZSlJJNXBpMnh3NXE5VGoxVDVkejhxME9NWnpueFhfbnNvNTR6cVRrbklkcFRPU1dsQ0pOSTJFeHNfdENZVkVTOHlUX2RTOUxCVTg4TjBsRDZhWVZaRlU1M2ZKZw?oc=5"
-    }
-   ]
-  },
-  {
-   "date": "2026-10-17",
-   "items": [
-    {
-     "cat": "金利",
-     "title": "日銀植田総裁“物価2％超の上昇容認せず” 今後も利上げ進める",
-     "body": "住宅ローンの変動金利や預金の金利に関わるニュースです。変動金利で借りている人は、次の金利見直しの時期を確認しておきましょう。",
-     "src": "NHKニュース",
-     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFB6YnJtOVJOcUVmWk80TU9fdjQ3RWg0WmRIaGl4YmhSc21CRTRSX0JjRVhvQkwwYzRZTG93UVZtS3A3TDdvc3RQMWJxTXJXcDhndUZfV09RYm1fYllIZ2tv?oc=5"
-    },
-    {
-     "cat": "NISA",
-     "title": "NISAで人気の「中国株」ランキング【2026年10月】楽天証券の「NISA口座(成長投資枠)」で買われている「中国株」の買付金額＆保有残高ランキングを発表！",
-     "body": "NISA・iDeCoの制度や使い方に関わるニュースです。自分の枠や掛金の設定に影響がないか確認しておきましょう。",
-     "src": "ダイヤモンド・オンライン",
-     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE12U29JYTltR25JV1BNUW05UkNYQmFyODNLWFEwa2VEdDlBT0tpcUVYRGRvQ21ZalRTcWFmSC1VT1NiR1BYNjNzQnNZZTg0NGllSGow?oc=5"
-    },
-    {
-     "cat": "税金",
-     "title": "公明「8万円給付」、国民「住民税の控除引き上げ」 消費減税に対案",
-     "body": "税金や控除に関わるニュースです。年末調整や確定申告で手取りが変わることがあるので、対象になるか確認しておきましょう。",
-     "src": "朝日新聞",
-     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1CVnJQTnRZS3ZxX2NaMGtXUnhTYXJMV1g2NE5sb2tnQzhVbXRFeTIxZGphSlpBc0FLTmw3M2ptNEtZZEVFWDRlVXlCNzNfaDZZZDlmb0Y4OHBENUE3TTJzbUdIRGo1V0k?oc=5"
-    },
-    {
-     "cat": "不動産",
-     "title": "50年住宅ローン、金利リスク高く 金融庁が監視方針",
-     "body": "住まいのお金に関わるニュースです。家賃の更新や住宅購入・借り換えを考えている人は、相場の流れを押さえておきましょう。",
-     "src": "日本経済新聞",
-     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5Rd2RmWnZic0FndG93NnROQWhSbXY3dTdHZmRZMzEwQnhQRENmRWpWZjBCMDVJdGNHLWx5NVhqVlNiQ2dXZVRKWjlvbWZuMVMzZnlsUVBybF96N0FieThUdmhNcFFfcW9vUkZBSw?oc=5"
-    },
-    {
-     "cat": "キャリア",
-     "title": "【内部留保を溜め込む日本企業】「もっと賃上げや設備投資に回せ」という批判が“的外れ”である理由",
-     "body": "働き方や収入に関わるニュースです。自分の職種・業界の相場と比べて、年収を見直すきっかけにしましょう。",
-     "src": "ダイヤモンド・オンライン",
-     "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBETXdyVUw3ZEk5UFBMbVhNYjJ1RTVocmtvb2hQVmZOQ1VpeUYwZzJpUVBOZzRuY0lmUHU1azBQQ0l0NkJmTTVjWUYzcXnSAU9BVV95cUxNYXF4NEl6Nl9tbC1VWU5KQ2ktZXowX1haUXdzLUh4ZVZ5dXhCTWY1Y1QwLVRMclJGOEREbTJQSjFORjlFLUhya0N0VHUxbmxz?oc=5"
-    },
-    {
-     "cat": "暮らし",
-     "title": "米消費者物価 伸び加速 幅広い品目で上昇",
-     "body": "毎日の暮らしと手続きに関わるニュースです。自分に必要な手続きや、家計への影響がないか確認しておきましょう。",
-     "src": "テレ東BIZ",
-     "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE12TzZod0hEMVZlZS0tNk8ySEtoNGRVYUNscGZPbjBfSkp0enlyMmZXdzZDbkllR0VuYWc4bmt4WHR3SHBFTWltT25VakUwQlQ5c1ZxWm8xd3UyM2x4N1FXNGw3OA?oc=5"
     }
    ]
   }
