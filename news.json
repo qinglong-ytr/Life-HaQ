@@ -1,6 +1,53 @@
 {
- "updated": "2026-10-28",
+ "updated": "2026-10-29",
  "days": [
+  {
+   "date": "2026-10-29",
+   "items": [
+    {
+     "cat": "金利",
+     "title": "｢日銀の利上げ｣で最も損をするのは誰か…住宅ローンと賃上げの両方で不利になる｢谷間の世代｣の理不尽",
+     "body": "住宅ローンの変動金利や預金の金利に関わるニュースです。変動金利で借りている人は、次の金利見直しの時期を確認しておきましょう。",
+     "src": "PRESIDENT Online（プレジデントオンライン）",
+     "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBKWEtvZ2hiMVBUMVNOOHgzdTUyc1E4VkwycDZjY3BpZ0tvYzF5V2lSU1VJRjJXWWU3eWFWdHZxVm1UMTdiRDhLLWkyT2l1dDQ?oc=5"
+    },
+    {
+     "cat": "NISA",
+     "title": "【こどもNISAの始め方】大人NISA・ジュニアNISAと何が違う？／児童手当の“最適な置き場”／親のNISAとどっちを優先？【ウエンツ瑛士のマネーファーム】",
+     "body": "NISA・iDeCoの制度や使い方に関わるニュースです。自分の枠や掛金の設定に影響がないか確認しておきましょう。",
+     "src": "東洋経済オンライン",
+     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9VT1ZkYkctQ3dFVGtOMFBVWlQ2ZEI2VzdUc3JVbTRSQ2FPWHZqNHowRDJvbVM1Zl9YV1NVaFp6Wlg5dWxoaW1qbEUwXzJkT0hNQkVBUEc4TTZmdFA3NGw0?oc=5"
+    },
+    {
+     "cat": "税金",
+     "title": "税と社会保障、真の改革は「新型給付」の先に 中低所得者の負担見直しを",
+     "body": "税金や控除に関わるニュースです。年末調整や確定申告で手取りが変わることがあるので、対象になるか確認しておきましょう。",
+     "src": "日経ビジネス電子版",
+     "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1TM2JRdWlUbXh6TDVpX0stVmVGc05uUnlvLW1DcE9tcDNCZzhVa1hSLUVWaUFGMWUtNnUzQXpiYmctMDdMYVRobXdON0o1RHdQZXhpQ2FOTlhHWFZSamhVMld3?oc=5"
+    },
+    {
+     "cat": "不動産",
+     "title": "プレスリリース：住宅ローン金利の上昇・建築費高騰でも、家のデザインはあきらめたくない。COZYから新住宅商品『&days』が誕生。（PR TIMES）",
+     "body": "住まいのお金に関わるニュースです。家賃の更新や住宅購入・借り換えを考えている人は、相場の流れを押さえておきましょう。",
+     "src": "毎日新聞",
+     "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1uQUlQeXRvYzNHenpnMlRxdmEzZnRmb2lCMHFMbmdxU1N2YnU2eXU2ZUlvY1dJMG5IR255N2IyNDR3Y3RLT2lsal9RT2lzZjZ0OHpQaVpCb1k2eVcxVTdKNTNEbXlWWFR2?oc=5"
+    },
+    {
+     "cat": "キャリア",
+     "title": "建設業の賃上げに息切れ、実施率が産業別ワースト3位 改定率6年ぶり低下",
+     "body": "働き方や収入に関わるニュースです。自分の職種・業界の相場と比べて、年収を見直すきっかけにしましょう。",
+     "src": "日経クロステック",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBoRWR2Zk43WDVkdXgzRF9xbFdqcVVqcHNJX3l6eXFyMjRoVWtqbDV1ZVZrbFJzaWxLektaUFRXSTdhU3lLQTRsdGd1Wl9RTnBMVU5xcXgzWFVjMk1NaEMzN2ppbzdvVnM?oc=5"
+    },
+    {
+     "cat": "暮らし",
+     "title": "第１回国民年金第３号被保険者制度等に関する検討会（議事録）",
+     "body": "毎日の暮らしと手続きに関わるニュースです。自分に必要な手続きや、家計への影響がないか確認しておきましょう。",
+     "src": "厚生労働省",
+     "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1Ba21xZmh1WnN5bGF2d3dZNHVua09RX3A5TWJ5TktVeHhZamU2Yzk2cHNfU09XVzNNU29qMl9pMWRwR2hlOUlLaXdqUzVhazVmZUw4d1VWSWI?oc=5"
+    }
+   ]
+  },
   {
    "date": "2026-10-28",
    "items": [
@@ -280,53 +327,6 @@
      "body": "毎日の暮らしと手続きに関わるニュースです。自分に必要な手続きや、家計への影響がないか確認しておきましょう。",
      "src": "NHKニュース",
      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1MODltaUJranBVeWR2aEJDOFpwcmQtdno4RHBOdWNrRlkwblU4Uk1WOHNhZ1dJWFJEZVlBZ1pKY215bVdacnhOWGFmeUlvTjQzTW5ESmNCQkQ4OWR1ZlFz?oc=5"
-    }
-   ]
-  },
-  {
-   "date": "2026-10-22",
-   "items": [
-    {
-     "cat": "金利",
-     "title": "日銀が物価上昇率2％到達判断へ、デフレ対応から転換 政策金利は据え置きか、10月会合",
-     "body": "金利や為替は、ローンの返済額や外国資産の評価額に影響します。1日の動きより数か月の流れで見るのがおすすめです。",
-     "src": "産経ニュース",
-     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1uVEVOTTNLWHNNSjBTczFIWmxSSVZzVUEtQ0IwSV9kX0Z1MjJRLWNfc19KU2JuSFhqMklIZldydElOVGkwOU53cmNBNFJndjZkTWFJc2lWZE1WUWt1aXZZXzdGc3BSY0UxVWJoUGd6eWpiMnppWWc?oc=5"
-    },
-    {
-     "cat": "NISA",
-     "title": "こどもNISAは金融教育の好機、18歳まで引き出さない FP夫婦が対談",
-     "body": "制度の変更は施行日と対象者が大事です。手続きが必要かどうかは金融機関の案内でも確認できます。",
-     "src": "日本経済新聞",
-     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE0yZHRDSXAwV2p0bFpWbzZaelJJdy1JQmFVM1huMldZSnhmdTdJMWFydi1qa0dZZ1dsenZuaF85M3ZYS1BYYU92MDRqQXlqSVJQNG1uLUJqR2p1ZkMyWkhzZlYzUDVhdDBvYkZKRg?oc=5"
-    },
-    {
-     "cat": "税金",
-     "title": "ふるさと納税で私立学校や大学を直接支援できるように 松本市が制度新設",
-     "body": "税制の変更は、決まってから実際に始まるまで時間があります。いつから・誰が対象かをチェックしておきましょう。",
-     "src": "信濃毎日新聞デジタル",
-     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1nam1GdWVZMmY3RDUwWXo0Ukk1YmJpQmNCaHdHLXZiZXBvanRDUGlkcm1mblFTZFRubU5hVmFINXRrNUoweTVkeF9DdHpxQm9mdjhZTTMxSkVXelJNVGEwemhmenhhMkxGbWZLYW02VFE?oc=5"
-    },
-    {
-     "cat": "不動産",
-     "title": "トランプ氏、中間選前のインフレ対策迷走 住宅金利の上昇招く悪循環",
-     "body": "住宅ローンや家賃は家計の中で一番大きな固定費です。金利タイプごとの返済額の違いも試算しておくと安心です。",
-     "src": "日本経済新聞",
-     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9RWmhkOE1DcFBvLVA5MEsxRzVWWGt5cnhqZXN6QWMtNmIyRFhFazZHNmZDTXJJRzlhNHRSeVVtS2ZGajAyRHEzQVNmUzBRcllxNnZQTzJxbnlpTnpPbmYxZGtUODRZUDVOV0F5WQ?oc=5"
-    },
-    {
-     "cat": "キャリア",
-     "title": "連合富山が定期大会 「賃上げノルム」の確立を柱に運動方針を可決",
-     "body": "賃金や求人の動きは転職のタイミングにも関わります。今の市場価値を知る材料にしましょう。",
-     "src": "FNNプライムオンライン",
-     "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9YZWttd1c4X1VsUXZvX3dBaC1LeGRfN2tzMXhnSklTM09Na1hNT3NUblpDTmxHVjExNUZrTmlKOGwxZ1BxWkZrZjd2V2JTZw?oc=5"
-    },
-    {
-     "cat": "暮らし",
-     "title": "のしかかる電気代 東電管内１１月、最高更新見通し 物価も高騰、補助終了で負担増",
-     "body": "物価や社会保険料の変化は手取りに直結します。固定費の見直しとあわせてチェックしておきましょう。",
-     "src": "朝日新聞",
-     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFB4YUNsZ0N5eFNtTlV6dTJ4VmU0RlhjczVqT2M4Qm16QlBqSTllQXB5Y1o0TXdUSXhiNjF5clBrb1NkU2V3ZTBac0FzR0JMWnVhMlppZEN6U3NOVWJG?oc=5"
     }
    ]
   }
