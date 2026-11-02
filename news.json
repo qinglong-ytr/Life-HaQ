@@ -1,6 +1,53 @@
 {
- "updated": "2026-11-01",
+ "updated": "2026-11-02",
  "days": [
+  {
+   "date": "2026-11-02",
+   "items": [
+    {
+     "cat": "金利",
+     "title": "［政策金利は２．５％に上昇も］深谷 幸司 マーケット・リスク・アドバイザリー（ＭＲＡ）フェロー",
+     "body": "住宅ローンの変動金利や預金の金利に関わるニュースです。変動金利で借りている人は、次の金利見直しの時期を確認しておきましょう。",
+     "src": "sannichi.co.jp",
+     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5GbkZYZGp5YV9VU0NlYlZYQ1NWdGIyYWRRRWFyS3R4cFJxemhVTmx5R0l3UFBPTU4wZTZrR2lwZ2tLcHRoNnVQbEZGd3h0dHVCOVRmbThxVllpZ3NBaGN6NmNrUWc?oc=5"
+    },
+    {
+     "cat": "NISA",
+     "title": "iDeCoが12月大幅拡充、利用拡大へ「企業年金弱者」加入が焦点",
+     "body": "NISA・iDeCoの制度や使い方に関わるニュースです。自分の枠や掛金の設定に影響がないか確認しておきましょう。",
+     "src": "日本経済新聞",
+     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1tX1RoSnVELVFreVNXeERhUGJNLVlYalJ3dk1CQk4xc1lfc1plbXBrYjQ3TFFYeFk5LTR6WlJ0NjJFVEVMbzRQVEVWRnNoMEYwclBma3V5NFJxYlNBajB1VUNuRzV1NXJHNFlpVg?oc=5"
+    },
+    {
+     "cat": "税金",
+     "title": "平川市「世界一の扇ねぷた」再利用で革製品へ ふるさと納税返礼品に [青森県]",
+     "body": "税金や控除に関わるニュースです。年末調整や確定申告で手取りが変わることがあるので、対象になるか確認しておきましょう。",
+     "src": "朝日新聞",
+     "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPRk85RjE0V2lLeWh0YjRkT1N3em1GOXdwdEJpZGpYaWFVLW9xS2FuTXlyQUM0WUtMY3ZIZzVxMGZYNHN6ZFBBZnpIQXhEaG8wdDRRa2JRMWhJUmowaXZQZVJPUUpPQ0U1U2FzaVM1NFpEMU1lTVJRQzZEbTFpTEJBdUNNcmlPR2N2NlRUcVl5NzloRnM?oc=5"
+    },
+    {
+     "cat": "不動産",
+     "title": "金利上昇下で急増する「超長期住宅ローン」のメリットとデメリットは？ 月々の負担軽減の一方で専門家が鳴らす警鐘",
+     "body": "住まいのお金に関わるニュースです。家賃の更新や住宅購入・借り換えを考えている人は、相場の流れを押さえておきましょう。",
+     "src": "Yahoo!ニュース",
+     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE02dl9jQU95MkN4N3NNdWhSZHNYRGxRV3cweWlFN1pGY05FRWpqMUxMTmlLVXhSNm1MZEd6djN0a3RLeTFmRXl4N0h0N19KWEdqUUFrWmVQOUJSd1NQbjhDUHlUQllZSTBnQlAzZTlycWp3UVFjY3lTREE2VDRuaEE?oc=5"
+    },
+    {
+     "cat": "キャリア",
+     "title": "9月の有効求人倍率1.50倍…2か月連続で上昇 全国平均1.19倍大きく上回る 全国4番目の高さに 富山",
+     "body": "働き方や収入に関わるニュースです。自分の職種・業界の相場と比べて、年収を見直すきっかけにしましょう。",
+     "src": "TBS NEWS DIG",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFAyY0tEUmlaYXRDdEQtQjZPSjRRSmlMc3dBWkY0ckUtMktqdUtoMDNSRk5OMFRvSmUyUHVlckgzVU5iUWFIZUZBcFhndDJlNE43Nk42eHRMOWQ2QQ?oc=5"
+    },
+    {
+     "cat": "暮らし",
+     "title": "Androidもマイナンバーカードにフル対応、その利用を阻むスマホ価格の高騰",
+     "body": "毎日の暮らしと手続きに関わるニュースです。自分に必要な手続きや、家計への影響がないか確認しておきましょう。",
+     "src": "日経クロステック",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9QU3U1dHNEZWdFdVRnTFVrM1dMWURtT3RJc3NQWUNyNzlnMjJJU3NsR1FhX0J2ejlBUDF5QXJyLTQwMGl4X3pSYzE5SkZZQUp2TXdxbHBNVHZkdmNZVWluVlM5Zno2aFU?oc=5"
+    }
+   ]
+  },
   {
    "date": "2026-11-01",
    "items": [
@@ -280,53 +327,6 @@
      "body": "毎日の暮らしと手続きに関わるニュースです。自分に必要な手続きや、家計への影響がないか確認しておきましょう。",
      "src": "時事ドットコム",
      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5nWEF6M01QWkd6dHluYXRZTXdOY2I0ZW9kanV3QThqLXNibmlYN1ZXQV9hSGxaWXEwYzhxSHpNWjNPVWRpZjNfQzZZblIwRW04U043UHRRejNzaGx0WmZRaVc2dw?oc=5"
-    }
-   ]
-  },
-  {
-   "date": "2026-10-26",
-   "items": [
-    {
-     "cat": "金利",
-     "title": "生保各社 長期金利上昇で国債入れ替え方針",
-     "body": "金利や為替は、ローンの返済額や外国資産の評価額に影響します。1日の動きより数か月の流れで見るのがおすすめです。",
-     "src": "NHKニュース",
-     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5SdzFGN0xsMnM3Q3dnczVDZzVMZzcxbUN4T2pMUnlYcUJzNHBGWlhzZkdhTTNscFZUY0U4eTlJd3dYUlJoQmYydkJrMWRHSE1rMVhPZ0xqY21uYUhSYzFn?oc=5"
-    },
-    {
-     "cat": "NISA",
-     "title": "NISA､iDeCoよりリターンがデカい…世界の辺境を巡る作家･高野秀行さんが｢暗黒時代の30代｣に続けた\"投資\"",
-     "body": "制度の変更は施行日と対象者が大事です。手続きが必要かどうかは金融機関の案内でも確認できます。",
-     "src": "PRESIDENT Online（プレジデントオンライン）",
-     "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1sWmZ1V01JM2NBemhLMXp2UWR1Y2FVRUZncHA1by1lc1dGeGtIbkZ5c1NBeEtnSUdPSUp6c3Y3eHVTLThvV2Z1eEtRUXFab1U?oc=5"
-    },
-    {
-     "cat": "税金",
-     "title": "（よみ解くしくみ）年末調整の季節、今年のポイントは？",
-     "body": "税制の変更は、決まってから実際に始まるまで時間があります。いつから・誰が対象かをチェックしておきましょう。",
-     "src": "朝日新聞",
-     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBaUXg3c3diSUZNU0pXU3l3UEZaUXlCN3NvR19UMUF6ZGVXV1hmTlFGaUR6bWh4QTExaUkyZHhXMFZlZ25kTk5oZEVHX09RT0pLSUh1RTYtTzRMTlNJ?oc=5"
-    },
-    {
-     "cat": "不動産",
-     "title": "住宅ローンの変動優遇金利が平均1.477％へ上昇、1％未満の銀行は3行に減少",
-     "body": "住宅ローンや家賃は家計の中で一番大きな固定費です。金利タイプごとの返済額の違いも試算しておくと安心です。",
-     "src": "リヴプラス",
-     "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBHR3AyTGZGQkJla0FsR2diaDVVMGp3WHpMazhDRGViVVlfVDFRUk5FeEcwelpoZXcwdTZXX3ZrenZ3M05xZTdSWThLNTRtNll3ZXc?oc=5"
-    },
-    {
-     "cat": "キャリア",
-     "title": "埼玉県は全国4位の「1196円」 最低賃金上昇継続の裏で企業の人件費負担も増加 埼玉経済ウォッチ",
-     "body": "賃金や求人の動きは転職のタイミングにも関わります。今の市場価値を知る材料にしましょう。",
-     "src": "産経ニュース",
-     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9nSlNweFYtVlh5RGVHMHFvVkdxWWlXc2UteFc5bWRJczZhb3AwaFVxUFMzWjBUS0Z4UmFBX1U0U2FsUy1fR2RJSFVoTFJpUnhfc3BzdXpwNThiR0h0LVptak1xQjBUMS1LX1lveUZuRzlKb2NjZlE?oc=5"
-    },
-    {
-     "cat": "暮らし",
-     "title": "画像 | 5年繰り下げで年金42%増はお得のはずが…60代夫婦が引き換えに失った｢何ものにも代えがたいもの｣",
-     "body": "物価や社会保険料の変化は手取りに直結します。固定費の見直しとあわせてチェックしておきましょう。",
-     "src": "PRESIDENT Online（プレジデントオンライン）",
-     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBYWVBuMlFGYW05X1FTSWl1QUpjcEUxSE5xT1dXRG9KWFA3SklmYjhmU1duMERxQU1rN3F3WDRUVlpyeWlyX3ZBRkZqLUY5aktkbmh6Yg?oc=5"
     }
    ]
   }
