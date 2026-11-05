@@ -1,6 +1,53 @@
 {
- "updated": "2026-11-04",
+ "updated": "2026-11-05",
  "days": [
+  {
+   "date": "2026-11-05",
+   "items": [
+    {
+     "cat": "金利",
+     "title": "日銀、政策金利「早めにゴールに近づけるべき」 9月議事要旨",
+     "body": "金利や為替は、ローンの返済額や外国資産の評価額に影響します。1日の動きより数か月の流れで見るのがおすすめです。",
+     "src": "日本経済新聞",
+     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5PRnpCdl9xa0d6VXN1Z1llZGZBTHhxNkpfVnV5OWw0Y2g1dXNLYWFGWFAxUGJld2xhUzZqdFIzdlc0TU9FTC1Jb095YzNqclUyU0lVZkhEYWphTGFaSkNaaE9ZUk12eHNLLXA0Sw?oc=5"
+    },
+    {
+     "cat": "NISA",
+     "title": "【NISA】2026年の年末までに駆け込みで済ませておくべきことは？ 余剰資金がある場合のおすすめの“使い切り案”や、ザイ読者が考える｢NISA年末戦略｣も公開",
+     "body": "制度の変更は施行日と対象者が大事です。手続きが必要かどうかは金融機関の案内でも確認できます。",
+     "src": "ダイヤモンド・オンライン",
+     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBmblVFb1NnQlBhT3k0ZHdjN0tnUmxHekFncURoQmUxZGpLbFBaNXRjdHBTSEtFTm1xQTI1NVdqa1JEWkpUYnZWa0VsU0RZaTVFMzFN?oc=5"
+    },
+    {
+     "cat": "税金",
+     "title": "「ふるさと納税」COREFORCE（コアフォース）より返礼品にコアフォースループの新色ラベンダー・バイオレットが掲載開始。",
+     "body": "税制の変更は、決まってから実際に始まるまで時間があります。いつから・誰が対象かをチェックしておきましょう。",
+     "src": "時事ドットコム",
+     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5JS2I4ZTBHczl2dmpQM0pFNkxxTEhudHV2RlE4czJyTmUwSWU0OHNkeWlJblgxRXdHM0xMdklrYm5LRzFwellFVHd4NGZPWGlqVTd4UWVMS2l0V0d0X3VDSjQ5V0RsWlFnN0hF?oc=5"
+    },
+    {
+     "cat": "不動産",
+     "title": "住宅金融普及協会、2027年度から新制度「住宅ローンシニアアドバイザー」運用=ローン金利の上昇基調受け",
+     "body": "住宅ローンや家賃は家計の中で一番大きな固定費です。金利タイプごとの返済額の違いも試算しておくと安心です。",
+     "src": "住宅産業新聞",
+     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5KWU1xWkxNNU12VmI0Uzd2NXZTZ09ZNzlieFNENm5zUTRpUnYyUTJLWGpDZXh1UWNlNFNMUHVDNG1Fd3RCWlpwNFdObU5qanZQcEpYS9IBVEFVX3lxTE5KWU1xWkxNNU12VmI0Uzd2NXZTZ09ZNzlieFNENm5zUTRpUnYyUTJLWGpDZXh1UWNlNFNMUHVDNG1Fd3RCWlpwNFdObU5qanZQcEpYSw?oc=5"
+    },
+    {
+     "cat": "キャリア",
+     "title": "＜主張＞来年の春闘 物価上昇超える賃上げを 社説",
+     "body": "賃金や求人の動きは転職のタイミングにも関わります。今の市場価値を知る材料にしましょう。",
+     "src": "産経ニュース",
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBxekU3RHp3LVlKWWh2WjhiVkJCWW50LW9yUU9Vb3RsU1FxOERQVkdtV1FpU0RvUUIxaGJUbHhVcXhEM05VbE4yM3dXTVdubzVnblYzSElfNU5FSEJCQzU1M2N3QWpLS1NSOTcxeFRTRmNBWG1jRUE?oc=5"
+    },
+    {
+     "cat": "暮らし",
+     "title": "ユーロ圏 10月の消費者物価指数は4％上昇に 約3年ぶり高水準",
+     "body": "物価や社会保険料の変化は手取りに直結します。固定費の見直しとあわせてチェックしておきましょう。",
+     "src": "NHKニュース",
+     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBWY0o3UEFzbFpuM09mQ1liSzJlU0FDcXNYc0U4cklLb3hPeWE2VnA2aXQwTHJBa0FqXzVzMU9TY18yME8weFA1cjBFcEZ6S1VYM1p2ZUNwUXltaUFQWWlj?oc=5"
+    }
+   ]
+  },
   {
    "date": "2026-11-04",
    "items": [
@@ -280,53 +327,6 @@
      "body": "物価や社会保険料の変化は手取りに直結します。固定費の見直しとあわせてチェックしておきましょう。",
      "src": "NHKニュース",
      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9PSm1Yb3BwRlpNR3U0Z2pKZ2NZUXlnYmVlN0hCSnk2ZncxN3BFcnY2T2pnTk9rVGY1dm9XUW9QT0lxMEdER2Z5SHF0aDQzUTRfU1RENWRXaE5tYkZ4eDZV?oc=5"
-    }
-   ]
-  },
-  {
-   "date": "2026-10-29",
-   "items": [
-    {
-     "cat": "金利",
-     "title": "｢日銀の利上げ｣で最も損をするのは誰か…住宅ローンと賃上げの両方で不利になる｢谷間の世代｣の理不尽",
-     "body": "住宅ローンの変動金利や預金の金利に関わるニュースです。変動金利で借りている人は、次の金利見直しの時期を確認しておきましょう。",
-     "src": "PRESIDENT Online（プレジデントオンライン）",
-     "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBKWEtvZ2hiMVBUMVNOOHgzdTUyc1E4VkwycDZjY3BpZ0tvYzF5V2lSU1VJRjJXWWU3eWFWdHZxVm1UMTdiRDhLLWkyT2l1dDQ?oc=5"
-    },
-    {
-     "cat": "NISA",
-     "title": "【こどもNISAの始め方】大人NISA・ジュニアNISAと何が違う？／児童手当の“最適な置き場”／親のNISAとどっちを優先？【ウエンツ瑛士のマネーファーム】",
-     "body": "NISA・iDeCoの制度や使い方に関わるニュースです。自分の枠や掛金の設定に影響がないか確認しておきましょう。",
-     "src": "東洋経済オンライン",
-     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9VT1ZkYkctQ3dFVGtOMFBVWlQ2ZEI2VzdUc3JVbTRSQ2FPWHZqNHowRDJvbVM1Zl9YV1NVaFp6Wlg5dWxoaW1qbEUwXzJkT0hNQkVBUEc4TTZmdFA3NGw0?oc=5"
-    },
-    {
-     "cat": "税金",
-     "title": "税と社会保障、真の改革は「新型給付」の先に 中低所得者の負担見直しを",
-     "body": "税金や控除に関わるニュースです。年末調整や確定申告で手取りが変わることがあるので、対象になるか確認しておきましょう。",
-     "src": "日経ビジネス電子版",
-     "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1TM2JRdWlUbXh6TDVpX0stVmVGc05uUnlvLW1DcE9tcDNCZzhVa1hSLUVWaUFGMWUtNnUzQXpiYmctMDdMYVRobXdON0o1RHdQZXhpQ2FOTlhHWFZSamhVMld3?oc=5"
-    },
-    {
-     "cat": "不動産",
-     "title": "プレスリリース：住宅ローン金利の上昇・建築費高騰でも、家のデザインはあきらめたくない。COZYから新住宅商品『&days』が誕生。（PR TIMES）",
-     "body": "住まいのお金に関わるニュースです。家賃の更新や住宅購入・借り換えを考えている人は、相場の流れを押さえておきましょう。",
-     "src": "毎日新聞",
-     "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1uQUlQeXRvYzNHenpnMlRxdmEzZnRmb2lCMHFMbmdxU1N2YnU2eXU2ZUlvY1dJMG5IR255N2IyNDR3Y3RLT2lsal9RT2lzZjZ0OHpQaVpCb1k2eVcxVTdKNTNEbXlWWFR2?oc=5"
-    },
-    {
-     "cat": "キャリア",
-     "title": "建設業の賃上げに息切れ、実施率が産業別ワースト3位 改定率6年ぶり低下",
-     "body": "働き方や収入に関わるニュースです。自分の職種・業界の相場と比べて、年収を見直すきっかけにしましょう。",
-     "src": "日経クロステック",
-     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBoRWR2Zk43WDVkdXgzRF9xbFdqcVVqcHNJX3l6eXFyMjRoVWtqbDV1ZVZrbFJzaWxLektaUFRXSTdhU3lLQTRsdGd1Wl9RTnBMVU5xcXgzWFVjMk1NaEMzN2ppbzdvVnM?oc=5"
-    },
-    {
-     "cat": "暮らし",
-     "title": "第１回国民年金第３号被保険者制度等に関する検討会（議事録）",
-     "body": "毎日の暮らしと手続きに関わるニュースです。自分に必要な手続きや、家計への影響がないか確認しておきましょう。",
-     "src": "厚生労働省",
-     "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1Ba21xZmh1WnN5bGF2d3dZNHVua09RX3A5TWJ5TktVeHhZamU2Yzk2cHNfU09XVzNNU29qMl9pMWRwR2hlOUlLaXdqUzVhazVmZUw4d1VWSWI?oc=5"
     }
    ]
   }
