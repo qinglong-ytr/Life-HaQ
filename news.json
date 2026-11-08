@@ -1,6 +1,53 @@
 {
- "updated": "2026-11-07",
+ "updated": "2026-11-08",
  "days": [
+  {
+   "date": "2026-11-08",
+   "items": [
+    {
+     "cat": "金利",
+     "title": "【速報】日銀が追加利上げ見送り 政策金利1.25％で据え置き決定 基調物価上昇率「目標の2％」に“事実上到達”",
+     "body": "住宅ローンの変動金利や預金の金利に関わるニュースです。変動金利で借りている人は、次の金利見直しの時期を確認しておきましょう。",
+     "src": "TBS NEWS DIG",
+     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1xRVl1NEZkMlFnZ3JOaDdJXzdvM3VCanM1cnNGa1djR3NCZFQxWGpEVkVWakp5ZU1WU3ByZXZzX0dwbmVsODI0WmQ2a0Z6UFRRNXhDN29zR0Q0MDJ6?oc=5"
+    },
+    {
+     "cat": "NISA",
+     "title": "NISA口座で人気の｢投資信託ランキング｣トップ10！ 11/2～11/6に楽天証券のNISA口座(つみたて投資枠＋成長投資枠)で買われた投資信託ランキングを公開！",
+     "body": "NISA・iDeCoの制度や使い方に関わるニュースです。自分の枠や掛金の設定に影響がないか確認しておきましょう。",
+     "src": "ダイヤモンド・オンライン",
+     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5Fd2dhUWVORTlpeGZ4MHR6akNLdE9jQW9vUERKME9sb1o4WFEzamtTWDVaOS1Qd0hqeXJKYTZjOUlGNi11Nm5faFd1S0xwUGZkd1h3?oc=5"
+    },
+    {
+     "cat": "税金",
+     "title": "岸田元首相、国債NISA「慎重な検討必要」税制改正論議に影響も [予算・税制][自由民主党（自民党）]",
+     "body": "税金や控除に関わるニュースです。年末調整や確定申告で手取りが変わることがあるので、対象になるか確認しておきましょう。",
+     "src": "朝日新聞",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB1Z0NjakN4dEsxd0wwOXNqektnb2kxRWt1UDRFTURUZnJ2bTBJaGhfSUcybzRGX0lzZWI2UE95QnBxNlhOdW4zNHQ3dkZEV21PZ2lMa0taYU45YU0wQlZsdHZlaTFobGs?oc=5"
+    },
+    {
+     "cat": "不動産",
+     "title": "韓国5大銀行の固定型住宅ローン、2カ月で年6%台半ばに…債券利回り急落が導いた「サプライズ利下げ」",
+     "body": "住まいのお金に関わるニュースです。家賃の更新や住宅購入・借り換えを考えている人は、相場の流れを押さえておきましょう。",
+     "src": "BigGo ファイナンス",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBlcXZmT1RrQ05VTldRenRWYWZ1bkVjYlN3SlBsVnJuT1Q0UjZWdnF4el95V0kzSTc4WjQ0Um14ZlB0dm5kODlOaHZDN2VOOTctOFZEelY3MTctUFBzMVFKNk1NY0RIZmQ5YUlkSkxnVjV0UkJ6?oc=5"
+    },
+    {
+     "cat": "キャリア",
+     "title": "連合の27年春闘、賃上げ要求「6%中心」目指す－さらなる上積み期待 フォトギャラリー | TBS CROSS DIG with Bloomberg",
+     "body": "働き方や収入に関わるニュースです。自分の職種・業界の相場と比べて、年収を見直すきっかけにしましょう。",
+     "src": "TBS NEWS DIG",
+     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOcHA0bXhXbUxQY29hb0JuQlV0TjJuSTdSTkNVTkZaeHdCTEk4eUcteVJ5OGVQVFNET05UbFVVaU1DMGtqam1RWUFqRGZNQk9BM2NhLXVQWlJGNDV6VkNfWVF6SGI1eEQxQ0JjQUlxVlJWeUZHNkkwQUlSZnRZa1ljQlJHSEpiWjQ?oc=5"
+    },
+    {
+     "cat": "暮らし",
+     "title": "公的年金運用、赤字５．２兆円＝ＧＰＩＦ、金利上昇・円高で―２６年７～９月期",
+     "body": "毎日の暮らしと手続きに関わるニュースです。自分に必要な手続きや、家計への影響がないか確認しておきましょう。",
+     "src": "時事メディカル",
+     "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9EUnE3Q1ozQU83ODRSbjE5QVluS1VIRXlRVDZsdzZ1dTlPNXFudWloYjZ1Q3BzT2pkRGVzTDBzOVdSN3ZVQ0NfT3ZWbw?oc=5"
+    }
+   ]
+  },
   {
    "date": "2026-11-07",
    "items": [
@@ -280,53 +327,6 @@
      "body": "毎日の暮らしと手続きに関わるニュースです。自分に必要な手続きや、家計への影響がないか確認しておきましょう。",
      "src": "日経クロステック",
      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9QU3U1dHNEZWdFdVRnTFVrM1dMWURtT3RJc3NQWUNyNzlnMjJJU3NsR1FhX0J2ejlBUDF5QXJyLTQwMGl4X3pSYzE5SkZZQUp2TXdxbHBNVHZkdmNZVWluVlM5Zno2aFU?oc=5"
-    }
-   ]
-  },
-  {
-   "date": "2026-11-01",
-   "items": [
-    {
-     "cat": "金利",
-     "title": "【ポイント解説】日銀・植田総裁の会見読み解き＆エコノミストの利上げ予想・政策金利2％超えも・基調物価2％って何？",
-     "body": "金利や為替は、ローンの返済額や外国資産の評価額に影響します。1日の動きより数か月の流れで見るのがおすすめです。",
-     "src": "日テレNEWS NNN",
-     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPLU9ESVFjejdYLUN0MDhFbkdnU3hMcTA5WUljaWR0Q08zSVZUeDJEQ0N0SmoyU3dfM3hFN1ZlMHVmMXF5OTFkTDROZUpzUjRHZ19QMlVrMUdiODUzS2FYcEttN0toWFZ4bjFFVmlsQmRLdUVkTXpQTHF5WlMzRXQzeWNn?oc=5"
-    },
-    {
-     "cat": "NISA",
-     "title": "NISA口座で人気の｢投資信託ランキング｣トップ10！ 10/26～10/30に楽天証券のNISA口座(つみたて投資枠＋成長投資枠)で買われた投資信託ランキングを公開",
-     "body": "制度の変更は施行日と対象者が大事です。手続きが必要かどうかは金融機関の案内でも確認できます。",
-     "src": "ダイヤモンド・オンライン",
-     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE11NVRUUTBEd20ydmkzeGVKTTlTaklIN3lyTXBIemwzbzN1Q25QNVpKZ3lHcXFmME5rcTJSQ2dfU01JTnQ0Y05OU08tU19hdm9mV0E0?oc=5"
-    },
-    {
-     "cat": "税金",
-     "title": "年末調整｢昨年と同じ｣で提出→10.8万円の損…50代男性が見落としていた\"取り返せる税金\"の正体",
-     "body": "税制の変更は、決まってから実際に始まるまで時間があります。いつから・誰が対象かをチェックしておきましょう。",
-     "src": "PRESIDENT Online（プレジデントオンライン）",
-     "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5IMW5wVWgwV21DcXN0X20wWTFWOVB4Y0dhbW9JbnJDWlNTQktZZW8zanB2SFdtajQzcmhLVVNQdjRLak1DV0N4TUtEektBNGNYZVNIUWczbWw?oc=5"
-    },
-    {
-     "cat": "不動産",
-     "title": "日銀利上げ見送りも、住宅ローン影響これから 総利息1500万円増の例",
-     "body": "住宅ローンや家賃は家計の中で一番大きな固定費です。金利タイプごとの返済額の違いも試算しておくと安心です。",
-     "src": "日本経済新聞",
-     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBGSzlpRW9wRUxwdkktMnR6M1NyNlhfNF9mQUZfMUtRX0p6aE4tU0xzWDNYekNRVFBLVDJtb1QteXh1eVRyUFI5Z2ItaUZLeDgzYUtEQ2F3SWtWWW5sLUh0NWJMTGV3VU9JMmFPNg?oc=5"
-    },
-    {
-     "cat": "キャリア",
-     "title": "県内の有効求人倍率 9月も全国トップを維持 求人が求職を一定程度上回る 福井労働局「物価上昇や中東情勢の影響に注意」",
-     "body": "賃金や求人の動きは転職のタイミングにも関わります。今の市場価値を知る材料にしましょう。",
-     "src": "日テレNEWS NNN",
-     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPOWs0aUJTaW9fblBCZlZ5alZSVWhOUldqZ19RMTg0ODM2djVTRjg2YUVZcGtVVW5WZjAzd09jVWh0a0U5enZaOHItMUNCc3NSMVBJY2F4c080Wnc1UGgtd0tnSVQ2anBnUUJlZTc2UXFYVVBWUkktenh3Wm9QbW1RTHdTRzZVdFdY?oc=5"
-    },
-    {
-     "cat": "暮らし",
-     "title": "9月の富山市の消費者物価指数 7月と並び過去最高に",
-     "body": "物価や社会保険料の変化は手取りに直結します。固定費の見直しとあわせてチェックしておきましょう。",
-     "src": "NHKニュース",
-     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1WaTlwbG5HZXoxSmVxb3lCbDI0alVUazdqTDhIMHZnMWlCS2RaYk15VnZvdFp5aXRPWTliWUdCbTV2Unl1MWpXVmVQZjlMMmNDUy1FVzgyOU04Mjl1d3Bv?oc=5"
     }
    ]
   }
