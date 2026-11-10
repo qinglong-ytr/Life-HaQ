@@ -1,6 +1,53 @@
 {
- "updated": "2026-11-09",
+ "updated": "2026-11-10",
  "days": [
+  {
+   "date": "2026-11-10",
+   "items": [
+    {
+     "cat": "金利",
+     "title": "日銀10月会合、過度に慎重にならず実施の声－早期利上げへ複数意見",
+     "body": "住宅ローンの変動金利や預金の金利に関わるニュースです。変動金利で借りている人は、次の金利見直しの時期を確認しておきましょう。",
+     "src": "TBS NEWS DIG",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBIR2NfNHdyZURlSUk0TEtOQ01hWWtyaTRUZllMMFB4SHdYN0xnY2lQUG5TWUVJVkVxVzZrSmY5VnpRa2E5czhrczlKNHpuN0NROHByREpiWTFZOWkwT2t5LTFPNXJDVG1feGlsN3JLX1k2dVFC?oc=5"
+    },
+    {
+     "cat": "NISA",
+     "title": "【お金に働いてもらう】2027年1月開始「こどもNISA」とは？失敗しない資産形成3つのポイント＆始め方を専門家が徹底解説",
+     "body": "NISA・iDeCoの制度や使い方に関わるニュースです。自分の枠や掛金の設定に影響がないか確認しておきましょう。",
+     "src": "TBS NEWS DIG",
+     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5TczhtazR0aE4zczdUMUYtOVM5YXBpdGV2U1RYZ0FvNmhoR2UxQnhsajVSbmxWOFdaWFF6UmR5ZEpmSXdpeTFYY3FBdldzX043eWVoQ2RsNmpDSWlDazYyYkd2djg?oc=5"
+    },
+    {
+     "cat": "税金",
+     "title": "名護市が地元工場で生産のビールをふるさと納税返礼品に",
+     "body": "税金や控除に関わるニュースです。年末調整や確定申告で手取りが変わることがあるので、対象になるか確認しておきましょう。",
+     "src": "NHKニュース",
+     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9ndEtPdEV2X0xKLUNESHlwbjNhNXAtR1I4TmZ4NE44N3c0MWxBS0w3SEt5R1ZRbENiSHZLdExDTXBmLThEVF9Ga00tQ29DSm5SRExsUm9JTXo0aWV0RTVV?oc=5"
+    },
+    {
+     "cat": "不動産",
+     "title": "住宅ローン「残り3000万円」で、金利が“1.3％”に上昇！「500万円分」を繰り上げ返済のつもりが、夫は「オルカン年利5％なら5年で100万円以上増えるからもったいない」と言います。本当に損しないでしょうか？ (2026年11月9日掲載)",
+     "body": "住まいのお金に関わるニュースです。家賃の更新や住宅購入・借り換えを考えている人は、相場の流れを押さえておきましょう。",
+     "src": "ライブドアニュース",
+     "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1DZXc5RENQVzBqQjBOSG1HWEZQVzVjdnQ1WlVLbTdiMzY2MFRqOVRZclZXN2ppcmlqQnZnMTJHdVZtNWRLZDBnR0NCSWYwdXZkSFpEbl9VQU9mblYtbUE?oc=5"
+    },
+    {
+     "cat": "キャリア",
+     "title": "ＵＡゼンセン、６％賃上げ要求へ＝格差是正へ議論開始",
+     "body": "働き方や収入に関わるニュースです。自分の職種・業界の相場と比べて、年収を見直すきっかけにしましょう。",
+     "src": "ダイヤモンド・チェーンストアオンライン",
+     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFB4M3RWMG5jSHN5MUtUYnB1OXpZQkV1Rl94MlUwRDRhNUl5T28tSUtmQ3VoYjNCSjJ4ZzdFT0pqa25ERDltNFhsVHFzWlFwSWZHVGE4?oc=5"
+    },
+    {
+     "cat": "暮らし",
+     "title": "東京円、158円近辺で取引開始 米国の消費者物価指数の発表控え様子見の雰囲気",
+     "body": "毎日の暮らしと手続きに関わるニュースです。自分に必要な手続きや、家計への影響がないか確認しておきましょう。",
+     "src": "産経ニュース",
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5QYWpweU5BTmZZOXRLUjgyenM2a2J2eW9IVHVIS2J2NGlxUEdacXZYVHczMWU2UW0yVnk4UGt3aVdtTWQxRmViVmZLWERpSjZDYzVmdWRjb2xYd3hLZmtkRG1vWm1jMGxaRDd4bG5XYU9taUZ3cFE?oc=5"
+    }
+   ]
+  },
   {
    "date": "2026-11-09",
    "items": [
@@ -280,53 +327,6 @@
      "body": "毎日の暮らしと手続きに関わるニュースです。自分に必要な手続きや、家計への影響がないか確認しておきましょう。",
      "src": "東洋経済オンライン",
      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1sOE1NLWRHbllRMDJLU2VhUHZpVmxYWHlvWENuSUxJZW9YSVl0N0ItaGpZUFhRRlRobi1TemhrYkVfVTl6Z2I5QTJGNlQtSGpsc2czS3dHMA?oc=5"
-    }
-   ]
-  },
-  {
-   "date": "2026-11-03",
-   "items": [
-    {
-     "cat": "金利",
-     "title": "高市政権の経済ブレーン会田卓司氏「緩やかな利上げには反対しない」、日銀の政策金利は「2029年に2.5％」と予想",
-     "body": "金利や為替は、ローンの返済額や外国資産の評価額に影響します。1日の動きより数か月の流れで見るのがおすすめです。",
-     "src": "ダイヤモンド・オンライン",
-     "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBqRXIyZHRVaDVLTU0zS0VpZFVxbE5zZ29Gck5qMzdreFA3THVRVl9mN0p0cS1UWFl5dTFYMEdXZ2syMWQ5Q0ZVem4wUU_SAU9BVV95cUxNMEpjQVpaaWlLbWhXR0o0RlFxWGdsZThqbndtQVVtZVZ5RUV0R1ZuYlBuaHhLamV2N1I1cUQwVjZkaXZJTU1nd1FHREpuN1ZN?oc=5"
-    },
-    {
-     "cat": "NISA",
-     "title": "「こんな方法があったのか！」相続税対策の新たな選択肢「孫への生前贈与→こどもNISAで運用」が有効な理由",
-     "body": "制度の変更は施行日と対象者が大事です。手続きが必要かどうかは金融機関の案内でも確認できます。",
-     "src": "マネーポストWEB",
-     "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFBYM0Y0WGpHbDNvcTNLVTNKYVJZQ2tPSzRlelM0UmxHUENiZnZwcG5YOW4tWnJia2lGQkphdnNrUzV3MTVHcXZn?oc=5"
-    },
-    {
-     "cat": "税金",
-     "title": "福岡市のふるさと納税の返礼品に「コックピット見学」夜の滑走路ツアーや機内食体験も 寄付金額は13万円 JALが提供",
-     "body": "税制の変更は、決まってから実際に始まるまで時間があります。いつから・誰が対象かをチェックしておきましょう。",
-     "src": "FNNプライムオンライン",
-     "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5WQjF0Uk5JTzlUNTZvcXB2Y1hmREY0RnduRGY2Wnl6cWZId2VlNlphM3FmNlo4WU9jV1NZQXU5VUsyUS0zb3A3WDFmU3dwQQ?oc=5"
-    },
-    {
-     "cat": "不動産",
-     "title": "住宅ローン「フラット３５」適用金利４か月ぶり低下、３・８１％に…前月まで３か月連続で最高更新",
-     "body": "住宅ローンや家賃は家計の中で一番大きな固定費です。金利タイプごとの返済額の違いも試算しておくと安心です。",
-     "src": "au Webポータル",
-     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9HTktsX0ktbTVDVXZZRVJLSlJ4STFSUWphSnRXcUZMdWpxenNHWklkNFVSZHZFaVJCaDZRSkw4RENqQUpQSllpekY2cWJSQktLNFl2Mjdjak5lYl9CMlRuU0JiSWRIcnV4Zm1DVFRR?oc=5"
-    },
-    {
-     "cat": "キャリア",
-     "title": "長崎県の最低賃金が11月2日から56円引き上げられ「1087円」に 全47都道府県で4番目に低い額",
-     "body": "賃金や求人の動きは転職のタイミングにも関わります。今の市場価値を知る材料にしましょう。",
-     "src": "TBS NEWS DIG",
-     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1aamdqVFpKRlFZMk4zSnB2ajB1aUZheXNSX3ItenlzSllvVFdGdC01MExhWDFNTUQzNnJGaTc5dGxsLTVkb1lELVF6RFZEVTdSd1RuRmF2cThJQQ?oc=5"
-    },
-    {
-     "cat": "暮らし",
-     "title": "マイナンバーカードをスマホに入れると何が変わる？ 利用者1割未満の現実と知っておきたいこと 2ページ目 | ビジネス",
-     "body": "物価や社会保険料の変化は手取りに直結します。固定費の見直しとあわせてチェックしておきましょう。",
-     "src": "東洋経済オンライン",
-     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1LR184TXhUM2ZjdmxYZThLZUwzMmlxRzk3TC14ai1tbEZQaVUweWxubllHQ3FVRF9GYU1lYmtNWWdvMUVsa0hqUG5jQ1Z5dWlEY1luci1ETnRiUFE?oc=5"
     }
    ]
   }
