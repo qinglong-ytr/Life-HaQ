@@ -1,6 +1,53 @@
 {
- "updated": "2026-11-10",
+ "updated": "2026-11-11",
  "days": [
+  {
+   "date": "2026-11-11",
+   "items": [
+    {
+     "cat": "金利",
+     "title": "日銀37年ぶり「年3回利上げ」、予想7割台 市場混乱後に回復",
+     "body": "金利や為替は、ローンの返済額や外国資産の評価額に影響します。1日の動きより数か月の流れで見るのがおすすめです。",
+     "src": "日本経済新聞",
+     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9jLXQzMmFtU1Nocl9UeW5veFYyRWdvU1VZb3U1R1A5bVNLYmxyYTY5RmZBekh0SUg1R2gtdlhPa3Ytc085UjVYZWpFTTQxTzZGdERmdE56aUYyR09vTUZPV2ZwNW0wVGQ5RGQ1Ng?oc=5"
+    },
+    {
+     "cat": "NISA",
+     "title": "新ＮＩＳＡに国債追加、慎重姿勢 かつてＮＩＳＡ拡充主導、岸田元首相に聞く",
+     "body": "制度の変更は施行日と対象者が大事です。手続きが必要かどうかは金融機関の案内でも確認できます。",
+     "src": "朝日新聞",
+     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE50R1l6V2xfX2w0Q2Rjc3pRZV8tT0JNc0gxcC14WmZteERram01a2JEUlhyejFZT0o0MUhtbkk3VFAwUWE5SmtsbWowSG1TLUprUVJabW5FUjRmbVc4?oc=5"
+    },
+    {
+     "cat": "税金",
+     "title": "ふるさと納税、安く早く配送 経費上限下げで佐川やヤマトが物流支援",
+     "body": "税制の変更は、決まってから実際に始まるまで時間があります。いつから・誰が対象かをチェックしておきましょう。",
+     "src": "日本経済新聞",
+     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9jWFdseTZCSVJ3OWRyZXc3Q1NqOWN1aTRGUHUtNl91b0JCYzFEYi1lYVNKLUZuajV6ZDBxaHZBNFRMdlFkT3RRWF8tdGc5VUtqOTl4RzFOSFFtZjVHd3hxZHRCRklQdnVhWVhZdg?oc=5"
+    },
+    {
+     "cat": "不動産",
+     "title": "アメリカ大統領選で住宅ローン金利は変わる？米国政治が日本の金利に影響する仕組み【アメリカ政治で住宅ローン金利はどうなる？ 第1回】",
+     "body": "住宅ローンや家賃は家計の中で一番大きな固定費です。金利タイプごとの返済額の違いも試算しておくと安心です。",
+     "src": "liv-plus.jp",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE83M1NjSUhnNVd0QTVtWTEzdjhweWJNVWp5S1FnVnVrTk5RaTkxYy1LMnZSRzI4YkoyYkRSRmhPMG1zMVVSU011U2FtbVZyMVdiVDMzX29JM3BrUkE?oc=5"
+    },
+    {
+     "cat": "キャリア",
+     "title": "租税特別措置：中小企業税優遇、バトル 賃上げ促進税制 財務省「上昇なし、見直しを」／中企庁「長期的効果、下支え」",
+     "body": "賃金や求人の動きは転職のタイミングにも関わります。今の市場価値を知る材料にしましょう。",
+     "src": "毎日新聞",
+     "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE4ySlNPbGMxRjhCZ2FxS3h4X0lTVlBIUGx0M3VhOVdrakpmX0VPVDhKd1lMOFhkRGl5aUQxVUdqLWpUR3ROS3JtbEtZX1BSNG80Q3F0c2QtNFBYYWFIS1ZkTTdEbXplYkpt?oc=5"
+    },
+    {
+     "cat": "暮らし",
+     "title": "10月の米消費者物価、前月比0.4％上昇 12月利上げ確実視",
+     "body": "物価や社会保険料の変化は手取りに直結します。固定費の見直しとあわせてチェックしておきましょう。",
+     "src": "毎日新聞",
+     "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFA3d1h4T3JXUGxIM09ZZUQ2a0hzeE1wb1lCMDl4UG1CaGpzVVRyTjFDMjZzZnJBd2hGOGphVTd3NGU1VVlLOUhJUThCN0pIUEtETGJjVG1NQnVDVHFfWUxkR3VtaFFfUEpj?oc=5"
+    }
+   ]
+  },
   {
    "date": "2026-11-10",
    "items": [
@@ -280,53 +327,6 @@
      "body": "物価や社会保険料の変化は手取りに直結します。固定費の見直しとあわせてチェックしておきましょう。",
      "src": "NHKニュース",
      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBWY0o3UEFzbFpuM09mQ1liSzJlU0FDcXNYc0U4cklLb3hPeWE2VnA2aXQwTHJBa0FqXzVzMU9TY18yME8weFA1cjBFcEZ6S1VYM1p2ZUNwUXltaUFQWWlj?oc=5"
-    }
-   ]
-  },
-  {
-   "date": "2026-11-04",
-   "items": [
-    {
-     "cat": "金利",
-     "title": "マネタリーベース、10月は前年比13.6％減 減少率が縮小＝日銀",
-     "body": "住宅ローンの変動金利や預金の金利に関わるニュースです。変動金利で借りている人は、次の金利見直しの時期を確認しておきましょう。",
-     "src": "Reuters",
-     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNemNhcEVXZGdCUjFCb2FNU3lVV0tRMWZqdjZhTXB5NHptMkR4aE9iWEE2RnNkTmtxUFh1aV9fRU5rejdxSnFnWU5GY0xZaUhjX2xYUGpnSU9mVVJ4SndpN1dyVFN2S2dEdnVRRkYwb0lKWG9QTW1Sb240R2NmdG4ySGNmR25YWm5lVFU3ZGNiQU4?oc=5"
-    },
-    {
-     "cat": "NISA",
-     "title": "【新NISA】つみたて投資枠対象となる投資信託・ETF等一覧 :投資信託 :マーケット :日経電子版",
-     "body": "NISA・iDeCoの制度や使い方に関わるニュースです。自分の枠や掛金の設定に影響がないか確認しておきましょう。",
-     "src": "日本経済新聞",
-     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNZFN0a21DOTNDNzdvb24yVVgwalFnbWdlczNjYlZZdzNQUWJjV3BVYjV3Z2xQcmdFMXB1Rkp3c04zYm5NTFZwWFVDUE12VGFWTHc2LVI3R09nNjNvSGh1SjhfVnNIby1QdkxrTkRpUEY5OE01SDJpWWVnZlBuWDZPd0ZaakNOaEh2QW5xTDlhSjZTbk50OFFfMmRHd0ZFX3VFczdmY3ZfLXY5bEQ4ZU1OM185a2RIdEk?oc=5"
-    },
-    {
-     "cat": "税金",
-     "title": "年末調整、2026年の変更点 対象の控除が増える可能性",
-     "body": "税金や控除に関わるニュースです。年末調整や確定申告で手取りが変わることがあるので、対象になるか確認しておきましょう。",
-     "src": "日本経済新聞",
-     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBzOUo0RFVfNGhDbUJ2R2lsMHRteXgwV0REVzF1ejlTbTE2X1VieWFHR3lIcEhoZWZuVER6bHdkaEFSRk1yMjd1aEdQUm5oc190eUxieE81YXFsZUVmalFtSUh4QjdkVFJqTFdOSg?oc=5"
-    },
-    {
-     "cat": "不動産",
-     "title": "変動金利1％台か？固定金利3％か？金利差「2％超」でも変動金利の住宅ローンを続けるのは正解か",
-     "body": "住まいのお金に関わるニュースです。家賃の更新や住宅購入・借り換えを考えている人は、相場の流れを押さえておきましょう。",
-     "src": "@DIME アットダイム",
-     "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTE4xdmluakVzWjIyY2xBc0dDX2ZoX1pGZnpVUlBRWnl3Z1pZSURVZ3dnSXUyczVwWGY5aVZNY3o2cGZMMWE4?oc=5"
-    },
-    {
-     "cat": "キャリア",
-     "title": "賃上げされても生活が全然ラクにならないわけだ…現役世代から手取り収入を奪う\"増税以外\"の犯人",
-     "body": "働き方や収入に関わるニュースです。自分の職種・業界の相場と比べて、年収を見直すきっかけにしましょう。",
-     "src": "PRESIDENT Online（プレジデントオンライン）",
-     "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1aUmFZVE9JWjhsX0tLOWhRSENuaENoR1FmcFlObTZKeTFiSUswbTh4a3ZmM0hEVTl4UTJLS3dBWW9xT0lnVmh6bG9ReVVPeWM?oc=5"
-    },
-    {
-     "cat": "暮らし",
-     "title": "画像 | マイナンバーカードをスマホに入れると何が変わる？ 利用者1割未満の現実と知っておきたいこと",
-     "body": "毎日の暮らしと手続きに関わるニュースです。自分に必要な手続きや、家計への影響がないか確認しておきましょう。",
-     "src": "東洋経済オンライン",
-     "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1sOE1NLWRHbllRMDJLU2VhUHZpVmxYWHlvWENuSUxJZW9YSVl0N0ItaGpZUFhRRlRobi1TemhrYkVfVTl6Z2I5QTJGNlQtSGpsc2czS3dHMA?oc=5"
     }
    ]
   }
