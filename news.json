@@ -1,6 +1,53 @@
 {
- "updated": "2026-11-11",
+ "updated": "2026-11-12",
  "days": [
+  {
+   "date": "2026-11-12",
+   "items": [
+    {
+     "cat": "金利",
+     "title": "浅田日銀委員、利上げは「ペースに十分留意」－早期実施に慎重姿勢",
+     "body": "住宅ローンの変動金利や預金の金利に関わるニュースです。変動金利で借りている人は、次の金利見直しの時期を確認しておきましょう。",
+     "src": "Bloomberg",
+     "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFB2M1V3TU5zcEVKeVFpSW5YX3JwM1dyVnRRZnRuUjB2d1B5ajV3WWdIWWs0X2VJUGR6RjZXQUJVdVdvYkw2YVYxX0MwX0FfMVZMaEhXZUYwX3A0aUhlMlhfM2hnZ3kwRmxHeEZjR0lyS3ZoektyZjN3?oc=5"
+    },
+    {
+     "cat": "NISA",
+     "title": "ＮＩＳＡ口座、開設再加速 株高追い風、企業も後押し：時事ドットコム",
+     "body": "NISA・iDeCoの制度や使い方に関わるニュースです。自分の枠や掛金の設定に影響がないか確認しておきましょう。",
+     "src": "時事ドットコム",
+     "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFA5RVFFUU1XRUdNZmNxd0V1cGFUMXlOTWZxOHN4d3FTRjFjTzJaQWNQVFVqTHNjYTFaMmFkeEppMUdWRVZCS1ZkV2JRRUwyLUF2X1p5T3ZMdnNEREpaYk9zWlJ1TQ?oc=5"
+    },
+    {
+     "cat": "税金",
+     "title": "ふるさと納税 基準厳格化で返礼品取り下げ相次ぐ 山形",
+     "body": "税金や控除に関わるニュースです。年末調整や確定申告で手取りが変わることがあるので、対象になるか確認しておきましょう。",
+     "src": "NHKニュース",
+     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE00VzMwRVVIcFJyam53ZVBXYll2NC1Na0pqeUtYR3ktLUNaMEYzS0pfUjZQVlFlLThIeVV3bDRFaHVNNlpzUWxUTWRaWVRTZGQ1Tmd5Wm0wYUVmb2dkWUVF?oc=5"
+    },
+    {
+     "cat": "不動産",
+     "title": "月10万円の住宅ローン 借入可能額800万円減 ハウスメーカー倒産1.8倍 愛知は50％増",
+     "body": "住まいのお金に関わるニュースです。家賃の更新や住宅購入・借り換えを考えている人は、相場の流れを押さえておきましょう。",
+     "src": "静岡ライフ",
+     "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE56UU81SjE2YTVEa21aTFFUWkpXcmFFbzlhWjF1a2dmVk1ZekljMG1pMnNwZVNRR2d4Qnk1ejQ5cVpKcWNIS2NFUzdUYmh3UHJyZ2c?oc=5"
+    },
+    {
+     "cat": "キャリア",
+     "title": "香川県の9月の有効求人倍率1.58倍 全国5番目の水準",
+     "body": "働き方や収入に関わるニュースです。自分の職種・業界の相場と比べて、年収を見直すきっかけにしましょう。",
+     "src": "NHKニュース",
+     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1scEk1amtud2k1M3N4dFYyaG1CellwVGIxZDBRUURLRUg4dE1tRXM0c2JCaDdLekN2dnR1dmVVc20wTnI1d2ptZzh4STdHdmdpQW9VUUdtOXVuS3huREhj?oc=5"
+    },
+    {
+     "cat": "暮らし",
+     "title": "独経済諮問委、成長見通し上方修正 国防・年金費抑制を提言",
+     "body": "毎日の暮らしと手続きに関わるニュースです。自分に必要な手続きや、家計への影響がないか確認しておきましょう。",
+     "src": "Reuters",
+     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRVJPeG1Tc2pRdjhFdXlJbmgydVVUQ0JZdDNhc3JiejM0cV9VbXVMcEdJTV9WWFlCSHJ4ZmNhXzF5anBpZ1l1dF9mOXF6Y2ZZTEo5MnEwUUlJNHpmZ1NXbzFTWlo2YkM3S0Z2RkNfM3JUcWY5ZV92Qk1mMDRMVnltazJ6X3ByUQ?oc=5"
+    }
+   ]
+  },
   {
    "date": "2026-11-11",
    "items": [
@@ -280,53 +327,6 @@
      "body": "毎日の暮らしと手続きに関わるニュースです。自分に必要な手続きや、家計への影響がないか確認しておきましょう。",
      "src": "日本経済新聞",
      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9jMDQtUWIwcDVONVBobTFMeHhKNnY3QmxIQVpJUEFXbTFvdUpEdzV6MjJWOXhCV1g5a05CMm83bGxtRnd1V3paWG9EVzNQU05oZDJqdGI2c3VGQQ?oc=5"
-    }
-   ]
-  },
-  {
-   "date": "2026-11-05",
-   "items": [
-    {
-     "cat": "金利",
-     "title": "日銀、政策金利「早めにゴールに近づけるべき」 9月議事要旨",
-     "body": "金利や為替は、ローンの返済額や外国資産の評価額に影響します。1日の動きより数か月の流れで見るのがおすすめです。",
-     "src": "日本経済新聞",
-     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5PRnpCdl9xa0d6VXN1Z1llZGZBTHhxNkpfVnV5OWw0Y2g1dXNLYWFGWFAxUGJld2xhUzZqdFIzdlc0TU9FTC1Jb095YzNqclUyU0lVZkhEYWphTGFaSkNaaE9ZUk12eHNLLXA0Sw?oc=5"
-    },
-    {
-     "cat": "NISA",
-     "title": "【NISA】2026年の年末までに駆け込みで済ませておくべきことは？ 余剰資金がある場合のおすすめの“使い切り案”や、ザイ読者が考える｢NISA年末戦略｣も公開",
-     "body": "制度の変更は施行日と対象者が大事です。手続きが必要かどうかは金融機関の案内でも確認できます。",
-     "src": "ダイヤモンド・オンライン",
-     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBmblVFb1NnQlBhT3k0ZHdjN0tnUmxHekFncURoQmUxZGpLbFBaNXRjdHBTSEtFTm1xQTI1NVdqa1JEWkpUYnZWa0VsU0RZaTVFMzFN?oc=5"
-    },
-    {
-     "cat": "税金",
-     "title": "「ふるさと納税」COREFORCE（コアフォース）より返礼品にコアフォースループの新色ラベンダー・バイオレットが掲載開始。",
-     "body": "税制の変更は、決まってから実際に始まるまで時間があります。いつから・誰が対象かをチェックしておきましょう。",
-     "src": "時事ドットコム",
-     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5JS2I4ZTBHczl2dmpQM0pFNkxxTEhudHV2RlE4czJyTmUwSWU0OHNkeWlJblgxRXdHM0xMdklrYm5LRzFwellFVHd4NGZPWGlqVTd4UWVMS2l0V0d0X3VDSjQ5V0RsWlFnN0hF?oc=5"
-    },
-    {
-     "cat": "不動産",
-     "title": "住宅金融普及協会、2027年度から新制度「住宅ローンシニアアドバイザー」運用=ローン金利の上昇基調受け",
-     "body": "住宅ローンや家賃は家計の中で一番大きな固定費です。金利タイプごとの返済額の違いも試算しておくと安心です。",
-     "src": "住宅産業新聞",
-     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5KWU1xWkxNNU12VmI0Uzd2NXZTZ09ZNzlieFNENm5zUTRpUnYyUTJLWGpDZXh1UWNlNFNMUHVDNG1Fd3RCWlpwNFdObU5qanZQcEpYS9IBVEFVX3lxTE5KWU1xWkxNNU12VmI0Uzd2NXZTZ09ZNzlieFNENm5zUTRpUnYyUTJLWGpDZXh1UWNlNFNMUHVDNG1Fd3RCWlpwNFdObU5qanZQcEpYSw?oc=5"
-    },
-    {
-     "cat": "キャリア",
-     "title": "＜主張＞来年の春闘 物価上昇超える賃上げを 社説",
-     "body": "賃金や求人の動きは転職のタイミングにも関わります。今の市場価値を知る材料にしましょう。",
-     "src": "産経ニュース",
-     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBxekU3RHp3LVlKWWh2WjhiVkJCWW50LW9yUU9Vb3RsU1FxOERQVkdtV1FpU0RvUUIxaGJUbHhVcXhEM05VbE4yM3dXTVdubzVnblYzSElfNU5FSEJCQzU1M2N3QWpLS1NSOTcxeFRTRmNBWG1jRUE?oc=5"
-    },
-    {
-     "cat": "暮らし",
-     "title": "ユーロ圏 10月の消費者物価指数は4％上昇に 約3年ぶり高水準",
-     "body": "物価や社会保険料の変化は手取りに直結します。固定費の見直しとあわせてチェックしておきましょう。",
-     "src": "NHKニュース",
-     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBWY0o3UEFzbFpuM09mQ1liSzJlU0FDcXNYc0U4cklLb3hPeWE2VnA2aXQwTHJBa0FqXzVzMU9TY18yME8weFA1cjBFcEZ6S1VYM1p2ZUNwUXltaUFQWWlj?oc=5"
     }
    ]
   }
