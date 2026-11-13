@@ -1,6 +1,53 @@
 {
- "updated": "2026-11-12",
+ "updated": "2026-11-13",
  "days": [
+  {
+   "date": "2026-11-13",
+   "items": [
+    {
+     "cat": "金利",
+     "title": "円安進行 日米金利差拡大 意識…日銀審議委員 利上げ慎重姿勢",
+     "body": "金利や為替は、ローンの返済額や外国資産の評価額に影響します。1日の動きより数か月の流れで見るのがおすすめです。",
+     "src": "読売新聞",
+     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5PZWZTYWNDT3ZXM19PcGh1alYwX3RtU1FnRXdGUW5QWmtyQVh6Y1lpV1FhYW1xRnZma0JySFJiNjVLdW9RSkdUbXJ6ZVUyVTQ0LWV3UGdqT2pvdzNnVlFydVYwS24?oc=5"
+    },
+    {
+     "cat": "NISA",
+     "title": "長期投資のはずが…NISA積み立て、20代の取り崩し率2倍に 結婚や転勤で「資金足りない」",
+     "body": "制度の変更は施行日と対象者が大事です。手続きが必要かどうかは金融機関の案内でも確認できます。",
+     "src": "日本経済新聞",
+     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE8tVTMwSlVwU0JqOGxObndMTEZKREFBbERZS3FkOFpZRldVQVlBczlfNjhtQlJ1aF84N2pBX0hiT21iaGxLc3FPZHNKWGhhc0NnWFAwVmh0eUpmdVRaVkpJbFhSYVpnbzk5eVVQUg?oc=5"
+    },
+    {
+     "cat": "税金",
+     "title": "プレスリリース：愛知県西尾市が「楽天超ふるさと納税祭」に出展！一色産めすうなぎ「艶鰻」の試食や、特産品が当たる大抽選会を開催（PR TIMES）",
+     "body": "税制の変更は、決まってから実際に始まるまで時間があります。いつから・誰が対象かをチェックしておきましょう。",
+     "src": "毎日新聞",
+     "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9JR3poN1pJeWRtOXdjODZsZHdyOHNvTFdIeXhHUHFuMExReGg2R040dEdYcHpvdmRnMXZuaTFrbmVobG1pV2tGUHpLdXZrTWlCTWhHQkx3ejhSNWFCNzlJcktvV1ZvMFpv?oc=5"
+    },
+    {
+     "cat": "不動産",
+     "title": "続く金利上昇…50年住宅ローンで大丈夫？ 毎月の返済軽くても利払い1000万円増も",
+     "body": "住宅ローンや家賃は家計の中で一番大きな固定費です。金利タイプごとの返済額の違いも試算しておくと安心です。",
+     "src": "日本経済新聞",
+     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE01ekpqQlhhYVZOdHNDSGtybGxxNnJ1RUpEcm1KWW95WjRHU2J2YTRHX0dXY0hmcG9WQjJUU0VzNWtLa1JKNWszU2NQRkd4VHFCZXNmTDh2VkdJdkV4S3BNU2VzSV93eGNlWS04RWJWdjVITGdUZkI1TGM0b2NHZw?oc=5"
+    },
+    {
+     "cat": "キャリア",
+     "title": "長野 9月の有効求人倍率 前月と同じ1.43倍",
+     "body": "賃金や求人の動きは転職のタイミングにも関わります。今の市場価値を知る材料にしましょう。",
+     "src": "NHKニュース",
+     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9CZXpTTFJEZ1A1UVlORVBUZXJLcU02dFFrcllrQ3RDRldpOVo0X3NIQkJ2eWF5T2hqdmlMYUZMcXhFSnZpUXpHUGtla1dGeWQ4eFZrRzdrdXhkOVZEcnFJ?oc=5"
+    },
+    {
+     "cat": "暮らし",
+     "title": "反データセンター議員、続々当選も 州年金基金はAI投資のジレンマ",
+     "body": "物価や社会保険料の変化は手取りに直結します。固定費の見直しとあわせてチェックしておきましょう。",
+     "src": "日本経済新聞",
+     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1pTGNRakdjdU94MndaVnRNVmk0d3dEWGFiSVRDQ1lqNENIVXJTX3MwWmtVUlRoZUtDMFg3dVFaVUp1VlBBeF9tbkFrWi1ZS2pBU0llY0M4Z1A1TGplNUFYOG00aXg2d2N6WTVwWg?oc=5"
+    }
+   ]
+  },
   {
    "date": "2026-11-12",
    "items": [
@@ -280,53 +327,6 @@
      "body": "物価や社会保険料の変化は手取りに直結します。固定費の見直しとあわせてチェックしておきましょう。",
      "src": "時事ドットコム",
      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE41ZGdjUGRRWDBIbEhMTGV5clM4WFB6enNvaWdiQUNDNFBTc3E3bWtnSmNCa2NWUllTR3ZOY1ZSTUlLa3pIeWpMQ2VTb1lLa3JxWFZ2U19MTGVoVVhwVGp2SjkzTQ?oc=5"
-    }
-   ]
-  },
-  {
-   "date": "2026-11-06",
-   "items": [
-    {
-     "cat": "金利",
-     "title": "日銀の追加利上げ「27年末に2.25%」「12月以降ペース減速」",
-     "body": "住宅ローンの変動金利や預金の金利に関わるニュースです。変動金利で借りている人は、次の金利見直しの時期を確認しておきましょう。",
-     "src": "日本経済新聞",
-     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9XN3p5WV8yUzVWTEFULVNkU2hDRWhFVW9hOHBkTmkwa2NKUDVRemh3V3VDelkxNF9EbVRVY1A5UmlKcE83SnhVenliOGZ0ZTBKRkJWSTNyQmpBRm1ncjJ2X0tiaFhtWHdMQWFDMA?oc=5"
-    },
-    {
-     "cat": "NISA",
-     "title": "お金のおけいこ：／17 今回のテーマ こどもNISA",
-     "body": "NISA・iDeCoの制度や使い方に関わるニュースです。自分の枠や掛金の設定に影響がないか確認しておきましょう。",
-     "src": "毎日新聞",
-     "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1KeUNOZFN2NE45VVE1UDUxMFFoalN6QjJRbEpDYVdBNHVqa2Z5djZnZHlVNzVJTl92dTNsNWJFY2tVbnN0RndQUDFTMjBpbk50a2VROFZxOGt1ZEpHTVFocXktUjB1Y3pSV3RWcXF3ZlE5dw?oc=5"
-    },
-    {
-     "cat": "税金",
-     "title": "所得税約6600万円脱税の罪 学校法人「中日学園」元理事長に執行猶予付き判決 名古屋地裁",
-     "body": "税金や控除に関わるニュースです。年末調整や確定申告で手取りが変わることがあるので、対象になるか確認しておきましょう。",
-     "src": "日テレNEWS NNN",
-     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNMVVKOC1HY1N6cmJGNTVqRVAtbDJZSUFFVVJrSkJlcmMwUUlDa1MzalpUTzVVcjhKTDQ1U0lqVGRoQVQ5cFRBUENSY3FPd1lWUGlwWjVDaUI1eTdRN191WDVIdlJSZUZSVnZRWk1BMFJ4aU5xdGtHNXZRZlh4VFd0Qml4MHhHblE?oc=5"
-    },
-    {
-     "cat": "不動産",
-     "title": "住宅ローン金利は第3四半期に15％まで上昇し、不動産融資の状況に乖離が生じ始めた。",
-     "body": "住まいのお金に関わるニュースです。家賃の更新や住宅購入・借り換えを考えている人は、相場の流れを押さえておきましょう。",
-     "src": "Vietnam.vn",
-     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNeGtIRVN1OVdPaDQzMEY1aldjWHBOYVlSQmdSeXdFUFVNMElDZ09YcGpkQk5FSGxza0cxV1IyYUlCVUtKQnlRRDRxWGEydTFnMHo2b3VjMmM5QlRjTTFfN2ZzTDNzd1IzUm9OTnJHZllwMHVBVHIyWXpPZm5ka3NyQU5KX2xBQUVhZ1JFci1Gb0dxZ0IwZFFfb2p3TlYxajJYdDRycV9tTU5TZw?oc=5"
-    },
-    {
-     "cat": "キャリア",
-     "title": "９月実質賃金、２．２％増 物価上昇鈍化で９カ月連続増",
-     "body": "働き方や収入に関わるニュースです。自分の職種・業界の相場と比べて、年収を見直すきっかけにしましょう。",
-     "src": "時事ドットコム",
-     "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBhOUJPSWFfTzhGMUx4d0dMZTRtZFVtOWNzTnhJc09vSjRWdXNFU0VEeW51R0g1SUNkRmdEWnFoX292c3Rma1hNcjY4REFXWEtCVkdCNC1US1c1aTQySEVxOGYyYw?oc=5"
-    },
-    {
-     "cat": "暮らし",
-     "title": "「少子化で年金減」は本当？ 受給アップへの実効5プラン",
-     "body": "毎日の暮らしと手続きに関わるニュースです。自分に必要な手続きや、家計への影響がないか確認しておきましょう。",
-     "src": "日本経済新聞",
-     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9jMDQtUWIwcDVONVBobTFMeHhKNnY3QmxIQVpJUEFXbTFvdUpEdzV6MjJWOXhCV1g5a05CMm83bGxtRnd1V3paWG9EVzNQU05oZDJqdGI2c3VGQQ?oc=5"
     }
    ]
   }
