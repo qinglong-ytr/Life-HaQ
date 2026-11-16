@@ -1,6 +1,53 @@
 {
- "updated": "2026-11-15",
+ "updated": "2026-11-16",
  "days": [
+  {
+   "date": "2026-11-16",
+   "items": [
+    {
+     "cat": "金利",
+     "title": "マイナス金利下の「10年固定住宅ローン」11年目の選択",
+     "body": "住宅ローンの変動金利や預金の金利に関わるニュースです。変動金利で借りている人は、次の金利見直しの時期を確認しておきましょう。",
+     "src": "毎日新聞",
+     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE15TmhXODR4UzJDUnVvMlgyT3RwN2hINkRVekFXREl0UFQyU29yUm1iUi11Wm5BRUNCcnBxdUdwOUtYakRvYWFSVXhvRzFPYzFqMF9fQzhPRk9YbVFlMHU5UlhpMXA1V214YU0wUGlRR29TYUNBYXB5Vk9Ic0hiV00?oc=5"
+    },
+    {
+     "cat": "NISA",
+     "title": "手取り50万円でも｢親のNISA｣優先？元トレーダーが断言､《こどもNISA貧乏》に陥らず家族が豊かになる｢資産形成の正解｣",
+     "body": "NISA・iDeCoの制度や使い方に関わるニュースです。自分の枠や掛金の設定に影響がないか確認しておきましょう。",
+     "src": "東洋経済オンライン",
+     "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFAwdklpTVNRQUdmZXV1SVMxVkRlenBJbVNubGVqMnk2WjNxbFBWYjNsZW01RXZENm81MmdUeExpLWk2YTMwYnRzYUR2MWtEYkN2NVE?oc=5"
+    },
+    {
+     "cat": "税金",
+     "title": "首都圏7都県へのふるさと納税、180億円も仲介サイトへ流出…国が業者に手数料の引き下げを迫ったのに",
+     "body": "税金や控除に関わるニュースです。年末調整や確定申告で手取りが変わることがあるので、対象になるか確認しておきましょう。",
+     "src": "東京新聞",
+     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1QSE1ScEpCMzN2b0Jac1NHWmlONHZFQ0dYNDQ1am85OTFkOG9LcHZvMERQdTNzdnNnb1ZBb1p1TGEzTEh3dFhoZy1La0llbm9HSFVJ?oc=5"
+    },
+    {
+     "cat": "不動産",
+     "title": "融資申込は5年で3倍に急増…修繕費不足を借入でしのぐ「負債持ちマンション」が金利上昇で追い込まれ始めた",
+     "body": "住まいのお金に関わるニュースです。家賃の更新や住宅購入・借り換えを考えている人は、相場の流れを押さえておきましょう。",
+     "src": "ライブドアニュース",
+     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5vM1haSjNtdS0zYzBRRnFYQXlkaUdDLVZnbmhaSzlUeVRJQlJaWEg2VGpEd3NHa0VFbzBySzVadWpCSE5QcENRSkFlQU9JVzVfQ3ZBV3o3Y243R1JEQjJV?oc=5"
+    },
+    {
+     "cat": "キャリア",
+     "title": "鳥取：鳥取市議選４３人立つ…中小賃上げや子育て支援訴え、２２日投開票 ：地域ニュース",
+     "body": "働き方や収入に関わるニュースです。自分の職種・業界の相場と比べて、年収を見直すきっかけにしましょう。",
+     "src": "読売新聞",
+     "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1EVzhKWW9JYmFjR0dMR0k1bFQwTDFzQmhwSHR1WjlVRnhkdDdDTVBLNGEwc284Y1hPMnF0RGVKTGtmZEhOWmNPZXVJcnAyUU00QngwUWhnRmtSNGdDdGVuS0U4N2lIN3F2ejU4Q1c1YWdKMXM?oc=5"
+    },
+    {
+     "cat": "暮らし",
+     "title": "【玄関先に現金を置け】「マイナンバーカードが不正利用」「資産を調査する」警察官や弁護士かたる特殊詐欺 現金450万円だまし取られる 70代女性の話を聞いた携帯電話店の店員が詐欺に気づく〈北海道札幌市〉",
+     "body": "毎日の暮らしと手続きに関わるニュースです。自分に必要な手続きや、家計への影響がないか確認しておきましょう。",
+     "src": "FNNプライムオンライン",
+     "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFB0X1oyOXBGUkJIYTllaDRQclRaeE1rM1FjQWRabG5mQXo0Q2ZSZThjQVZaUEZNbENIaDFBZk14Q0lGNi1ZZjY3amh1MmpzZw?oc=5"
+    }
+   ]
+  },
   {
    "date": "2026-11-15",
    "items": [
@@ -280,53 +327,6 @@
      "body": "毎日の暮らしと手続きに関わるニュースです。自分に必要な手続きや、家計への影響がないか確認しておきましょう。",
      "src": "産経ニュース",
      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5QYWpweU5BTmZZOXRLUjgyenM2a2J2eW9IVHVIS2J2NGlxUEdacXZYVHczMWU2UW0yVnk4UGt3aVdtTWQxRmViVmZLWERpSjZDYzVmdWRjb2xYd3hLZmtkRG1vWm1jMGxaRDd4bG5XYU9taUZ3cFE?oc=5"
-    }
-   ]
-  },
-  {
-   "date": "2026-11-09",
-   "items": [
-    {
-     "cat": "金利",
-     "title": "日銀政策金利は来春1.75%へ、次の利上げは12月の可能性－前田元理事",
-     "body": "金利や為替は、ローンの返済額や外国資産の評価額に影響します。1日の動きより数か月の流れで見るのがおすすめです。",
-     "src": "TBS NEWS DIG",
-     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxONFEtN3NvNEl1cWtSejg3ZUJ0ZFk2M3pNSHVrOHNZbHhkSDZSbm03UWFnamhKUkR3Z2V3ckRpSjZHTEZHLXlDOHVZVDZkdFRIcWlIMVphbTdxRV9kbXQ1OGpwWDFyeFNqN0VRYlZUOUhwZnc2bFFOSEhDRWZ4V0ZzSVZCbUxHQms?oc=5"
-    },
-    {
-     "cat": "NISA",
-     "title": "来年スタート こどもNISA「それ、子への贈与です」",
-     "body": "制度の変更は施行日と対象者が大事です。手続きが必要かどうかは金融機関の案内でも確認できます。",
-     "src": "毎日新聞",
-     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5FRklHb1c1SnNGOE9NbF9ZaFZCUkZKRFFYVG02RWZuYTM1azZoWkxWaDZROFIyVlFWLTR3bGQwNUpqUjBVWm5CZk00cGNndldrSkRKSzJwbmRuWUVZaTg5TVpHR2llYzlXZl92VlNqWi1kSVljTkNPdDluRUlmUm8?oc=5"
-    },
-    {
-     "cat": "税金",
-     "title": "ふるさと納税、自治体の手数料は下がるか スタートアップ「ふるコミ」、2.5%掲げ寡占市場に参入",
-     "body": "税制の変更は、決まってから実際に始まるまで時間があります。いつから・誰が対象かをチェックしておきましょう。",
-     "src": "日本経済新聞",
-     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9ic1l0U3FkWk9ZZnIxYW1UbkhxUWFiYl9lNVpiVS04NmFhb1BrcmpfYmhSUFZTM3NKelJNeHVtVmZpS1VCQlVyelBwRjJYQ1UxUGlHcjJUcm9Xd1dqNko3VFZST0dxNEZEMDhvNA?oc=5"
-    },
-    {
-     "cat": "不動産",
-     "title": "アイリッジ、地銀95行のAI検索実態調査を公表 住宅ローン金利回答の約2割が不一致",
-     "body": "住宅ローンや家賃は家計の中で一番大きな固定費です。金利タイプごとの返済額の違いも試算しておくと安心です。",
-     "src": "Dellows News",
-     "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFAtWDVLSHEzNF9jQlRsXzg5M091bGdid0lTVWhDU2JVNWM2VVVtVmswRVR5LXotTWItc3ZkakJKb3I3OWZpR19V?oc=5"
-    },
-    {
-     "cat": "キャリア",
-     "title": "仏急進左派メランション氏「最低賃金引き上げ」 27年大統領選へ公約",
-     "body": "賃金や求人の動きは転職のタイミングにも関わります。今の市場価値を知る材料にしましょう。",
-     "src": "日本経済新聞",
-     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE92NkZidjQ0bzgyU3pVdEp4VVhibERSTWpDMEVVSWMyeVVTQmNtUFRybGtXaDFJX205b05YRDZZM0NjajY5S1FEbGlFVG5WTGk2a3gtbDFfVWRkTHBROXlSN3JsaVBXRlBVX3R1MQ?oc=5"
-    },
-    {
-     "cat": "暮らし",
-     "title": "同じ年金額でも負担が違う？遺族年金と老齢年金の課税ギャップ フォトギャラリー | TBS CROSS DIG with Bloomberg",
-     "body": "物価や社会保険料の変化は手取りに直結します。固定費の見直しとあわせてチェックしておきましょう。",
-     "src": "TBS NEWS DIG",
-     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE0wUEtER2hqblkwVVVkam56VVFVVjZBLXVrbUREdDlrRUlZRVBDMzFEckxBcWhRQzFZSXBRMmdGaUYxcjdFQVhBYm13cjdNSEhFb0M1Zl96UllWbVBsOXpN?oc=5"
     }
    ]
   }
