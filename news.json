@@ -1,6 +1,53 @@
 {
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "days": [
+  {
+   "date": "2026-11-26",
+   "items": [
+    {
+     "cat": "金利",
+     "title": "政策金利は早期に中立水準へ、物価上振れの兆しに「俊敏な反応を」＝田村委員",
+     "body": "住宅ローンの変動金利や預金の金利に関わるニュースです。変動金利で借りている人は、次の金利見直しの時期を確認しておきましょう。",
+     "src": "Reuters",
+     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPZEhoMFdZdkZwWWZndWhLWmh3OWZVSkZSXzExZ0YyUm9TUjJmOVBpNzNiUWFNSzRmZUp0S2NNV2taVWg3dG1MMXQwbE5ibWJmc3BNRklydV9hblRVR2IyaVNMUl9YZzBSLWJIamxPOHRPdV85V0xWeUYxWmp5c3hXaFBHS2Iyck85bGFyZ0MtWEg?oc=5"
+    },
+    {
+     "cat": "NISA",
+     "title": "NISAの非課税枠、売却年の復活は見送り 政府・与党方針",
+     "body": "NISA・iDeCoの制度や使い方に関わるニュースです。自分の枠や掛金の設定に影響がないか確認しておきましょう。",
+     "src": "日本経済新聞",
+     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBHUXgycDNoUVp3N09YRXgyVjluQTNVWnFkNUN6eGNxWVVVbE5aWDFrc0s2c0JOeHFtN1JIN3d5VHhYVnpZSmNCSHlpbVdfdm5VWVM4UmI1cXg2UXREVC1MbVFYUENtVklENnBfSA?oc=5"
+    },
+    {
+     "cat": "税金",
+     "title": "ハコベルとタックスナップが提携し、軽貨物ドライバーの確定申告とインボイス登録を後押し",
+     "body": "税金や控除に関わるニュースです。年末調整や確定申告で手取りが変わることがあるので、対象になるか確認しておきましょう。",
+     "src": "時事ドットコム",
+     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE12dDNIdmx6QmVtV2V4UVZWTmtkN0pJTlgwUDNEaGU1RlgyeW82aEVqV1ZtUGxXQzJfR1dGMHdka05EYXdPN2g3ZDN4M3Budnh5TlAxb1FYVGRrTXYydng3UTJ3anh6NkJWemJn?oc=5"
+    },
+    {
+     "cat": "不動産",
+     "title": "米住宅価格指数、9月は前月比横ばい 金利上昇で需要鈍化＝ＦＨＦＡ | ロイター",
+     "body": "住まいのお金に関わるニュースです。家賃の更新や住宅購入・借り換えを考えている人は、相場の流れを押さえておきましょう。",
+     "src": "Reuters",
+     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5YQVhkV2tfU04wZ2NsajVCTEoxa2xRcXNXSDNHSFZTRThSeHZnanlOSWI3bTUzd2VFdGJmc3c0TW9ySl9WLUU2WG5jV2RWc0ZwQ1dJZ2hzdy01NmNUaWlhVWJ5NlNaZVQ1SDBJNVhPSF9mM0lDcTlpenNOTEJQQQ?oc=5"
+    },
+    {
+     "cat": "キャリア",
+     "title": "最低賃金引き上げ…大分県内企業約6割が「給与引き上げ」 対策の最多は「価格転嫁」 政府目標の時給1500円、約6割が「対応は不可能」【東京商工リサーチ】",
+     "body": "働き方や収入に関わるニュースです。自分の職種・業界の相場と比べて、年収を見直すきっかけにしましょう。",
+     "src": "TBS NEWS DIG",
+     "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5hZmUyXzVIeFZyVW9kMmdJWlpwN04taGNBaVFJclRXeEFKTmRnRnV2ZzcwOGtTU1FhN2tjMnhDVjNhN2JFSjktTklvR1JNVWpnbTFiSk5kbw?oc=5"
+    },
+    {
+     "cat": "暮らし",
+     "title": "年金増、非課税外れ負担増 介護保険料５．７万→９．９万円 医療費も",
+     "body": "毎日の暮らしと手続きに関わるニュースです。自分に必要な手続きや、家計への影響がないか確認しておきましょう。",
+     "src": "朝日新聞",
+     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1GclgyTlM0aXBtQ0NpSk1BTTRJclpsZ3ZHa1Y2SDZ0UzdHR2RfdGkyZk1PTUgyOW55OE1ISWFfWG02cnpJcERGRzhva18wNVp3ZGg3Y0w0aHdFNVpz?oc=5"
+    }
+   ]
+  },
   {
    "date": "2026-11-25",
    "items": [
@@ -280,53 +327,6 @@
      "body": "毎日の暮らしと手続きに関わるニュースです。自分に必要な手続きや、家計への影響がないか確認しておきましょう。",
      "src": "NHKニュース",
      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5hWWVoVmRha0hIN2JDbld3RS1PZkZoS1ozU3pyc0ctZkdreVpoZEt0ZnQyVFhMeVl6UUk4NERBRnp5THdoWXQyVm9WdWFYUzkzX0tpcXQyQUJZMm05LU5z?oc=5"
-    }
-   ]
-  },
-  {
-   "date": "2026-11-19",
-   "items": [
-    {
-     "cat": "金利",
-     "title": "金融環境は緩和的、経済・物価・金融情勢に応じて引き続き利上げ＝日銀総裁",
-     "body": "金利や為替は、ローンの返済額や外国資産の評価額に影響します。1日の動きより数か月の流れで見るのがおすすめです。",
-     "src": "Reuters",
-     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOSWdCN3J3ZjE4b2xLaFdiQkVwWDNWb1FQWnE5YmNWQVlHcFRMZjRmVFRvb0tpdHg1R0dkd0N2clJLa2V1ZVMzVFQ1NDlacUdWRzFSMkRoZ2dkNXJiV1prZXIwbDFOeE1TcEs5Y2hHT2xYYVVzTUFKeGpQLXN1V3liWHQ5SXZmMzM1VENRUWVpaGM?oc=5"
-    },
-    {
-     "cat": "NISA",
-     "title": "こどもNISA 口座選びは慎重に 1月開始、制度メリット生かすには 余裕資金で長期投資を",
-     "body": "制度の変更は施行日と対象者が大事です。手続きが必要かどうかは金融機関の案内でも確認できます。",
-     "src": "東京新聞",
-     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE8zT3dXR3Y4UG9ic2Qtc1VPU3JCQ19uQ2phUkx2c19FUUpaaGpMUzRmN2VnRl8wOXdXWEVUR2NEcTA2Nm1JbHR5Q3U3Q19wMEpUcEVQOF91TE9pTkNhQllB?oc=5"
-    },
-    {
-     "cat": "税金",
-     "title": "【ふるさと納税対象】未来のデジタル人材育成を支援するガバメントクラウドファンディング開始！（1月12日まで受付）",
-     "body": "税制の変更は、決まってから実際に始まるまで時間があります。いつから・誰が対象かをチェックしておきましょう。",
-     "src": "時事ドットコム",
-     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5aT1AzNmRrdWcyeDZCTXJScnJKQWtacDlZZlFrNHVvX1ZRM2F4dEhHcnFTWU5mWDBSWTJTNmszNC1HbDF5Yml5X2wwNzdoSjFWWnRWNU9ScVpsdmFIcHEwXzl5aDYwblZVR0dz?oc=5"
-    },
-    {
-     "cat": "不動産",
-     "title": "米中古住宅仮契約指数、10月は調査開始以来最低 金利上昇重し",
-     "body": "住宅ローンや家賃は家計の中で一番大きな固定費です。金利タイプごとの返済額の違いも試算しておくと安心です。",
-     "src": "Reuters",
-     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNN3VkNERXZ29fMVhoTTFxbWU1enJSSUlXcWJVLWtzZktyeGVXTFlUaFI0eHlaMGZSajRVRFFXSWNxNDNzaUVhZlRhbU12SkptMG5WUVI4MHR0N0w3NURFaU9GRnFHc2tHdWlXeXBnRDFyQVExS1czLVdaamVZdWFnY204aV80QQ?oc=5"
-    },
-    {
-     "cat": "キャリア",
-     "title": "賃上げ阻む非正規化と労組の弱体化 分断され、抵抗できぬ労働者 [春闘]",
-     "body": "賃金や求人の動きは転職のタイミングにも関わります。今の市場価値を知る材料にしましょう。",
-     "src": "朝日新聞",
-     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNT2lQelVIM2ppSDVzUlBrU3lsbTlFSTREYnNlampQUGRRaVBnV2dRcEhubkZxOXNNU1VTTUtkRGtmRDUwWG55SWswSEJuNy01bWQ2TWh6VHlZbDBKa1NGZlI2TXpVT0xPWUhqeEVJcHR5RWR0bm9xVTU2dk96UlM2aWt3Umx6Zw?oc=5"
-    },
-    {
-     "cat": "暮らし",
-     "title": "物価安定目標到達でも「実質賃金」は低下？年金の実質額は目減りする可能性 | 野口悠紀雄 新しい経済成長の経路を探る",
-     "body": "物価や社会保険料の変化は手取りに直結します。固定費の見直しとあわせてチェックしておきましょう。",
-     "src": "ダイヤモンド・オンライン",
-     "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFA1RnFTNUhCdkhXWF9hb3c4djM2T3ZUUzdGazQxeTJvU092MlpsazVNOXNCLTl4eXAtQUc1TlpxbHV3LV82bDFlTDV3aEY?oc=5"
     }
    ]
   }
