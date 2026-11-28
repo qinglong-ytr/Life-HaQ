@@ -1,6 +1,53 @@
 {
- "updated": "2026-11-27",
+ "updated": "2026-11-28",
  "days": [
+  {
+   "date": "2026-11-28",
+   "items": [
+    {
+     "cat": "金利",
+     "title": "きょうのおはBiz 11/27 日銀審議員 政策金利“中立的水準”へ",
+     "body": "住宅ローンの変動金利や預金の金利に関わるニュースです。変動金利で借りている人は、次の金利見直しの時期を確認しておきましょう。",
+     "src": "NHKニュース",
+     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5rUEt2WjJTQnBMN3llYVpJYkZoOGdsMlItOHBTekVjczl1OEpBai1GMFlPNG1JU3lzelB2RW83aEZpRWV5V2xUblJTYTN1RVU3cmdxQkY0NHhoLU1pWENB?oc=5"
+    },
+    {
+     "cat": "NISA",
+     "title": "フアン氏エヌビディアCEO復帰、トランプ新関税は新NISAも「敵視」、JT大型買収検討、香港火災から1年─1週間のニュース5選",
+     "body": "NISA・iDeCoの制度や使い方に関わるニュースです。自分の枠や掛金の設定に影響がないか確認しておきましょう。",
+     "src": "Bloomberg",
+     "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNMFR6WjR5V000N2VDUmRRb0NaeE9SNW5kOUVxUDcxMVZaelJPUF9ITVdqYTA5SFgzWHItUFNacDVEOEdMVUZFcWJpVDl2LVdNYTVkSy1MSDZOWm9OTjBIZFZEbHV2OWNjTG9MVTVXemxVQlZZTURVTFBTT2psVzYtOExJUEs5a19hRGZlMU9R?oc=5"
+    },
+    {
+     "cat": "税金",
+     "title": "【独自】基礎控除上乗せ、見直し先送り 所得税、最大４２万円―政府・与党",
+     "body": "税金や控除に関わるニュースです。年末調整や確定申告で手取りが変わることがあるので、対象になるか確認しておきましょう。",
+     "src": "時事ドットコム",
+     "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFA1WkhUVVd0dTJTaE1DQS1sTFJNZWhoQ3NLd1d6Um5lSnk2dFd5MmNmMkRvRnFuZUNwSEYzbEY2Qmc3ZkR3cF9ITmc1aUg2VERsd0hseTl6WFY4a0piMXcyWmJqYw?oc=5"
+    },
+    {
+     "cat": "不動産",
+     "title": "金利上昇…新築よりリフォーム住宅に熱視線 住宅ローン抑えて”夢のマイホーム”を手に入れる",
+     "body": "住まいのお金に関わるニュースです。家賃の更新や住宅購入・借り換えを考えている人は、相場の流れを押さえておきましょう。",
+     "src": "Excite エキサイト",
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1vdDFzZ19ZVGxSZ2V2LU5UbzRMeDZlQ0ZaRjFaMWpUaHNfMEpQWXN6S19oOGpLQzRwMGowTm81M0pRWURyYmFOQXhqRGR3T2hqeEFMbGNNQUllVzR0VlRLWWlxWmQ0WmZ0aDBtd3Rnbk9xX29VQlE?oc=5"
+    },
+    {
+     "cat": "キャリア",
+     "title": "県「賃上げ緊急支援金」に 約２万人分の申請",
+     "body": "働き方や収入に関わるニュースです。自分の職種・業界の相場と比べて、年収を見直すきっかけにしましょう。",
+     "src": "TBS NEWS DIG",
+     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9GbERPMjBLRVA1ZzN5SkU3RE5xUERveTFzaEd1bV9tdHgzS05kYWFwM0FUYkZMb3liM1ZjeGczdlRva1FROTFoLTNtMERyaWJCY19ocHhxc2NSUQ?oc=5"
+    },
+    {
+     "cat": "暮らし",
+     "title": "英年金省で「深刻」なサイバー事案、サービス停止",
+     "body": "毎日の暮らしと手続きに関わるニュースです。自分に必要な手続きや、家計への影響がないか確認しておきましょう。",
+     "src": "Reuters",
+     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPWFZyWjNXUVJneWtfcEJCNC1uQlJPVWt5SlJVTjFoaHMwaHNFamdiN0hDcXU0V1NQM1Z0R3NkU2djNXE0d2VfSVNTaWVhRnpiV0owVHRSQXpJN1AwZHUzS252YXRXUVp3UHNydm95Z0xPWnhHZXR5djQxMDhVOFA1SW9LeWlNM28?oc=5"
+    }
+   ]
+  },
   {
    "date": "2026-11-27",
    "items": [
@@ -280,53 +327,6 @@
      "body": "毎日の暮らしと手続きに関わるニュースです。自分に必要な手続きや、家計への影響がないか確認しておきましょう。",
      "src": "TBS NEWS DIG",
      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE94b0tBMWF5aUtZZFA2RVRmQUxuZDZfMDcyNkZZN0NnMjZCNTVIdGx3SGtLVDdBQ3RZbDhkZXpBelM0RDZtc0xRZmNETmRHdzlqNjR3cC1Bd1lUU1E1QnJPaE1wUFZtZmc?oc=5"
-    }
-   ]
-  },
-  {
-   "date": "2026-11-21",
-   "items": [
-    {
-     "cat": "金利",
-     "title": "日銀タカ派が示す「政策金利2％」の意義／欧米の12月利上げは確実になるか",
-     "body": "金利や為替は、ローンの返済額や外国資産の評価額に影響します。1日の動きより数か月の流れで見るのがおすすめです。",
-     "src": "日経ビジネス電子版",
-     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5BYjk0SmF6aDR2b2NIc3lNekwzQ3dTVGRNcXQzYVVsM1FTY0NXWUVMTXZBUGszckRfV29yUy1ncXpaUFhvSXI5YVZtS1BkTXFYbzRLNE5sdVdIaDEyMGR0NGM0VU5Dc1U?oc=5"
-    },
-    {
-     "cat": "NISA",
-     "title": "NISAで人気の「中国株」ランキング【2026年11月】楽天証券の「NISA口座(成長投資枠)」で買われている「中国株」の買付金額＆保有残高ランキングを発表！",
-     "body": "制度の変更は施行日と対象者が大事です。手続きが必要かどうかは金融機関の案内でも確認できます。",
-     "src": "ダイヤモンド・オンライン",
-     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1oX1pKUXZlQUZ4UlFSZFlQaXNfVHJrLTlwSHluNnU5MzQ1SUMzNlRNRkN1NVpNNENvVzQydFItRWRkS1JwdHJxU0s1cUwtTWw2LVVJ?oc=5"
-    },
-    {
-     "cat": "税金",
-     "title": "名古屋市、ふるさと納税の魅力発信を強化！新ブランドコピー「ずっといいもんで」とロゴを発表",
-     "body": "税制の変更は、決まってから実際に始まるまで時間があります。いつから・誰が対象かをチェックしておきましょう。",
-     "src": "時事ドットコム",
-     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1WeU8tOEJEY2E0SkJsX3cwRTVXWV9KM0FPNGRCal9zMGE2R0lVWFZlaDZvOThTU2NCM2tpWlFrUWZfRkRlWXJ5XzI2ME1aRVEzVEJjNXBHUXFJcW5Id1dsWUxyVnZpVzJLM1ZF?oc=5"
-    },
-    {
-     "cat": "不動産",
-     "title": "変動金利の住宅ローンはいつ返済額が上がる？5年ルール・125％ルールの注意点【日銀の利上げで私たちの暮らしはどう変わる？ 第3回】",
-     "body": "住宅ローンや家賃は家計の中で一番大きな固定費です。金利タイプごとの返済額の違いも試算しておくと安心です。",
-     "src": "liv-plus.jp",
-     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9nRmFlOHEtZDIxX0FDLWthcmdrX3ZxSWJOQzA0V3NMT0FVczJ3dnY4dzQ2XzRiWm5NajJseXpwcVFEbWNCcHpJR3NaS2ZOSTZLa0lwY2hlVDVibE0?oc=5"
-    },
-    {
-     "cat": "キャリア",
-     "title": "イタリア全土で賃上げ求めストライキ、労組呼びかけ 学生も参加",
-     "body": "賃金や求人の動きは転職のタイミングにも関わります。今の市場価値を知る材料にしましょう。",
-     "src": "Reuters",
-     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1CcHZqMVRQaGNsblN2U2RKVF9SbFJzVHZENUUzN2hHQzRXQlV3SF90LV9jZFBYOUhPNk5mRE1sY3hJVEZnN3NoMjAxbmM3QkdnbGZWbDVBOVMtRnAwdzExdFhCU2wwZUVzek41djRIem9Qa0FVZzhsc29IcDRhUQ?oc=5"
-    },
-    {
-     "cat": "暮らし",
-     "title": "正社員になっても老後は安泰じゃない？氷河期世代が直面する「年金の壁」",
-     "body": "物価や社会保険料の変化は手取りに直結します。固定費の見直しとあわせてチェックしておきましょう。",
-     "src": "TBS NEWS DIG",
-     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBLZXA3cEhfUHluQ2hLcV91ZTRzNUdReENKTk13a1pheC1RSDczaWI5d1ZaT1A0U2xjSk1UMnNOMXJaNWRtU1hMMGttM05EQUJvckZWajQ0QWFnUmt1c3VSVERxX1BBUEk?oc=5"
     }
    ]
   }
